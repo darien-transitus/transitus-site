@@ -1,2 +1,0 @@
-Temporary Netlify auto-deploy verification marker. Safe to delete.
-deploy-check-20260618103554-597
