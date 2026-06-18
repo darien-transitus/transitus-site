@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.className='js';</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18117724697"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','AW-18117724697');</script>
+    <title>You don't have to navigate foreclosure alone | Transitus</title>
+    <link rel="canonical" href="https://gettransitus.ai/foreclosure-guide">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+    <meta name="description" content="Foreclosure is confusing and lonely. This walks you through every step in Colorado, what to do, and what matters. No legal jargon.">
+    <meta property="og:title" content="You don't have to navigate foreclosure alone">
+    <meta property="og:description" content="Foreclosure is confusing and lonely. This walks you through every step in Colorado, what to do, and what matters. No legal jargon.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gettransitus.ai/foreclosure-guide">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--navy:#2B4C7E;--navy-deep:#1d3556;--cream:#f8f7f4;--paper:#ffffff;--surface:#ffffff;--ink:#1b1a16;--ink-soft:#52504a;--muted:#8d8b80;--line:#e8e3d7;--c1-bg:#eaf0f8;--c1-tx:#274a78;--brand:#2B4C7E;--brand-dark:#1d3556;--brand-light:#eaf0f8;--bg:#f8f7f4;--card:#ffffff}
+        html{scroll-behavior:smooth}
+        body{font-family:'Hanken Grotesk',-apple-system,sans-serif;color:var(--ink-soft);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+        .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+        h1,h2,h3{font-family:'Newsreader',Georgia,serif;color:var(--ink);font-weight:500;letter-spacing:-0.01em;line-height:1.12}
+        a{color:inherit;text-decoration:none}
+
+        header{position:sticky;top:0;z-index:50;background:rgba(248,247,244,0.82);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+        .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+        .brand{display:flex;align-items:center;gap:11px}
+        .brand svg{width:34px;height:18px}
+        .brand-name{font-family:'Newsreader',serif;font-weight:600;font-size:22px;letter-spacing:0.02em;color:var(--navy)}
+        .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:14px;border-radius:999px;padding:9px 18px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;cursor:pointer;white-space:nowrap}
+        .btn-primary{background:var(--navy);color:#fff;box-shadow:0 1px 2px rgba(27,26,22,.12),0 10px 24px -10px rgba(43,76,126,.5)}
+        .btn-primary:hover{background:var(--navy-deep);transform:translateY(-2px)}
+        .btn .arr{transition:transform .2s ease}.btn:hover .arr{transform:translateX(4px)}
+
+        .alayout{display:flex;gap:0;align-items:flex-start;max-width:1000px;margin:0 auto;padding:52px 0 64px}
+        .toc{width:212px;flex-shrink:0;padding-right:36px;position:sticky;top:92px;align-self:flex-start}
+        .toc-label{font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin-bottom:14px}
+        .toc-links{display:flex;flex-direction:column;border-left:1.5px solid var(--line)}
+        .toc-links a{font-size:13px;color:var(--muted);line-height:1.35;padding:7px 0 7px 15px;border-left:2px solid transparent;margin-left:-1.5px;transition:color .2s,border-color .2s}
+        .toc-links a:hover{color:var(--navy)}
+        .toc-links a.active{color:var(--navy);font-weight:600;border-left-color:var(--navy)}
+
+        .toc-mobile{display:none;margin-bottom:24px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+        .toc-mobile-toggle{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;background:transparent;cursor:pointer;border:none;width:100%;font-family:inherit;font-size:14px;color:var(--navy);font-weight:600}
+        .toc-mobile-toggle .caret{font-size:10px;transition:transform .2s}
+        .toc-mobile-toggle.open .caret{transform:rotate(180deg)}
+        .toc-mobile-list{max-height:0;overflow:hidden;transition:max-height .3s ease;background:var(--c1-bg)}
+        .toc-mobile-list.open{max-height:640px}
+        .toc-mobile-list a{display:block;font-size:13.5px;color:var(--navy);padding:9px 18px;border-bottom:1px solid rgba(43,76,126,.1)}
+        .toc-mobile-list a:last-child{border-bottom:none}
+
+        .article{flex:1;min-width:0;max-width:720px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(32px,5vw,62px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 40px 80px -55px rgba(27,26,22,.4)}
+        .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:22px}
+        .breadcrumb a{color:var(--navy);font-weight:500}
+        .breadcrumb a:hover{text-decoration:underline}
+        .article h1{font-size:clamp(2rem,4.2vw,2.85rem);font-weight:500;color:var(--ink);line-height:1.16;margin-bottom:18px}
+        .byline{display:flex;align-items:center;gap:11px;padding:0 0 22px;border-bottom:1px solid var(--line);margin-bottom:34px}
+        .byline svg{width:26px;height:14px;flex-shrink:0}
+        .byline-text{font-size:14px;color:var(--ink-soft);line-height:1.4}
+        .byline-text .author{color:var(--navy);font-weight:600}
+        .byline-text .meta{color:var(--muted)}
+        .article h2{font-size:clamp(1.4rem,2.6vw,1.72rem);font-weight:500;color:var(--ink);line-height:1.25;margin-top:44px;margin-bottom:15px;scroll-margin-top:96px}
+        .article p{font-size:17px;color:var(--ink-soft);line-height:1.78;margin-bottom:20px}
+        .article p strong{color:var(--ink);font-weight:600}
+        .article a:not(.btn){color:var(--navy);font-weight:500;text-decoration:underline;text-decoration-color:rgba(43,76,126,0.32);text-underline-offset:3px;transition:text-decoration-color .2s}
+        .article a:not(.btn):hover{text-decoration-color:var(--navy)}
+        .article ul{list-style:none;padding:0;margin:0 0 24px}
+        .article ul li{font-size:17px;color:var(--ink-soft);margin-bottom:13px;padding-left:36px;position:relative;line-height:1.7}
+        .article ul li::before{content:"";position:absolute;left:0;top:8px;width:25px;height:13px;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-2 0 34 16' fill='none' stroke='%232B4C7E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='3' cy='8' r='2.5' fill='%232B4C7E'/%3E%3Cline x1='6' y1='8' x2='26' y2='8'/%3E%3Cpolyline points='22,3 28,8 22,13'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain;background-position:left center}
+        .article ul li strong{color:var(--ink);font-weight:600}
+
+        .disclaimer{font-size:13px;color:var(--muted);background:var(--cream);border:1px solid var(--line);border-left:3px solid var(--navy);border-radius:12px;padding:18px 20px;margin-top:38px;line-height:1.6}
+
+        .cta-card{margin-top:48px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(30px,4vw,44px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 30px 60px -45px rgba(27,26,22,.35)}
+        .cta-card h3{font-family:'Newsreader',serif;font-size:1.6rem;font-weight:500;color:var(--ink);text-align:center;margin-bottom:6px}
+        .cta-helper{font-size:14px;color:var(--muted);text-align:center;margin-bottom:26px}
+        .fg{margin-bottom:14px}
+        .fg label{display:block;font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:6px}
+        .fg input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:15px;background:var(--surface);color:var(--ink);transition:border-color .15s,box-shadow .15s}
+        .fg input:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(43,76,126,.14)}
+        .submit{width:100%;margin-top:8px;background:var(--navy);color:#fff;font-family:inherit;font-weight:600;font-size:15px;border:none;border-radius:10px;padding:14px;cursor:pointer;transition:background .18s,transform .18s}
+        .submit:hover{background:var(--navy-deep);transform:translateY(-1px)}
+        .back-link{display:inline-block;margin-top:20px;font-size:14px;color:var(--navy);font-weight:500}
+        .back-link:hover{text-decoration:underline}
+
+        footer{margin-top:8px;background:var(--navy-deep);color:rgba(255,255,255,.62)}
+        .foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:30px 0}
+        .foot .brand-name{color:#fff;font-size:19px}
+        .foot a{color:#fff;font-weight:500}.foot a:hover{text-decoration:underline}
+        .foot-meta{font-size:13.5px}
+
+        @media(max-width:880px){
+            .toc{display:none}
+            .article{max-width:none}
+            .alayout{padding:34px 0 48px}
+            .toc-mobile{display:block}
+        }
+        @media(max-width:600px){.foot{flex-direction:column;text-align:center}}
+        @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+        .guides-exit{margin-top:20px;text-align:center}
+        .guides-exit p{font-size:15px;color:var(--muted)}
+        .guides-exit a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:rgba(43,76,126,.3);text-underline-offset:3px}
+        .guides-exit a:hover{text-decoration-color:var(--navy)}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap nav">
+            <a href="/" class="brand" aria-label="Transitus home">
+                <svg viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></svg>
+                <span class="brand-name">Transitus</span>
+            </a>
+            <a href="/your-options" class="btn btn-primary">See my options <span class="arr">&rarr;</span></a>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <div class="alayout">
+                <nav class="toc" aria-label="Table of contents">
+                    <p class="toc-label">On this page</p>
+                    <div class="toc-links">
+                        <a href="#behind" class="active">Behind on your mortgage</a>
+                        <a href="#holding-truth">Holding the truth in</a>
+                        <a href="#dont-know">Concerned you can't solve this</a>
+                        <a href="#more-time">More time than you think</a>
+                        <a href="#first-missed">What I wish someone told me</a>
+                        <a href="#people-helpful">Are these people helpful?</a>
+                        <a href="#no-sense">None of this makes sense</a>
+                        <a href="#time-running">Time is running out</a>
+                        <a href="#anyone-care">Does anyone care?</a>
+                        <a href="#frustrating-option">A frustrating option</a>
+                        <a href="#why-care">Why should I care?</a>
+                        <a href="#bad-stop">When does bad stop?</a>
+                        <a href="#two-evils">Two evils</a>
+                    </div>
+                </nav>
+                <article class="article">
+                    <div class="toc-mobile">
+                        <button type="button" class="toc-mobile-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+                            <span>What's in this article</span>
+                            <span class="caret">&#9662;</span>
+                        </button>
+                        <div class="toc-mobile-list">
+                            <a href="#behind">Behind on your mortgage</a>
+                            <a href="#holding-truth">Holding the truth in</a>
+                            <a href="#dont-know">Concerned you can't solve this</a>
+                            <a href="#more-time">More time than you think</a>
+                            <a href="#first-missed">What I wish someone told me</a>
+                            <a href="#people-helpful">Are these people helpful?</a>
+                            <a href="#no-sense">None of this makes sense</a>
+                            <a href="#time-running">Time is running out</a>
+                            <a href="#anyone-care">Does anyone care?</a>
+                            <a href="#frustrating-option">A frustrating option</a>
+                            <a href="#why-care">Why should I care?</a>
+                            <a href="#bad-stop">When does bad stop?</a>
+                            <a href="#two-evils">Two evils</a>
+                        </div>
+                    </div>
+                    <nav class="breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp; Articles &nbsp;/&nbsp; Foreclosure guide</nav>
+                    <h1>Behind on your mortgage. Afraid. What happens now.</h1>
+                    <div class="byline">
+                        <svg viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></svg>
+                        <div class="byline-text">Written by <span class="author">Transitus</span> <span class="meta">&middot; Denver, Colorado &middot; May 15, 2026</span></div>
+                    </div>
+
+                    <p id="behind">Life is already hard enough. You didn't plan on being in this situation. Bad news seems to keep appearing in all directions without belief it will get better. You're fighting with everything you have to keep making payments and to have it work out. I just want to say, your resilience is admirable and I know that isn't helpful at this time, but I want to acknowledge the hardship you are going through. It's hard, period. No need to minimize the situation because I see it is truly hard. There is nothing fun, exciting, interesting, or satisfying about struggling to pay your mortgage and getting things back in order.</p>
+
+                    <h2 id="holding-truth">Holding the truth in about missing payments</h2>
+
+                    <p>With everything building up, missing payments and being behind doesn't feel good. You aren't trying to miss your mortgage payments, it's just a place you have found yourself in. There is a desire to hide what you are going through from your friends, from your family, even from yourself as it is deeply painful. You may be ashamed. You may be unsure. There is questioning of what the future holds and how you can solve this problem and it feels like you have to solve it all on your own. You receive a pre-foreclosure letter and it feels like it's over. I promise, it's not over. There are options, there is opportunity, there is hope to get this resolved for you and your family.</p>
+
+                    <h2 id="dont-know">Concerned you don't know how to solve this</h2>
+
+                    <p>The entire process of a foreclosure is deeply confusing and intimidating. It really is. There are hundreds of pages of legal documents describing the process that are impossible to understand. Even if understood, it doesn't feel like anyone cares about your situation or cares to help you get through it. It feels lonely and impossible. Let me walk you through what's actually happening here, what options you have within the process and what's important to understand. If you need more personal assistance with your situation <a href="/your-options">we at Transitus are here to help</a>.</p>
+
+                    <h2 id="more-time">You have more time than you think</h2>
+
+                    <p>A typical foreclosure process takes anywhere from 8 to 10 months. So, take a breath. You have time. You can save your home. You just need to make sure you do the right things to do so and this should help you.</p>
+
+                    <!-- Timeline summary -->
+                    <div style="background:var(--brand-light);border:1px solid var(--line);border-radius:12px;padding:28px 28px 20px;margin:28px 0">
+                        <p style="font-size:11px;color:var(--brand);text-transform:uppercase;letter-spacing:1.2px;font-weight:700;margin:0 0 18px">Your foreclosure timeline at a glance</p>
+                        <div style="border-left:2px solid var(--brand);margin-left:8px">
+                            <div style="position:relative;padding:0 0 8px 20px">
+                                <div style="position:absolute;left:-7px;top:12px;width:12px;height:12px;border-radius:50%;background:var(--brand)"></div>
+                                <div style="display:flex;align-items:baseline;gap:14px;padding:10px 14px;background:var(--card);border-radius:8px">
+                                    <span style="font-size:12px;font-weight:600;color:var(--brand);white-space:nowrap;min-width:100px">Day 1 – 120</span>
+                                    <span style="font-size:13px;color:var(--ink-soft)">First missed payment. Can't file foreclosure yet. Your best window to resolve.</span>
+                                </div>
+                            </div>
+                            <div style="position:relative;padding:0 0 8px 20px">
+                                <div style="position:absolute;left:-7px;top:12px;width:12px;height:12px;border-radius:50%;background:var(--brand)"></div>
+                                <div style="display:flex;align-items:baseline;gap:14px;padding:10px 14px;background:var(--card);border-radius:8px">
+                                    <span style="font-size:12px;font-weight:600;color:var(--brand);white-space:nowrap;min-width:100px">~Day 90 – 150</span>
+                                    <span style="font-size:13px;color:var(--ink-soft)">Pre-foreclosure notice. Loss mitigation protections activate.</span>
+                                </div>
+                            </div>
+                            <div style="position:relative;padding:0 0 8px 20px">
+                                <div style="position:absolute;left:-7px;top:12px;width:12px;height:12px;border-radius:50%;background:var(--brand)"></div>
+                                <div style="display:flex;align-items:baseline;gap:14px;padding:10px 14px;background:var(--card);border-radius:8px">
+                                    <span style="font-size:12px;font-weight:600;color:var(--brand);white-space:nowrap;min-width:100px">~Day 120 – 160</span>
+                                    <span style="font-size:13px;color:var(--ink-soft)">NED filed. Official clock starts. 110–125 days until sale.</span>
+                                </div>
+                            </div>
+                            <div style="position:relative;padding:0 0 8px 20px">
+                                <div style="position:absolute;left:-7px;top:12px;width:12px;height:12px;border-radius:50%;background:var(--brand)"></div>
+                                <div style="display:flex;align-items:baseline;gap:14px;padding:10px 14px;background:var(--card);border-radius:8px">
+                                    <span style="font-size:12px;font-weight:600;color:var(--brand);white-space:nowrap;min-width:100px">~Day 150 – 250</span>
+                                    <span style="font-size:13px;color:var(--ink-soft)">Combined notices arrive. <a href="/rule-120-hearing">Rule 120 hearing</a>. 14+ days to respond.</span>
+                                </div>
+                            </div>
+                            <div style="position:relative;padding:0 0 8px 20px">
+                                <div style="position:absolute;left:-7px;top:12px;width:12px;height:12px;border-radius:50%;background:var(--brand)"></div>
+                                <div style="display:flex;align-items:baseline;gap:14px;padding:10px 14px;background:var(--card);border-radius:8px">
+                                    <span style="font-size:12px;font-weight:600;color:var(--brand);white-space:nowrap;min-width:100px">~Day 245+</span>
+                                    <span style="font-size:13px;color:var(--ink-soft)">Cure deadline. File 15 days before sale. Pay by noon day before.</span>
+                                </div>
+                            </div>
+                            <div style="position:relative;padding:0 0 0 20px">
+                                <div style="position:absolute;left:-7px;top:12px;width:12px;height:12px;border-radius:50%;background:#A32D2D"></div>
+                                <div style="display:flex;align-items:baseline;gap:14px;padding:10px 14px;background:#fcebeb;border-radius:8px">
+                                    <span style="font-size:12px;font-weight:600;color:#A32D2D;white-space:nowrap;min-width:100px">~Day 270</span>
+                                    <span style="font-size:13px;color:var(--ink-soft)">Sale. No redemption in Colorado. Claim any surplus.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p style="font-size:12px;color:var(--muted);font-style:italic;margin:14px 0 0;padding-top:12px;border-top:1px solid var(--line)">Loss mitigation can start Day 1, must complete 37+ days before sale.</p>
+                    </div>
+
+                    <h2 id="first-missed">What I wish someone told me after my first missed payment</h2>
+
+                    <p>The foreclosure process technically begins when you miss and don't resolve your first mortgage payment within the grace period. It can happen for countless reasons. It's not an indictment of you. I have missed a mortgage payment before so I get it. Things happen. Once you have missed that payment, under federal law (12 CFR 1024.41) they cannot start a foreclosure filing until the loan is 120+ days past due. Even though they can't file yet, it is very important to understand that the process is still in motion. This is valuable time between your first missed payment and the pre-foreclosure letter to resolve your situation in whatever way possible. If you have short-term money hardship, looking into loss mitigation options as early as possible with your servicer is always a valuable practice and is covered in more depth <a href="#frustrating-option">here</a>.</p>
+
+                    <h2 id="people-helpful">Wondering if these people are actually helpful</h2>
+
+                    <p>If you haven't been able to resolve your situation by this stage we still have lots of time but we need to move with urgency. You will be receiving a formal pre-foreclosure notice in the mail from your servicer. I understand if this letter is a reminder of something you want to forget but you can get through this. That letter will contain the following information:</p>
+
+                    <ul>
+                        <li>Colorado Foreclosure Hotline Number</li>
+                        <li>Direct phone number of homeowner's Loss Mitigation Contact or department</li>
+                        <li>A statement that it is illegal for anyone "acting" as a foreclosure consultant to charge an upfront fee (CRS 6-1-1107).</li>
+                    </ul>
+
+                    <p>These exist to help you keep your house. Are they satisfactory or truly helpful? I hope they are, but that will be something you have to determine for yourself. On top of these support systems I want you to be aware of a couple legal protections that are in place at this stage of the process.</p>
+
+                    <p>First, legally you should have a "single point of contact" (CRS 38-38-103.1) to help resolve your foreclosure case. If you are being passed around multiple people please document that as it could help you down the road. Secondly, if you submit a "completed" loss mitigation application 37+ days prior to the sale of your home, the bank can't foreclose while reviewing your application because of the Dual Tracking Prohibition (CRS 38-38-103.2) statute.</p>
+
+                    <p>If you submit an application, it's worth getting written confirmation from your loss mitigation contact stating it is "completed" and then you need to present written notification to the Public Trustee no later than 14 calendar days before the sale date. If they don't consider it "completed" AND/OR it's not delivered to the Public Trustee they will proceed with the foreclosure even if it feels like you did your part. It's harsh but taking full ownership of this process is what keeps your home safe.</p>
+
+                    <h2 id="no-sense">None of this makes sense and that's not your fault</h2>
+
+                    <p>Next, the bank's lawyer will file what is called a "Notice of Election and Demand (NED)" with the Public Trustee (CRS 38-38-101). Then it must be recorded within 10 business days by the Public Trustee (CRS 38-38-102). I know this doesn't mean anything to you and it didn't to me either initially. However, it's important because once the NED is recorded the official foreclosure process begins. At this stage, you have approximately 110 to 125 days until your home is officially foreclosed and no longer yours. If you need a moment after hearing that, take it, walk away and come back so we can save your house.</p>
+
+                    <h2 id="time-running">The feeling that time is running out</h2>
+
+                    <p>After the Public Trustee files the NED, within 20 days, by law (CRS 38-38-103), you will receive your first "combined notice" in the mail. They will send a second notice 45-60 days prior to the expected sale date of your home. The combined notices will have the following information and more:</p>
+
+                    <ul>
+                        <li>The sale date, time, and location</li>
+                        <li>The property's legal description</li>
+                        <li>The outstanding loan balance owed as of the date</li>
+                        <li>Statutory language about your right to cure (with the 15-days-before-sale deadline)</li>
+                        <li>Statutory language about junior lienholder redemption rights (8 business days after sale)</li>
+                        <li>AG/CFPB complaint info &amp; contact information</li>
+                    </ul>
+
+                    <p>This information will help you know what is needed to keep your home. What it won't do, is help you figure out how you're going to do it. I will touch on some of those potential options in the next section and if you want specific information, <a href="/your-options">we at Transitus are here to help</a>. Time at this stage seems short and every decision or indecision feels heavy. There is so much going on and a lot that needs to be accomplished so I understand the burden. We will narrow down some ways out next.</p>
+
+                    <p>Quickly before that, it's important to know, the bank's lawyer will next file a motion called a <a href="/rule-120-hearing">Rule 120</a> where they are trying to receive legal approval to sell your house. The notice will be provided to you and you have the option to respond or not. There are reasons when you should respond and when you should save your energy and time for other parts of this exhausting process.</p>
+
+                    <h2 id="anyone-care">Does anyone care if I keep my house?</h2>
+
+                    <p>Now the important part. How do you either save your house or save yourself from the penalties of foreclosure? Most importantly, filing a Notice of Intent to Cure (CRS 38-38-104) at least 15 days before the sale date is a critical step. Once that is filed, you have to pay the necessary statements no later than noon on the day before the sale date found on the "combined notice" to keep your home. Coming up with this money feels impossible. But people in this situation have found it in places they didn't initially consider. Here are some below:</p>
+
+                    <ul>
+                        <li>Hard Money Loan Against Home Equity</li>
+                        <li>Private Investor Loan</li>
+                        <li>401(K) Liquidation or Loan Against 401(K) or stock portfolio</li>
+                        <li>Family can legally supply payment</li>
+                        <li>Selling other owned assets</li>
+                        <li>Cash Buyer like Transitus</li>
+                        <li>Refinance (if possible)</li>
+                        <li>Sell On Market (if you have enough time)</li>
+                    </ul>
+
+                    <p>If none of these options feel right, feel attainable, or don't fit what you want to do I understand. I want to do my best to give you all the information that could help you. If you're curious about some of these options you can <a href="/your-options">reach out to us at Transitus</a>. Otherwise, as mentioned earlier in the article there are potential options by working directly with the bank itself.</p>
+
+                    <h2 id="frustrating-option">A great option but a frustrating option</h2>
+
+                    <p>I understand if working directly with the bank and the people who are trying to take your house feels frustrating and empty. However, for context, the bank doesn't necessarily want to foreclose on your house as it will most likely be a negative cost to their business and therefore they have an incentive to find some middle ground with you. That is what the loss mitigation process is for. Essentially, you will work directly with the servicer to find ways to change/alter your loan so you can pay it instead of losing your home. These are worth discussing with your servicer:</p>
+
+                    <ul>
+                        <li>Loan Modification</li>
+                        <li>Forbearance</li>
+                        <li>Repayment Plan</li>
+                        <li>Partial Claim</li>
+                        <li>Deed in Lieu / Short Sale</li>
+                    </ul>
+
+                    <p>Also, here are some extremely important things to understand when pursuing this process:</p>
+
+                    <ul>
+                        <li>You can start this process the moment you miss your first payment.</li>
+                        <li>You are required to submit a completed loss mitigation application to your servicer at least 37 days before the sale date.</li>
+                        <li>It's important to receive written confirmation from your loss mitigation contact stating your application is completed, then hand-deliver it to the Public Trustee at least 14 calendar days before the sale date.</li>
+                        <li>If you are missing even a single document, you are unprotected and it won't be considered completed. Double-checking everything has been provided is critical.</li>
+                    </ul>
+
+                    <p>I know this is so much information and this entire process is tiring to track. Unfortunately, it is meant to be hard and if it becomes too much work then it's worth honestly assessing if going into foreclosure is better than any other options available.</p>
+
+                    <h2 id="why-care">Why should I even care anymore?</h2>
+
+                    <p>It's over. It's draining. All this work and your house was still foreclosed and still sold to someone else. I understand if you want to give up but I need to make sure you know that your home could sell in surplus over what you owe the bank and other loan holders. If it does, you are entitled to that surplus and the Public Trustee is required to "make a reasonable effort" to identify your current address and mail a notice within 30 days. Also, you can find the surplus information (38-38-111(2.5)(a)) at the Public Trustee website where your home is located but contacting directly is best. If you don't claim it within six months of the sale, the money is transferred to the Colorado state unclaimed property administrator where you can still claim it there, but the process is harder. Even though it's hard, don't wait as everything in this process always seems to get harder.</p>
+
+                    <h2 id="bad-stop">When is the bad going to stop?</h2>
+
+                    <p>If you are from out of state, two quick but important notes. In Colorado, the homeowner doesn't have any opportunity to get the house post mortgage foreclosure/sale (CRS 38-38-302) and is why pre-sale decisions are so important like the things listed above.</p>
+
+                    <p>Secondly, if the sale doesn't cover the loan, the lender can file a deficiency judgment (CRS 4-3-118). This is a separate lawsuit which will be a court order saying you owe them money and they can garnish your wages, place liens on future properties, and/or sell the debt to a collector agency. You can argue against this that your home wasn't sold at fair market value. You can visit our article on <a href="/fair-home-offer#fixed-up-value">understanding fair value for your home</a> to help determine if that's the case. For you, do comparables relative to your house's condition when sold, not the "fixed up" version of it.</p>
+
+                    <p>I don't want to tell you these things to continue to pile on but to give you all the information so you can make the best decision for you. If it feels unfair and like bullshit that is completely reasonable to feel that way. In order for me to be the most helpful, I have to provide the information as it is and let you know I see you in this tough situation.</p>
+
+                    <h2 id="two-evils">The better of two evils is obvious</h2>
+
+                    <p>The last piece of information I want to provide is foreclosure compared to selling beforehand. If this isn't what you wanted this will be tough but it's important to still make the best of every option you have.</p>
+
+                    <p>Ultimately, going the foreclosure route in most cases will be more detrimental to you. Only cash bidders, no financing, and no inspection buyers can participate and therefore there is a smaller demand pool on your home which can lead to 70 to 85% of fair market value. Next, we discussed the deficiency lawsuit risk which will be more likely in a scenario where you get much less than market value and that can haunt you for 6 years after sale. Lastly, <a href="/foreclosure-credit-report">your credit will take a major hit of several hundred points</a> and can impact so much in life. Buying a home, renting a home, leasing a car, acquiring a credit card are all impacted by this as are many other things.</p>
+
+                    <p>All of this is to say, people in this situation often sell their home prior to being foreclosed and we at Transitus are happy to show you what is available considering your situation in the foreclosure process. I know this wasn't fun but I hope this was helpful and I wish the best of luck to you and your family and I'm sure you will get back on your feet. I am here if you need anything. Whenever you're ready.</p>
+
+                    <p class="disclaimer">This article is general information from Transitus, not legal, financial, or tax advice. Foreclosure rules change and every situation is different. Transitus is not a foreclosure consultant (CRS 6-1-1103) and charges no upfront fees. For free help, call the Colorado Foreclosure Hotline at 1-877-601-HOPE or consult a Colorado real estate attorney.</p>
+
+                    <div class="cta-card">
+                        <h3>If you'd like to see your specific options</h3>
+                        <p class="cta-helper">Free. Your options delivered by email within 48 hours. No surprise calls, no spam.</p>
+                        <form action="https://formspree.io/f/xqewvyzg" method="POST">
+                            <input type="hidden" name="_subject" value="New Transitus Lead (from Foreclosure Guide)">
+                            <input type="hidden" name="_next" value="thank-you.html">
+                            <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" required></div>
+                            <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+                            <div class="fg"><label for="address">Property Address</label><input type="text" id="address" name="address" required></div>
+                            <div class="fg"><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone"></div>
+                            <button type="submit" class="submit">Get My Free Options</button>
+                        </form>
+                        <a href="/" class="back-link">← Back to Transitus home</a>
+                    </div>
+
+                    <div class="guides-exit">
+                        <p>Not ready yet? No pressure. <a href="/guides">Read our other guides for Colorado homeowners.</a></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap foot">
+            <span class="brand-name">Transitus</span>
+            <span class="foot-meta">&copy; 2026 Transitus, LLC &middot; <a href="/privacy">Privacy</a> &middot; Denver, Colorado</span>
+        </div>
+    </footer>
+    <script>
+    (function(){
+        var links=document.querySelectorAll('.toc-links a');
+        var sections=[];
+        links.forEach(function(a){var id=a.getAttribute('href').replace('#','');var el=document.getElementById(id);if(el)sections.push({id:id,el:el,link:a});});
+        if(!sections.length)return;
+        function update(){
+            var y=window.scrollY||window.pageYOffset,cur=sections[0].id;
+            for(var i=0;i<sections.length;i++){if(sections[i].el.offsetTop-96<=y)cur=sections[i].id;}
+            links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href').replace('#','')===cur);});
+        }
+        window.addEventListener('scroll',update,{passive:true});update();
+    })();
+    </script>
+</body>
+</html>

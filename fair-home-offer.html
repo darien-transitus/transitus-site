@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.className='js';</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18117724697"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','AW-18117724697');</script>
+    <title>You deserve to know if a home offer is fair | Transitus</title>
+    <link rel="canonical" href="https://gettransitus.ai/fair-home-offer">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+    <meta name="description" content="You shouldn't have to guess if an offer is fair. The formula buyers use, the math behind it, and the questions worth asking.">
+    <meta property="og:title" content="You deserve to know if a home offer is fair">
+    <meta property="og:description" content="You shouldn't have to guess if an offer is fair. The formula buyers use, the math behind it, and the questions worth asking.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gettransitus.ai/fair-home-offer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--navy:#2B4C7E;--navy-deep:#1d3556;--cream:#f8f7f4;--paper:#ffffff;--surface:#ffffff;--ink:#1b1a16;--ink-soft:#52504a;--muted:#8d8b80;--line:#e8e3d7;--c1-bg:#eaf0f8;--c1-tx:#274a78;--brand:#2B4C7E;--brand-dark:#1d3556;--brand-light:#eaf0f8;--bg:#f8f7f4;--card:#ffffff}
+        html{scroll-behavior:smooth}
+        body{font-family:'Hanken Grotesk',-apple-system,sans-serif;color:var(--ink-soft);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+        .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+        h1,h2,h3{font-family:'Newsreader',Georgia,serif;color:var(--ink);font-weight:500;letter-spacing:-0.01em;line-height:1.12}
+        a{color:inherit;text-decoration:none}
+
+        header{position:sticky;top:0;z-index:50;background:rgba(248,247,244,0.82);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+        .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+        .brand{display:flex;align-items:center;gap:11px}
+        .brand svg{width:34px;height:18px}
+        .brand-name{font-family:'Newsreader',serif;font-weight:600;font-size:22px;letter-spacing:0.02em;color:var(--navy)}
+        .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:14px;border-radius:999px;padding:9px 18px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;cursor:pointer;white-space:nowrap}
+        .btn-primary{background:var(--navy);color:#fff;box-shadow:0 1px 2px rgba(27,26,22,.12),0 10px 24px -10px rgba(43,76,126,.5)}
+        .btn-primary:hover{background:var(--navy-deep);transform:translateY(-2px)}
+        .btn .arr{transition:transform .2s ease}.btn:hover .arr{transform:translateX(4px)}
+
+        .alayout{display:flex;gap:0;align-items:flex-start;max-width:1000px;margin:0 auto;padding:52px 0 64px}
+        .toc{width:212px;flex-shrink:0;padding-right:36px;position:sticky;top:92px;align-self:flex-start}
+        .toc-label{font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin-bottom:14px}
+        .toc-links{display:flex;flex-direction:column;border-left:1.5px solid var(--line)}
+        .toc-links a{font-size:13px;color:var(--muted);line-height:1.35;padding:7px 0 7px 15px;border-left:2px solid transparent;margin-left:-1.5px;transition:color .2s,border-color .2s}
+        .toc-links a:hover{color:var(--navy)}
+        .toc-links a.active{color:var(--navy);font-weight:600;border-left-color:var(--navy)}
+
+        .toc-mobile{display:none;margin-bottom:24px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+        .toc-mobile-toggle{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;background:transparent;cursor:pointer;border:none;width:100%;font-family:inherit;font-size:14px;color:var(--navy);font-weight:600}
+        .toc-mobile-toggle .caret{font-size:10px;transition:transform .2s}
+        .toc-mobile-toggle.open .caret{transform:rotate(180deg)}
+        .toc-mobile-list{max-height:0;overflow:hidden;transition:max-height .3s ease;background:var(--c1-bg)}
+        .toc-mobile-list.open{max-height:640px}
+        .toc-mobile-list a{display:block;font-size:13.5px;color:var(--navy);padding:9px 18px;border-bottom:1px solid rgba(43,76,126,.1)}
+        .toc-mobile-list a:last-child{border-bottom:none}
+
+        .article{flex:1;min-width:0;max-width:720px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(32px,5vw,62px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 40px 80px -55px rgba(27,26,22,.4)}
+        .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:22px}
+        .breadcrumb a{color:var(--navy);font-weight:500}
+        .breadcrumb a:hover{text-decoration:underline}
+        .article h1{font-size:clamp(2rem,4.2vw,2.85rem);font-weight:500;color:var(--ink);line-height:1.16;margin-bottom:18px}
+        .byline{display:flex;align-items:center;gap:11px;padding:0 0 22px;border-bottom:1px solid var(--line);margin-bottom:34px}
+        .byline svg{width:26px;height:14px;flex-shrink:0}
+        .byline-text{font-size:14px;color:var(--ink-soft);line-height:1.4}
+        .byline-text .author{color:var(--navy);font-weight:600}
+        .byline-text .meta{color:var(--muted)}
+        .article h2{font-size:clamp(1.4rem,2.6vw,1.72rem);font-weight:500;color:var(--ink);line-height:1.25;margin-top:44px;margin-bottom:15px;scroll-margin-top:96px}
+        .article p{font-size:17px;color:var(--ink-soft);line-height:1.78;margin-bottom:20px}
+        .article p strong{color:var(--ink);font-weight:600}
+        .article a:not(.btn){color:var(--navy);font-weight:500;text-decoration:underline;text-decoration-color:rgba(43,76,126,0.32);text-underline-offset:3px;transition:text-decoration-color .2s}
+        .article a:not(.btn):hover{text-decoration-color:var(--navy)}
+        .article ul{list-style:none;padding:0;margin:0 0 24px}
+        .article ul li{font-size:17px;color:var(--ink-soft);margin-bottom:13px;padding-left:36px;position:relative;line-height:1.7}
+        .article ul li::before{content:"";position:absolute;left:0;top:8px;width:25px;height:13px;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-2 0 34 16' fill='none' stroke='%232B4C7E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='3' cy='8' r='2.5' fill='%232B4C7E'/%3E%3Cline x1='6' y1='8' x2='26' y2='8'/%3E%3Cpolyline points='22,3 28,8 22,13'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain;background-position:left center}
+        .article ul li strong{color:var(--ink);font-weight:600}
+
+        .disclaimer{font-size:13px;color:var(--muted);background:var(--cream);border:1px solid var(--line);border-left:3px solid var(--navy);border-radius:12px;padding:18px 20px;margin-top:38px;line-height:1.6}
+
+        .cta-card{margin-top:48px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(30px,4vw,44px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 30px 60px -45px rgba(27,26,22,.35)}
+        .cta-card h3{font-family:'Newsreader',serif;font-size:1.6rem;font-weight:500;color:var(--ink);text-align:center;margin-bottom:6px}
+        .cta-helper{font-size:14px;color:var(--muted);text-align:center;margin-bottom:26px}
+        .fg{margin-bottom:14px}
+        .fg label{display:block;font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:6px}
+        .fg input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:15px;background:var(--surface);color:var(--ink);transition:border-color .15s,box-shadow .15s}
+        .fg input:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(43,76,126,.14)}
+        .submit{width:100%;margin-top:8px;background:var(--navy);color:#fff;font-family:inherit;font-weight:600;font-size:15px;border:none;border-radius:10px;padding:14px;cursor:pointer;transition:background .18s,transform .18s}
+        .submit:hover{background:var(--navy-deep);transform:translateY(-1px)}
+        .back-link{display:inline-block;margin-top:20px;font-size:14px;color:var(--navy);font-weight:500}
+        .back-link:hover{text-decoration:underline}
+
+        footer{margin-top:8px;background:var(--navy-deep);color:rgba(255,255,255,.62)}
+        .foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:30px 0}
+        .foot .brand-name{color:#fff;font-size:19px}
+        .foot a{color:#fff;font-weight:500}.foot a:hover{text-decoration:underline}
+        .foot-meta{font-size:13.5px}
+
+        @media(max-width:880px){
+            .toc{display:none}
+            .article{max-width:none}
+            .alayout{padding:34px 0 48px}
+            .toc-mobile{display:block}
+        }
+        @media(max-width:600px){.foot{flex-direction:column;text-align:center}}
+        @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+        /* fair-home-offer components, restyled for the new design */
+        .formula-box{background:var(--c1-bg);border:1.5px solid var(--navy);border-radius:14px;padding:24px 28px;margin:28px 0;text-align:center}
+        .formula-label{font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:var(--navy);font-weight:700;margin-bottom:10px}
+        .formula-text{font-size:19px;color:var(--ink);font-weight:600;line-height:1.4}
+        .formula-example{font-size:15px;color:var(--ink-soft);font-weight:400;margin-top:12px;padding-top:12px;border-top:1px dashed rgba(43,76,126,.3)}
+        .compare-table-wrap{margin:24px 0 16px;overflow-x:auto;border:1px solid var(--line);border-radius:14px}
+        .compare-table{width:100%;border-collapse:collapse;font-size:15px;background:var(--surface)}
+        .compare-table thead th{background:#e3ebf6;color:var(--ink-soft);font-weight:600;font-size:12px;text-transform:uppercase;letter-spacing:.08em;padding:14px 18px;text-align:left;border-bottom:1px solid var(--line)}
+        .compare-table thead th:not(:first-child){text-align:right}
+        .compare-table tbody th{font-weight:600;color:var(--ink);padding:14px 18px;text-align:left;border-bottom:1px solid var(--line)}
+        .compare-table tbody td{padding:14px 18px;text-align:right;border-bottom:1px solid var(--line);color:var(--ink-soft)}
+        .compare-table tbody td.expected{color:var(--muted)}
+        .compare-table tbody tr:last-child th,.compare-table tbody tr:last-child td{border-bottom:none;background:var(--c1-bg);font-weight:700}
+        .compare-table .profit-positive{color:#2f7d54}
+        .compare-table .profit-negative{color:#a83b32}
+        .compare-caption{font-size:13px;color:var(--muted);font-style:italic;margin-bottom:28px;text-align:center}
+        .expense-list{background:var(--c1-bg);border:1px solid var(--line);border-radius:14px;padding:24px 28px;margin:24px 0}
+        .expense-list ul{list-style:none;padding:0;margin:0;columns:2;column-gap:32px}
+        .expense-list ul li{font-size:14px;color:var(--ink-soft);padding:6px 0;padding-left:0;break-inside:avoid;line-height:1.5}
+        .expense-list ul li::before{display:none}
+        .expense-list ul li strong{color:var(--ink);font-weight:600}
+        .expense-list .expense-total{margin-top:16px;padding-top:16px;border-top:1px solid var(--line);font-size:15px;font-weight:600;color:var(--ink);line-height:1.7}
+        .expense-list .expense-total .loss{color:#a83b32;font-weight:700}
+        @media(max-width:768px){.formula-text{font-size:16px}.formula-example{font-size:13px}.compare-table{font-size:14px}.compare-table thead th,.compare-table tbody th,.compare-table tbody td{padding:10px 12px}.expense-list ul{columns:1}}
+        .guides-exit{margin-top:20px;text-align:center}
+        .guides-exit p{font-size:15px;color:var(--muted)}
+        .guides-exit a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:rgba(43,76,126,.3);text-underline-offset:3px}
+        .guides-exit a:hover{text-decoration-color:var(--navy)}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="wrap nav">
+            <a href="/" class="brand" aria-label="Transitus home">
+                <svg viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></svg>
+                <span class="brand-name">Transitus</span>
+            </a>
+            <a href="/your-options" class="btn btn-primary">See my options <span class="arr">&rarr;</span></a>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <div class="alayout">
+                <nav class="toc" aria-label="Table of contents">
+                    <p class="toc-label">On this page</p>
+                    <div class="toc-links">
+                        <a href="#taken-advantage" class="active">Taken advantage of</a>
+                        <a href="#constant-questioning">Is the offer good?</a>
+                        <a href="#whats-fair">What's fair?</a>
+                        <a href="#trust-me">Should you trust me?</a>
+                        <a href="#who-are-buyers">Who are these buyers?</a>
+                        <a href="#property-value">Is your property valuable?</a>
+                        <a href="#hard-look">A hard look in the mirror</a>
+                    </div>
+                </nav>
+                <article class="article">
+                    <div class="toc-mobile">
+                        <button type="button" class="toc-mobile-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+                            <span>What's in this article</span>
+                            <span class="caret">&#9662;</span>
+                        </button>
+                        <div class="toc-mobile-list">
+                            <a href="#taken-advantage">Taken advantage of</a>
+                            <a href="#constant-questioning">Is the offer good?</a>
+                            <a href="#whats-fair">What's fair?</a>
+                            <a href="#trust-me">Should you trust me?</a>
+                            <a href="#who-are-buyers">Who are these buyers?</a>
+                            <a href="#property-value">Is your property valuable?</a>
+                            <a href="#hard-look">A hard look in the mirror</a>
+                        </div>
+                    </div>
+                    <nav class="breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp; Articles &nbsp;/&nbsp; Fair home offers</nav>
+                    <h1>The anxiety of not knowing what to do with your home.</h1>
+                    <div class="byline">
+                        <svg viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></svg>
+                        <div class="byline-text">Written by <span class="author">Transitus</span> <span class="meta">&middot; Denver, Colorado &middot; May 11, 2026</span></div>
+                    </div>
+
+                    <p>It's scary. It's frustrating. It's exhausting. The unknown of what will happen or what decision to make for your home is a never ending roller coaster. One day you're okay. The next day you aren't. The weight is unbearable in moments and you question if there is a way to make this work for you and your family. I see you. I see the burden. The hardship is your own individual experience that you have to navigate and overcome but you are not alone. I am here to help if you need it. I understand you don't know me and may not trust me and that is completely fair. The world is filled with deception, with selfishness, with greed, and you and I have both experienced that countless times so I understand.</p>
+
+                    <h2 id="taken-advantage">The feeling of being taken advantage of by buyers</h2>
+                    <p>This greed, this predatory nature that you have experienced is something that has heightened during this period of home distress. You receive endless phone calls, emails, mail, from people wanting to "buy your house in cash" without acknowledging your situation, what is best for you, or you as a person. It's annoying, there's anger, there's bitterness, there's pain. What you are feeling is true. You are living the experience of an entire industry trying to take advantage of you, of your friends, of your family in one of the harder moments of your life. This is how the vast majority of the off-market real estate industry operates by preying on people in hardship. You deserve better. You deserve help.</p>
+
+                    <h2 id="constant-questioning">The constant questioning if an offer is good for you or not</h2>
+                    <p>The more you hear from people trying to buy your house, the more you question what you don't know that they do. Is what they are offering fair? Is it something I should accept or something I shouldn't accept? Am I getting taken advantage of? This feeling, this questioning is reasonable when you consider the industry is built to function on an information gap between you and the people trying to buy your house. You aren't supposed to know this information. It isn't your job to buy and sell real estate like it is the industry's livelihood. You have never been told this information to ensure the industry gets the largest returns they possibly can at the expense of you as the homeowner. I'm here to change this because you deserve to understand your situation, pick what's best for you, and not get taken advantage of.</p>
+
+                    <h2 id="whats-fair">How do you know what is fair or what is not when you receive an offer?</h2>
+                    <p>That's a great question and one I'm excited to share with you. After this section, you will be able to confidently determine if an offer is good or not for you. When you see the math I can understand if it still feels like a rip-off and that's completely valid but the information is still important to share.</p>
+                    <p>To be truthful, every buyer you hear from has slightly different formulas or metrics to determine what price they "need" to buy any property. With that, here is how you protect yourself and know if an offer is in the ballpark of fair value or if someone is trying to take advantage of you and your situation. Here is the formula you will always use:</p>
+
+                    <div class="formula-box" id="fixed-up-value">
+                        <p class="formula-label">The Fair Offer Formula</p>
+                        <div class="formula-text">Fair Offer = (Fixed Up Value &times; 0.78) &minus; Repair Costs</div>
+                    </div>
+
+                    <p>You might be wondering, thanks for the formula but how do I calculate half of the things in it. And you are right so we continue.</p>
+                    <p>Guidance for the "fixed up value" is as follows:</p>
+                    <ul>
+                        <li>Navigate to <a href="https://www.zillow.com" target="_blank" rel="noopener">zillow.com</a></li>
+                        <li>Search for sold properties that have comparable property details to your home</li>
+                        <li>Comparable details to care about:
+                            <ul>
+                                <li># of bedrooms</li>
+                                <li># of bathrooms</li>
+                                <li>Home Square Footage (+/- 20% of your home)</li>
+                                <li>Property Lot Size (+/- 20% of your home)</li>
+                                <li>Year Built (+/- 20 Years)</li>
+                                <li>Days On Market</li>
+                                <li>Sale Price</li>
+                                <li>Sold within the last year</li>
+                                <li>Renovation level</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p>If you can find multiple properties with similar comparables on the list above you can be quite confident on the "fixed up value" of your home. Next, transparently, repair costs are harder to calculate as there isn't a perfect formula. These costs are learned over time through doing multiple home repairs and learning from each experience. In your case, I would encourage you to <a href="/your-options">communicate with us at Transitus</a> and we can refer you to a general contractor or provide the repair cost numbers ourselves.</p>
+                    <p>Once you know the answers you are in a great position to understand what is fair or not for your home. Anything under 70% in the fair value calculator I would always ask the buyer to show how they got to their numbers. Then, if they won't, most likely they are trying to take advantage of you so now you are equipped to walk away with full confidence. If they start a conversation or the fair value is near the 78% range it's something to consider if you are in need of selling.</p>
+
+                    <h2 id="trust-me">Should you trust me and do I know what I'm talking about?</h2>
+                    <p>I don't want to tell you what to do in any scenario. I believe I am doing the right thing but you have to feel that for yourself. If it feels right, I'm truly excited to help and we can keep moving forward together. I want to now provide further context to the math we discussed above with a recent example of my own.</p>
+                    <p>I recently bought a distressed home, repaired it, and then sold it here in Denver, Colorado. Here is the property address and the zillow link so you can follow along if you would like: 11842 W 14th Ave, Lakewood, CO 80401 &mdash; <a href="https://www.zillow.com/homedetails/11842-W-14th-Ave-Golden-CO-80401/13762730_zpid/" target="_blank" rel="noopener">view on Zillow</a>.</p>
+                    <p>When a buyer like me purchases a distressed home, it comes with a lot of uncertainty and therefore risk. This uncertainty shows up in unexpected costs that cannot be known without a house inspection or the rehab process (post purchase). Therefore high uncertainty and high risk are involved in the business of acquiring distressed properties and fixing them up.</p>
+                    <p>Here are the numbers: I bought the house for $315,000 and sold it for $555,000 with $10,000 in seller concessions 7 months later. At face value, this looks like I made a lot of money. However, when you dive into the numbers it reveals a much different story. Below is what I expected vs. what happened in sale price, hold-time, profit and repair costs:</p>
+
+                    <div class="compare-table-wrap">
+                        <table class="compare-table">
+                            <thead><tr><th></th><th>Expected</th><th>Actual</th></tr></thead>
+                            <tbody>
+                                <tr><th>Sale price</th><td class="expected">$568,500</td><td>$555,000</td></tr>
+                                <tr><th>Repair costs</th><td class="expected">$125,000</td><td>$175,255</td></tr>
+                                <tr><th>Hold-time</th><td class="expected">4.5 months</td><td>7 months</td></tr>
+                                <tr><th>Profit</th><td class="expected profit-positive">+$40,000</td><td class="profit-negative">&minus;$25,000</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="compare-caption">11842 W 14th Ave, Lakewood, CO</p>
+
+                    <p>First, let's put the fair value calculator to the test with my expected numbers:</p>
+                    <div class="formula-box">
+                        <p class="formula-label">Applied to my flip</p>
+                        <div class="formula-text">Fair Value = (Fixed Up Value &times; 0.78) &minus; Repair Costs</div>
+                        <div class="formula-example">$318,430 = ($568,500 &times; 0.78) &minus; $125,000</div>
+                    </div>
+
+                    <p>As you can see, I purchased the house for slightly less than the fair value calculator would say at $315,000. However, the fair value formula only protects you when the rehab estimate and expected sale price is accurate. My actual rehab budget was $50K more than expected, and therefore the math shifted entirely. This is why the fair value calculator is truthful for both seller and buyer. The math captures real risk, not just buyer greed.</p>
+                    <p>On top of what was listed above, here is a list of all the potential expenses that exist from purchase to re-sale for a buyer like me. Every line is real money I had to cover before I could sell the project at 11842 W 14th Avenue:</p>
+
+                    <div class="expense-list">
+                        <ul>
+                            <li><strong>Lender Service Fee</strong> ($1,499)</li>
+                            <li><strong>Loan Origination Fee</strong> ($9,375)</li>
+                            <li><strong>Closing Costs of purchase</strong> ($1,950)</li>
+                            <li><strong>Monthly Mortgage Payments</strong> (11.99% or $23,726)</li>
+                            <li><strong>Property Taxes</strong> ($206/mo, $1,442)</li>
+                            <li><strong>Utilities</strong> ($120/mo, $840)</li>
+                            <li><strong>Insurance</strong> ($235/mo, $1,645)</li>
+                            <li><strong>Agent Commissions when sold</strong> (4.9% or $27,195)</li>
+                            <li><strong>Permit/Inspection Costs</strong> ($952)</li>
+                            <li><strong>Repair Interest Costs</strong> ($3,891)</li>
+                            <li><strong>Staging Costs</strong> ($1,235)</li>
+                            <li><strong>Photography Costs</strong> ($293)</li>
+                            <li><strong>Repair Costs</strong> ($175,255)</li>
+                            <li><strong>Repair Cost Draw Fee</strong> ($1,500)</li>
+                            <li><strong>HELOC Interest</strong> ($3,813)</li>
+                            <li><strong>Seller Closing Costs</strong> ($1,363)</li>
+                        </ul>
+                        <div class="expense-total">
+                            <p>Total costs reflected: <strong>$255,974</strong></p>
+                            <p>$315,000 (purchase) + $255,974 (costs) = $570,974 (total debts)</p>
+                            <p>$555,000 (sale) &minus; $10,000 (seller concessions) = $545,000 &minus; $570,974 &asymp; <span class="loss">$25,000 loss</span></p>
+                        </div>
+                    </div>
+
+                    <p>All of this is to show, there is a reason for the specific offer amount that buyers need when communicating with you. However, more often than not, these buyers will try to get a better price than they truly need because they don't think you know what's happening. Now you do and you can confidently protect yourself.</p>
+
+                    <h2 id="who-are-buyers">Who exactly and what exactly do each of these buyers do?</h2>
+                    <p>Many times, you get phone calls or emails and they are asking you all the questions and trying to force answers out of you. That can feel one-sided and extractive but I want you to flip the script and begin to learn who your buyers are and how they operate. Here are the questions you should ask:</p>
+                    <ul>
+                        <li>Are you a wholesaler, an investor or a developer?</li>
+                        <li>Will you be assigning this property to someone else or completing the project yourself?</li>
+                        <li>Are you going to scrape my property and build a brand new property or remodel my house as-is?</li>
+                        <li>Can you show me your numbers as to how you are getting fair value for your offer to me?</li>
+                    </ul>
+                    <p><strong>Context:</strong></p>
+                    <p>A <strong>wholesaler</strong> buys property and then assigns it right away to an investor. They will need a slightly lower price so they can make money in between you and the investor.</p>
+                    <p>An <strong>investor</strong> is the direct buyer, and they will be the individual who is buying, repairing and then selling the property after it's fixed up. Without a wholesaler involved, they have a little more wiggle room on price.</p>
+                    <p>A <strong>developer</strong> is most likely going to knock down your entire house and then build two properties on the same lot to make a larger return. With a larger return, you should expect a greater sale price for you. This is much more complex than what has been discussed but <a href="/your-options">Transitus is happy to guide you through it</a>.</p>
+                    <p>I hope this helps you feel more comfortable in understanding "what" will be happening to your home, who has more wiggle room if you sell it and so you can prepare for the change as a home is deeply personal.</p>
+
+                    <h2 id="property-value">How do I know if my property is more valuable than someone else's?</h2>
+                    <p>With all of the truth about the industry it's also important to be truthful about your home's situation. Not because I want you to feel bad about it but because I care that you understand all aspects of this complex situation so you can make the best decision for you.</p>
+                    <p>Here is a list of things to consider about your property:</p>
+                    <ul>
+                        <li><strong>Is your property considered livable?</strong> If so, you can sell to non-investors through conventional lending which will open the pool of "potential" buyers for your home.</li>
+                        <li><strong>Is it not considered livable?</strong> If so, you can only sell to cash buyers or non-conventional lending buyers which are mostly investors and wholesalers who you have already heard from.</li>
+                        <li><strong>Is your property in a high demand or low demand area?</strong></li>
+                        <li><strong>Is your property a single family home, townhome, apartment, duplex, etc.?</strong> In terms of value/demand on the market it typically goes like the following:
+                            <ul>
+                                <li>Single Family Home</li>
+                                <li>Townhome</li>
+                                <li>Duplex</li>
+                                <li>Apartment</li>
+                            </ul>
+                        </li>
+                        <li><strong>Are there a lot of active listings on Zillow or not many?</strong> More listings = more competition and therefore potentially harder to sell for yourself or for a buyer of your property.</li>
+                        <li><strong>Are there at least two sold comparable properties to yours in the last year?</strong> If so, an investor buyer has more security in what to expect when they have to sell.</li>
+                    </ul>
+                    <p>The more distressed your property the more unknowns that exist for a buyer and therefore the higher variance that exists in costs to the upside. This will have many buyers reduce their offer to protect against this uncertainty.</p>
+                    <p>All of these questions will help you determine your leverage with any conversations you may have with buyers of your home. Use it to get what you deserve.</p>
+
+                    <h2 id="hard-look">A hard look in the mirror but an important one</h2>
+                    <p>I understand it's hard to truly look at your situation but it's helpful to ensure you make the best decision for yourself, your family and no one else. To do so, here's what's important to understand:</p>
+                    <ul>
+                        <li>Is there some reason you HAVE to sell?</li>
+                        <li>If there is, what is the reason?</li>
+                        <li>If it's time pressure, for example, the government could take your home away from you on a certain date, what is that date?</li>
+                        <li>If you're restricted by cost, we need to assess if holding will ever get you a better offer. If not, you will incur more expenses through holding costs while not receiving greater value in the future for doing so.</li>
+                        <li>Do you have money to participate in the repair and sale of your own property? If so, you could capture the upside that buyers are trying to capture when communicating with you.</li>
+                    </ul>
+                    <p>If you can answer these questions it will help you make the best decision given your circumstances. Your circumstances are hard, but there is always a best way to move forward in any given situation. If anything in this article made you feel less alone, that's enough for me. If you'd like further personal guidance from Transitus or to see what your specific options look like, that's what the form below is for.</p>
+
+                    <div class="cta-card">
+                        <h3>If you'd like to see your specific options</h3>
+                        <p class="cta-helper">Free. Your options delivered by email within 48 hours. No surprise calls, no spam.</p>
+                        <form action="https://formspree.io/f/xqewvyzg" method="POST">
+                            <input type="hidden" name="_subject" value="New Transitus Lead (from Fair Home Offer)">
+                            <input type="hidden" name="_next" value="thank-you.html">
+                            <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" required></div>
+                            <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+                            <div class="fg"><label for="address">Property Address</label><input type="text" id="address" name="address" required></div>
+                            <div class="fg"><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone"></div>
+                            <button type="submit" class="submit">Get My Free Options</button>
+                        </form>
+                        <a href="/" class="back-link">&larr; Back to Transitus home</a>
+                    </div>
+
+                    <div class="guides-exit">
+                        <p>Not ready yet? No pressure. <a href="/guides">Read our other guides for Colorado homeowners.</a></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap foot">
+            <span class="brand-name">Transitus</span>
+            <span class="foot-meta">&copy; 2026 Transitus, LLC &middot; <a href="/privacy">Privacy</a> &middot; Denver, Colorado</span>
+        </div>
+    </footer>
+    <script>
+    (function(){
+        var links=document.querySelectorAll('.toc-links a');
+        var sections=[];
+        links.forEach(function(a){var id=a.getAttribute('href').replace('#','');var el=document.getElementById(id);if(el)sections.push({id:id,el:el,link:a});});
+        if(!sections.length)return;
+        function update(){
+            var y=window.scrollY||window.pageYOffset,cur=sections[0].id;
+            for(var i=0;i<sections.length;i++){if(sections[i].el.offsetTop-96<=y)cur=sections[i].id;}
+            links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href').replace('#','')===cur);});
+        }
+        window.addEventListener('scroll',update,{passive:true});update();
+    })();
+    </script>
+</body>
+</html>

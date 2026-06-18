@@ -1,0 +1,5 @@
+# Transitus site — flat static site deployed whole.
+# Netlify publishes the repo root as-is; there is no build step.
+[build]
+  publish = "."
+  command = ""
