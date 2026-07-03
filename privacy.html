@@ -3,237 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script>document.documentElement.className='js';</script>
     <title>Privacy Policy | Transitus</title>
     <link rel="canonical" href="https://gettransitus.ai/privacy">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
     <meta name="description" content="Transitus privacy policy: how we handle the information homeowners share with us.">
     <meta name="robots" content="noindex">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--navy:#2B4C7E;--navy-deep:#1d3556;--cream:#f6f3ec;--paper:#fffdf9;--surface:#ffffff;--ink:#1b1a16;--ink-soft:#52504a;--muted:#8d8b80;--line:#e8e3d7}
+        html{scroll-behavior:smooth}
+        body{font-family:'Hanken Grotesk',-apple-system,sans-serif;color:var(--ink-soft);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+        .wrap{max-width:800px;margin:0 auto;padding:0 24px}
+        h1,h2{font-family:'Newsreader',Georgia,serif;color:var(--ink);font-weight:500;letter-spacing:-0.01em;line-height:1.12}
+        a{color:inherit;text-decoration:none}
+        header{position:sticky;top:0;z-index:50;background:rgba(246,243,236,0.82);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+        .buyer-bar{background:var(--navy);color:#fff;text-align:center;font-family:'Hanken Grotesk',sans-serif;font-size:clamp(11px,1.3vw,13px);font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px}
+        .nav{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1140px;margin:0 auto;padding:0 24px}
+        .brand{display:flex;align-items:center;gap:11px}
+        .brand svg{width:34px;height:18px}
+        .brand-name{font-family:'Newsreader',serif;font-weight:600;font-size:22px;letter-spacing:0.02em;color:var(--navy)}
+        .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:14px;border-radius:999px;padding:9px 18px;transition:transform .18s,box-shadow .18s,background .18s;cursor:pointer;white-space:nowrap}
+        .btn-primary{background:var(--navy);color:#fff;box-shadow:0 1px 2px rgba(27,26,22,.12),0 10px 24px -10px rgba(43,76,126,.5)}
+        .btn-primary:hover{background:var(--navy-deep);transform:translateY(-2px)}
+        .btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
 
-        :root {
-            --brand: #2B4C7E;
-            --brand-light: #f0f4fa;
-            --ink: #0f172a;
-            --ink-soft: #334155;
-            --muted: #64748b;
-            --line: #e2e8f0;
-            --bg: #f8fafc;
-            --card: #ffffff;
-        }
+        main{padding:56px 0 40px}
+        .ghead{margin-bottom:26px}
+        .eyebrow{font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--navy)}
+        .ghead h1{font-size:clamp(2.1rem,4.6vw,3rem);font-weight:500;margin:12px 0 8px;line-height:1.14}
+        .updated{font-size:14px;color:var(--muted)}
 
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.7;
-            color: var(--ink-soft);
-            background: linear-gradient(to right,
-                rgba(43, 76, 126, 0.25) 0,
-                rgba(43, 76, 126, 0.08) calc(50% - 700px),
-                var(--bg) calc(50% - 600px),
-                var(--bg) calc(50% + 600px),
-                rgba(43, 76, 126, 0.08) calc(50% + 700px),
-                rgba(43, 76, 126, 0.25) 100%
-            );
-            background-attachment: fixed;
-            -webkit-font-smoothing: antialiased;
-        }
+        .pol{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(28px,4.5vw,50px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 36px 70px -50px rgba(27,26,22,.3)}
+        .pol p{font-size:16.5px;line-height:1.75;margin-bottom:16px}
+        .pol h2{font-size:clamp(1.3rem,2.4vw,1.55rem);margin:34px 0 12px}
+        .pol h2:first-of-type{margin-top:6px}
+        .pol ul{list-style:none;margin:0 0 18px}
+        .pol li{font-size:16.5px;color:var(--ink-soft);margin-bottom:10px;padding-left:36px;position:relative;line-height:1.7}
+        .pol li::before{content:"";position:absolute;left:0;top:8px;width:25px;height:13px;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-2 0 34 16' fill='none' stroke='%232B4C7E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='3' cy='8' r='2.5' fill='%232B4C7E'/%3E%3Cline x1='6' y1='8' x2='26' y2='8'/%3E%3Cpolyline points='22,3 28,8 22,13'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain;background-position:left center}
+        .pol a{color:var(--navy);font-weight:600}
+        .pol a:hover{text-decoration:underline}
+        .back-link{display:inline-block;margin-top:26px;font-weight:600;color:var(--navy)}
+        .back-link:hover{text-decoration:underline}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        header {
-            padding: 24px 0 18px;
-            background: var(--card);
-            border-bottom: 1px solid var(--line);
-        }
-
-        .logo-section { text-align: center; }
-        .logo-section a { text-decoration: none; display: inline-block; }
-
-        .logo-text {
-            font-size: 42px;
-            font-weight: 800;
-            color: var(--brand);
-            letter-spacing: 4px;
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 18px;
-        }
-
-        .logo-arrow { width: 56px; height: 28px; flex-shrink: 0; }
-
-        .tagline {
-            font-size: 18px;
-            color: var(--brand);
-            font-weight: 500;
-            letter-spacing: 0.5px;
-        }
-
-        main { padding: 50px 0 60px; }
-
-        .policy {
-            max-width: 720px;
-            margin: 0 auto;
-            background: var(--card);
-            border: 1px solid var(--line);
-            border-radius: 16px;
-            padding: 50px 50px 40px;
-            box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04), 0 8px 30px rgba(15, 23, 42, 0.06);
-        }
-
-        .policy h1 {
-            font-size: 32px;
-            font-weight: 800;
-            color: var(--ink);
-            margin-bottom: 12px;
-            letter-spacing: -0.5px;
-        }
-
-        .policy .updated {
-            font-size: 13px;
-            color: var(--muted);
-            margin-bottom: 36px;
-        }
-
-        .policy h2 {
-            font-size: 20px;
-            font-weight: 700;
-            color: var(--ink);
-            margin-top: 36px;
-            margin-bottom: 14px;
-        }
-
-        .policy p {
-            font-size: 16px;
-            color: var(--ink-soft);
-            margin-bottom: 16px;
-            line-height: 1.75;
-        }
-
-        .policy ul {
-            list-style: none;
-            padding: 0;
-            margin-bottom: 16px;
-        }
-
-        .policy ul li {
-            font-size: 16px;
-            color: var(--ink-soft);
-            margin-bottom: 10px;
-            padding-left: 32px;
-            position: relative;
-            line-height: 1.7;
-        }
-
-        .policy ul li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 8px;
-            width: 22px;
-            height: 11px;
-            background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-2 0 34 16' fill='none' stroke='%232B4C7E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='3' cy='8' r='2.5' fill='%232B4C7E'/%3E%3Cline x1='6' y1='8' x2='26' y2='8'/%3E%3Cpolyline points='22,3 28,8 22,13'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-size: contain;
-        }
-
-        .policy a {
-            color: var(--brand);
-            font-weight: 500;
-            text-decoration: underline;
-            text-decoration-color: rgba(43, 76, 126, 0.3);
-            text-underline-offset: 3px;
-        }
-
-        .policy a:hover { text-decoration-color: var(--brand); }
-
-        .back-link {
-            display: block;
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-            color: var(--muted);
-            text-decoration: none;
-        }
-
-        .back-link:hover { color: var(--brand); }
-
-        footer {
-            background: var(--card);
-            padding: 32px 0;
-            text-align: center;
-            border-top: 1px solid var(--line);
-            margin-top: 40px;
-        }
-
-        footer p {
-            color: var(--muted);
-            font-size: 14px;
-            margin-bottom: 8px;
-        }
-
-        footer a {
-            color: var(--brand);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        @media (max-width: 768px) {
-            .logo-text { font-size: 36px; }
-            .tagline { font-size: 16px; }
-            .policy { padding: 36px 28px 30px; border-radius: 12px; }
-            .policy h1 { font-size: 26px; }
-            .policy h2 { font-size: 18px; }
-            .policy p, .policy ul li { font-size: 15px; }
-        }
-
-        @media (max-width: 480px) {
-            .logo-text { font-size: 28px; letter-spacing: 2px; }
-            .policy { padding: 28px 22px 24px; }
-            .policy h1 { font-size: 22px; }
-        }
+        footer{margin-top:64px;background:var(--navy-deep);color:rgba(255,255,255,.62)}
+        .foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:30px 0;max-width:1140px;margin:0 auto;padding-left:24px;padding-right:24px}
+        .foot .brand-name{color:#fff;font-size:19px}
+        .foot a{color:#fff;font-weight:500}.foot a:hover{text-decoration:underline}
+        .foot-meta{font-size:13.5px}
+        @media(max-width:600px){.foot{flex-direction:column;text-align:center}}
+        @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
     </style>
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="logo-section">
-                <a href="/">
-                    <div class="logo-text">
-                        <svg class="logo-arrow" viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/>
-                            <line x1="6" y1="8" x2="26" y2="8"/>
-                            <polyline points="22,3 28,8 22,13"/>
-                        </svg>TRANSITUS
-                    </div>
-                    <p class="tagline">Transparent Options. Full-Service Coordination.</p>
-                </a>
-            </div>
+        <div class="nav">
+            <a href="/" class="brand" aria-label="Transitus home">
+                <svg viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></svg>
+                <span class="brand-name">Transitus</span>
+            </a>
+            <a href="/your-options" class="btn btn-primary">See my options <span class="arr">&rarr;</span></a>
         </div>
     </header>
-
+    <div class="buyer-bar">A different kind of Colorado home buyer</div>
     <main>
-        <div class="container">
-            <article class="policy">
+        <div class="wrap">
+            <div class="ghead">
+                <span class="eyebrow">Transitus, LLC</span>
                 <h1>Privacy Policy</h1>
                 <p class="updated">Last updated: May 12, 2026</p>
-
+            </div>
+            <article class="pol">
                 <p>Transitus, LLC ("Transitus," "we," "us") respects your privacy. This policy explains what information we collect, how we use it, and how we protect it.</p>
 
                 <h2>Information we collect</h2>
-
                 <p>When you fill out a form on our website, we collect:</p>
                 <ul>
                     <li>Your name</li>
@@ -241,11 +91,9 @@
                     <li>Your email address</li>
                     <li>The property address you're inquiring about</li>
                 </ul>
-
                 <p>We may also automatically collect basic technical information when you visit our website, including your IP address, browser type, device type, pages visited, and approximate location. This is used to understand how visitors use the site and improve it.</p>
 
                 <h2>How we use your information</h2>
-
                 <p>We use the information you provide to:</p>
                 <ul>
                     <li>Respond to your inquiry about your property</li>
@@ -253,51 +101,42 @@
                     <li>Communicate with you about your specific situation</li>
                     <li>Refer you to relevant vendors (general contractors, attorneys, housing counselors, etc.) only with your consent</li>
                 </ul>
-
                 <p>We do not sell your personal information to third parties. We do not share your information with anyone outside of Transitus and its directly retained vendors without your explicit consent.</p>
 
                 <h2>Cookies and analytics</h2>
-
                 <p>Our website uses cookies and analytics tools (including Google Analytics and Google Ads) to understand site usage and measure marketing effectiveness. These tools may collect anonymized data about your visit. You can disable cookies in your browser settings.</p>
 
                 <h2>How we store and protect your information</h2>
-
                 <p>Information submitted through forms on our website is transmitted via secure HTTPS and stored with our form processing service (Formspree). We retain submitted information only as long as needed to communicate with you and serve your inquiry.</p>
 
                 <h2>Your rights</h2>
-
                 <p>You have the right to:</p>
                 <ul>
                     <li>Request access to information we hold about you</li>
                     <li>Request that we delete information about you</li>
                     <li>Withdraw your consent for us to contact you at any time</li>
                 </ul>
-
                 <p>To make any of these requests, email us at <a href="mailto:darien@gettransitus.ai">darien@gettransitus.ai</a>.</p>
 
                 <h2>Children</h2>
-
                 <p>Our services are intended for adults. We do not knowingly collect information from anyone under 18.</p>
 
                 <h2>Changes to this policy</h2>
-
                 <p>If we update this policy, we'll update the "Last updated" date at the top. Material changes will be communicated to current Transitus clients directly.</p>
 
                 <h2>Contact</h2>
-
                 <p>Transitus, LLC<br>
                 Denver, Colorado<br>
                 <a href="mailto:darien@gettransitus.ai">darien@gettransitus.ai</a></p>
 
-                <a href="/" class="back-link">← Back to Transitus home</a>
+                <a href="/" class="back-link">&larr; Back to Transitus home</a>
             </article>
         </div>
     </main>
-
     <footer>
-        <div class="container">
-            <p>&copy; 2026 Transitus, LLC. All rights reserved.</p>
-            <p><a href="/privacy">Privacy Policy</a> | Denver, Colorado</p>
+        <div class="foot">
+            <span class="brand-name">Transitus</span>
+            <span class="foot-meta">&copy; 2026 Transitus, LLC &middot; <a href="/privacy">Privacy</a> &middot; Denver, Colorado</span>
         </div>
     </footer>
 </body>
