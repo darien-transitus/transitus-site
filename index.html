@@ -363,7 +363,15 @@
             apply('all');
         })();
         (function(){
-            var els=document.querySelectorAll('.reveal');
+            var els=Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+            var vh=window.innerHeight||document.documentElement.clientHeight;
+            // anything in (or just past) the first viewport is visible IMMEDIATELY — no scroll needed;
+            // the scroll-reveal animation applies only to content genuinely below the fold.
+            els=els.filter(function(e){
+                if(e.getBoundingClientRect().top<vh*1.12){e.classList.add('in');return false;}
+                return true;
+            });
+            if(!els.length)return;
             if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
             var io=new IntersectionObserver(function(entries){
                 entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
