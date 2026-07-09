@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.className='js';</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18117724697"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','AW-18117724697');</script>
+    <title>Unsure about how a short sale works? | Transitus</title>
+    <link rel="canonical" href="https://gettransitus.ai/how-does-a-short-sale-work">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+    <meta name="description" content="How does a short sale work? A plain walk-through of every step: the lender&#x27;s yes, the hardship letter, the timeline, and what happens to the leftover debt.">
+    <meta property="og:title" content="Unsure about how a short sale works?">
+    <meta property="og:description" content="How does a short sale work? A plain walk-through of every step: the lender&#x27;s yes, the hardship letter, the timeline, and what happens to the leftover debt.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gettransitus.ai/how-does-a-short-sale-work">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--navy:#2B4C7E;--navy-deep:#1d3556;--cream:#f8f7f4;--paper:#ffffff;--surface:#ffffff;--ink:#1b1a16;--ink-soft:#52504a;--muted:#8d8b80;--line:#e8e3d7;--c1-bg:#eaf0f8;--c1-tx:#274a78;--brand:#2B4C7E;--brand-dark:#1d3556;--brand-light:#eaf0f8;--bg:#f8f7f4;--card:#ffffff}
+        html{scroll-behavior:smooth}
+        body{font-family:'Hanken Grotesk',-apple-system,sans-serif;color:var(--ink-soft);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+        .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+        h1,h2,h3{font-family:'Newsreader',Georgia,serif;color:var(--ink);font-weight:500;letter-spacing:-0.01em;line-height:1.12}
+        a{color:inherit;text-decoration:none}
+
+        header{position:sticky;top:0;z-index:50;background:rgba(248,247,244,0.82);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+        .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+        .brand{display:flex;align-items:center;gap:11px}
+        .brand svg{width:34px;height:18px}
+        .brand-name{font-family:'Newsreader',serif;font-weight:600;font-size:22px;letter-spacing:0.02em;color:var(--navy)}
+        .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:14px;border-radius:999px;padding:9px 18px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;cursor:pointer;white-space:nowrap}
+        .btn-primary{background:var(--navy);color:#fff;box-shadow:0 1px 2px rgba(27,26,22,.12),0 10px 24px -10px rgba(43,76,126,.5)}
+        .btn-primary:hover{background:var(--navy-deep);transform:translateY(-2px)}
+        .btn .arr{transition:transform .2s ease}.btn:hover .arr{transform:translateX(4px)}
+
+        .alayout{display:flex;gap:0;align-items:flex-start;max-width:1000px;margin:0 auto;padding:52px 0 64px}
+        .toc{width:212px;flex-shrink:0;padding-right:36px;position:sticky;top:92px;align-self:flex-start}
+        .toc-label{font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin-bottom:14px}
+        .toc-links{display:flex;flex-direction:column;border-left:1.5px solid var(--line)}
+        .toc-links a{font-size:13px;color:var(--muted);line-height:1.35;padding:7px 0 7px 15px;border-left:2px solid transparent;margin-left:-1.5px;transition:color .2s,border-color .2s}
+        .toc-links a:hover{color:var(--navy)}
+        .toc-links a.active{color:var(--navy);font-weight:600;border-left-color:var(--navy)}
+
+        .toc-mobile{display:none;margin-bottom:24px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+        .toc-mobile-toggle{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;background:transparent;cursor:pointer;border:none;width:100%;font-family:inherit;font-size:14px;color:var(--navy);font-weight:600}
+        .toc-mobile-toggle .caret{font-size:10px;transition:transform .2s}
+        .toc-mobile-toggle.open .caret{transform:rotate(180deg)}
+        .toc-mobile-list{max-height:0;overflow:hidden;transition:max-height .3s ease;background:var(--c1-bg)}
+        .toc-mobile-list.open{max-height:640px}
+        .toc-mobile-list a{display:block;font-size:13.5px;color:var(--navy);padding:9px 18px;border-bottom:1px solid rgba(43,76,126,.1)}
+        .toc-mobile-list a:last-child{border-bottom:none}
+
+        .article{flex:1;min-width:0;max-width:720px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(32px,5vw,62px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 40px 80px -55px rgba(27,26,22,.4)}
+        .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:22px}
+        .breadcrumb a{color:var(--navy);font-weight:500}
+        .breadcrumb a:hover{text-decoration:underline}
+        .article h1{font-size:clamp(2rem,4.2vw,2.85rem);font-weight:500;color:var(--ink);line-height:1.16;margin-bottom:14px}
+        .dek{font-family:'Newsreader',Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(1.15rem,2.1vw,1.45rem);color:var(--navy);line-height:1.3;margin:0 0 22px}
+        .byline{display:flex;align-items:center;gap:11px;padding:0 0 22px;border-bottom:1px solid var(--line);margin-bottom:34px}
+        .byline svg{width:26px;height:14px;flex-shrink:0}
+        .byline-text{font-size:14px;color:var(--ink-soft);line-height:1.4}
+        .byline-text .author{color:var(--navy);font-weight:600}
+        .byline-text .meta{color:var(--muted)}
+        .article h2{font-size:clamp(1.4rem,2.6vw,1.72rem);font-weight:500;color:var(--ink);line-height:1.25;margin-top:44px;margin-bottom:15px;scroll-margin-top:96px}
+        .article p{font-size:17px;color:var(--ink-soft);line-height:1.78;margin-bottom:20px}
+        .article p strong{color:var(--ink);font-weight:600}
+        .article a:not(.btn){color:var(--navy);font-weight:500;text-decoration:underline;text-decoration-color:rgba(43,76,126,0.32);text-underline-offset:3px;transition:text-decoration-color .2s}
+        .article a:not(.btn):hover{text-decoration-color:var(--navy)}
+        .article ul{list-style:none;padding:0;margin:0 0 24px}
+        .article ul li{font-size:17px;color:var(--ink-soft);margin-bottom:13px;padding-left:36px;position:relative;line-height:1.7}
+        .article ul li::before{content:"";position:absolute;left:0;top:8px;width:25px;height:13px;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-2 0 34 16' fill='none' stroke='%232B4C7E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='3' cy='8' r='2.5' fill='%232B4C7E'/%3E%3Cline x1='6' y1='8' x2='26' y2='8'/%3E%3Cpolyline points='22,3 28,8 22,13'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain;background-position:left center}
+        .article ul li strong{color:var(--ink);font-weight:600}
+
+        .disclaimer{font-size:13px;color:var(--muted);background:var(--cream);border:1px solid var(--line);border-left:3px solid var(--navy);border-radius:12px;padding:18px 20px;margin-top:38px;line-height:1.6}
+
+        .cta-card{margin-top:48px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(30px,4vw,44px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 30px 60px -45px rgba(27,26,22,.35)}
+        .cta-card h3{font-family:'Newsreader',serif;font-size:1.6rem;font-weight:500;color:var(--ink);text-align:center;margin-bottom:6px}
+        .cta-helper{font-size:14px;color:var(--muted);text-align:center;margin-bottom:26px}
+        .fg{margin-bottom:14px}
+        .fg label{display:block;font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:6px}
+        .fg input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:15px;background:var(--surface);color:var(--ink);transition:border-color .15s,box-shadow .15s}
+        .fg input:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(43,76,126,.14)}
+        .submit{width:100%;margin-top:8px;background:var(--navy);color:#fff;font-family:inherit;font-weight:600;font-size:15px;border:none;border-radius:10px;padding:14px;cursor:pointer;transition:background .18s,transform .18s}
+        .submit:hover{background:var(--navy-deep);transform:translateY(-1px)}
+        .back-link{display:inline-block;margin-top:20px;font-size:14px;color:var(--navy);font-weight:500}
+        .back-link:hover{text-decoration:underline}
+
+        footer{margin-top:8px;background:var(--navy-deep);color:rgba(255,255,255,.62)}
+        .foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:30px 0}
+        .foot .brand-name{color:#fff;font-size:19px}
+        .foot a{color:#fff;font-weight:500}.foot a:hover{text-decoration:underline}
+        .foot-meta{font-size:13.5px}
+
+        @media(max-width:880px){
+            .toc{display:none}
+            .article{max-width:none}
+            .alayout{padding:34px 0 48px}
+            .toc-mobile{display:block}
+        }
+        @media(max-width:600px){.foot{flex-direction:column;text-align:center}}
+        @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+        .guides-exit{margin-top:20px;text-align:center}
+        .guides-exit p{font-size:15px;color:var(--muted)}
+        .guides-exit a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:rgba(43,76,126,.3);text-underline-offset:3px}
+        .guides-exit a:hover{text-decoration-color:var(--navy)}
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Unsure about how a short sale works?","description":"How does a short sale work? A plain walk-through of every step: the lender's yes, the hardship letter, the timeline, and what happens to the leftover debt.","author":{"@type":"Organization","name":"Transitus"},"datePublished":"2026-07-09","mainEntityOfPage":"https://gettransitus.ai/how-does-a-short-sale-work"}</script>
+</head>
+<body>
+    <header>
+        <div class="wrap nav">
+            <a href="/" class="brand" aria-label="Transitus home">
+                <svg viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></svg>
+                <span class="brand-name">Transitus</span>
+            </a>
+            <a href="/your-options" class="btn btn-primary">See my options <span class="arr">&rarr;</span></a>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <div class="alayout">
+                <nav class="toc" aria-label="Table of contents">
+                    <p class="toc-label">On this page</p>
+                    <div class="toc-links">
+                        <a href="#a-plain-meaning-with-one-heavy-piece-inside" class="active">A plain meaning</a>
+                        <a href="#the-yes-you-need-that-isn-t-yours-to-give">The yes you need</a>
+                        <a href="#the-letter-you-re-dreading-is-just-your-story-on-paper">Your story on paper</a>
+                        <a href="#the-clock-behind-your-homework">The clock</a>
+                        <a href="#some-relief-hiding-in-the-closing-numbers">Relief in the numbers</a>
+                        <a href="#the-fear-the-debt-follows-you-out-the-door">The debt follows you</a>
+                        <a href="#you-re-allowed-to-just-be-learning">Just learning</a>
+                    </div>
+                </nav>
+                <article class="article">
+                    <div class="toc-mobile">
+                        <button type="button" class="toc-mobile-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+                            <span>What's in this article</span>
+                            <span class="caret">&#9662;</span>
+                        </button>
+                        <div class="toc-mobile-list">
+                            <a href="#a-plain-meaning-with-one-heavy-piece-inside">A plain meaning</a>
+                            <a href="#the-yes-you-need-that-isn-t-yours-to-give">The yes you need</a>
+                            <a href="#the-letter-you-re-dreading-is-just-your-story-on-paper">Your story on paper</a>
+                            <a href="#the-clock-behind-your-homework">The clock</a>
+                            <a href="#some-relief-hiding-in-the-closing-numbers">Relief in the numbers</a>
+                            <a href="#the-fear-the-debt-follows-you-out-the-door">The debt follows you</a>
+                            <a href="#you-re-allowed-to-just-be-learning">Just learning</a>
+                        </div>
+                    </div>
+                    <nav class="breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp; Articles &nbsp;/&nbsp; How does a short sale work</nav>
+                    <h1>Unsure about how a short sale works?</h1>
+                    <p class="dek">Getting your footing to make the right decision.</p>
+                    <div class="byline">
+                        <svg viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></svg>
+                        <div class="byline-text">Written by <span class="author">Transitus</span> <span class="meta">&middot; Denver, Colorado &middot; July 9, 2026</span></div>
+                    </div>
+                    <p>Doing your homework before you let yourself hope. Someone put the words in front of you and didn't stay to explain them. A lender on the phone, an agent, a search result at midnight. Short sale. And now here you are with a notepad, quietly teaching yourself a language you never asked to learn, before you'll even let it become a plan. I want you to know I see what you're doing. You're being careful with your own future, and that isn't overthinking, it's wisdom. So let me do this properly: no jargon left standing, no step skipped. Here is how a short sale actually works, from the first phone call to the last piece of debt.</p>
+
+                    <h2 id="a-plain-meaning-with-one-heavy-piece-inside">A plain meaning with one heavy piece inside</h2>
+                    <p>A short sale is a sale of your home where the price comes up short of what you still owe on the mortgage. That is the whole term. The house sells, the money goes to the loan, and the loan doesn't quite get paid off. It sits inside a variety of options the industry calls <a href="/falling-behind-on-mortgage-payments#more-doors-than-you-thought-you-had">loss mitigation</a>, which is just the formal name for the alternatives to foreclosure, and lenders treat it as a normal recognized path. Two honest things before we go further, because you came to understand, not to be sold. First, a short sale is still a sale, which means you do leave the home at the end of it. I won't slide past that like it's a paperwork detail. It is the heaviest part of this whole subject and it deserves a plain sentence and a moment to land. Second, this path only exists for a home worth less than its mortgage balance. If your home is worth more than you owe, you don't need any of this: <a href="/can-i-sell-my-home-before-foreclosure#yes-and-you-don-t-need-the-bank-s-blessing-to-do-it">a regular sale pays the loan in full without anyone's permission needed</a>, and that route is typically <a href="/foreclosure-guide#two-evils">better for both the sale price</a> and <a href="/foreclosure-credit-report">your credit</a>. Most people <a href="/fair-home-offer#whats-fair">check that number before they study any harder</a> and you can do so by using the “comparables details” specifically. .</p>
+                    <h2 id="the-yes-you-need-that-isn-t-yours-to-give">The yes you need that isn&#x27;t yours to give</h2>
+                    <p>Here is what separates a short sale from every other sale of a home. Because the price won't cover the loan, you are asking the lender to accept less than they are owed. That makes their agreement the hinge of the whole thing: a short sale only happens if <a href="/falling-behind-on-mortgage-payments#dreading-the-call-that-helps-the-most">your servicer, the company you send your payment to</a>, says yes to it. The division of labor surprises people. You are the one responsible for <a href="/fair-home-offer#who-are-buyers">finding a buyer for the home</a>. If you need help <a href="/your-options">finding a buyer for your situation we at Transitus can help</a>. The servicer's role is approval, and there are actually two approvals hiding in there: one to let the sale itself go through, and a separate one to forgive the difference between the sale price and what you owed. Hold onto that second one. It matters more than anything else on this page, and we will come back to it. One thing I'd rather you hear from me now than discover mid-process: no law forces them to say yes. I know how that lands. The plan you're carefully building is approved or denied by someone else when you're doing all the work and that’s frustrating. It’s also uncomfortable, and it is true, and knowing it now is exactly why you're doing this work.</p>
+                    <h2 id="the-letter-you-re-dreading-is-just-your-story-on-paper">The letter you&#x27;re dreading is just your story on paper</h2>
+                    <p>So how do you actually ask? It starts with the servicer. The federal consumer bureau's standing guidance for anyone who can't make their mortgage payment, or is worried about missing one, is to call the servicer right away, and a short sale is one of the options that conversation can put on the table. When that conversation happens, here is what they'll expect you to walk them through: why you can't make the payment, whether the problem is temporary or permanent, and the honest picture of your income, your expenses, and what you have in the bank. If you've seen the phrase hardship letter in your research and felt your stomach drop, this is all it is. It's not an essay where you have to beg. It's a written account of facts you already know, because you're the one living them. That may not make it feel better but at least you have the answers. If Fannie Mae owns your loan, the request is even a standard form, a Mortgage Assistance Application, with the income and hardship paperwork listed out by type. So, please understand this happens to millions of people and you are not alone or less than because of it.</p>
+                    <h2 id="the-clock-behind-your-homework">The clock behind your homework</h2>
+                    <p>I know part of what pulled you here is quieter than curiosity: how long does this take, and <a href="/when-too-late-foreclosure#have-time">how much time is there</a>? Let me hand you the pieces that are actually written down, because they are more protective than the fear suggests. If the missed payments have only just started, breathe for a second. A foreclosure can't even begin until a loan is <a href="/foreclosure-guide#first-missed">more than 120 days past due</a> (12 CFR 1024.41(f)(1)). That is real working room to work with your servicer, which can be taken advantage of right away and exists <a href="/pre-foreclosure-vs-foreclosure#hidden-time">before anything formal does</a>. Now, as long as you send a complete application to your servicer more than 37 days before a sale then you have a chance here. From there, they get 30 days to evaluate you for every option available and tell you in writing what they'll offer (12 CFR 1024.41(c)(1)). And while a complete, on-time application is being reviewed, federal rules generally keep them from pushing a foreclosure through to a sale. I won't pretend the waiting feels good. But it is not a black hole. Every stretch of it has a deadline attached to someone else, not just to you. If you hold your end of the bargain and get things in on time, you almost always have time to beat foreclosure.</p>
+                    <h2 id="some-relief-hiding-in-the-closing-numbers">Some relief hiding in the closing numbers</h2>
+                    <p>Say the servicer approves, your buyer is real, and the closing arrives. What does the money actually do? The buyer's money goes to the loan, and the ordinary costs of selling get paid out of the sale money itself. Fannie Mae's public rulebook is a good window into how these closings work. On its short sales, the sale proceeds carry real estate commission up to 6 percent, the title and settlement charges a seller usually pays, and the usual buyer closing costs a seller covers. Further, because it’s a short sale, up to $6,000 in total can go to what is called junior lienholders, like a second mortgage, to release their liens. I know that is a lot and it feels draining to hear all that is involved. But one detail that surprises nearly everyone doing this research: under that same Fannie Mae policy, if the home is your main residence, there is a $7,500 relocation payment to <a href="/can-i-give-my-house-back-to-the-bank#a-small-thing-that-might-soften-the-leaving">help with the cost of moving</a>, unless you're required to contribute cash to the deal or you're getting moving help from somewhere else. I am not promising you that number. It depends on who owns your loan, and different owners have different rulebooks. But I want you to know it exists, because most people walk into this assuming there is nothing on the other side of the table for them at all.</p>
+                    <h2 id="the-fear-the-debt-follows-you-out-the-door">The fear the debt follows you out the door</h2>
+                    <p>Now the question underneath every other question you've searched: after all of this, do you still owe money? Here is the truth, told straight. A short sale does not automatically erase the rest of the debt. The gap between what the house brought and what you owed is <a href="/credit-bid#why-care">called a deficiency</a>, and in some cases the lender can sue afterward to collect it. I know it is hard to hear that you can lose everything and still have this following you and I see that. This is why homeowners in this position almost always ask the lender to waive the deficiency before agreeing to the short sale, and they get that waiver in writing, so the sale truly ends the debt. If your loan is owned by Fannie Mae, there is real comfort here. In most situations, its policy requires the servicer to release you from the deficiency when the short sale completes. Might not feel like a win but it is, I promise. One last honest piece, because you're the kind of person who wants the full picture. Debt that gets forgiven can show up at tax time. A canceled amount is generally treated as taxable, and the lender may send a Form 1099-C showing it, though exclusions exist.</p>
+                    <h2 id="you-re-allowed-to-just-be-learning">You&#x27;re allowed to just be learning</h2>
+                    <p>You haven't committed to anything by reading this, and you don't have to. Understanding the machine before you step into it is not stalling, it is the smartest thing you've done all week. Whenever you're ready to see how this path compares to every other one for your actual home, we at Transitus can <a href="/your-options">show you your options</a>. Until then, take your time. You're doing this exactly right.</p>
+                    <p class="disclaimer" data-nosnippet>This article is general information from Transitus, not legal, financial, or tax advice. Foreclosure rules change and every situation is different. Transitus is not a foreclosure consultant (CRS 6-1-1103) and charges no upfront fees. For free help, call the Colorado Foreclosure Hotline at 1-877-601-HOPE or consult a Colorado real estate attorney.</p>
+                    <div class="cta-card">
+                        <h3>If you'd like to see your specific options</h3>
+                        <p class="cta-helper">Free. Your options delivered by email within 48 hours. No surprise calls, no spam.</p>
+                        <form action="https://formspree.io/f/xqewvyzg" method="POST">
+                            <input type="hidden" name="_subject" value="New Transitus Lead (from How does a short sale work)">
+                            <input type="hidden" name="_next" value="thank-you.html">
+                            <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" required></div>
+                            <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+                            <div class="fg"><label for="address">Property Address</label><input type="text" id="address" name="address" required></div>
+                            <div class="fg"><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone"></div>
+                            <button type="submit" class="submit">Get My Free Options</button>
+                        </form>
+                        <a href="/" class="back-link">&larr; Back to Transitus home</a>
+                    </div>
+                    <div class="guides-exit">
+                        <p>Not ready yet? No pressure. <a href="/guides">Read our other guides for Colorado homeowners.</a></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap foot">
+            <span class="brand-name">Transitus</span>
+            <span class="foot-meta">&copy; 2026 Transitus, LLC &middot; <a href="/privacy">Privacy</a> &middot; Denver, Colorado</span>
+        </div>
+    </footer>
+    <script>
+    (function(){
+        var links=document.querySelectorAll('.toc-links a');
+        var sections=[];
+        links.forEach(function(a){var id=a.getAttribute('href').replace('#','');var el=document.getElementById(id);if(el)sections.push({id:id,el:el,link:a});});
+        if(!sections.length)return;
+        function update(){
+            var y=window.scrollY||window.pageYOffset,cur=sections[0].id;
+            for(var i=0;i<sections.length;i++){if(sections[i].el.offsetTop-96<=y)cur=sections[i].id;}
+            links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href').replace('#','')===cur);});
+        }
+        window.addEventListener('scroll',update,{passive:true});update();
+    })();
+    </script>
+</body>
+</html>
