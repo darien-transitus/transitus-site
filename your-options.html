@@ -50,6 +50,10 @@
         .badge{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--navy);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:7px 16px;box-shadow:0 2px 10px -4px rgba(27,26,22,.1)}
         .badge .dot{width:7px;height:7px;border-radius:50%;background:#2e9e6b;box-shadow:0 0 0 3px rgba(46,158,107,.18)}
         .phero h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:500;margin-top:22px;line-height:1.14}
+        .trust-link{text-align:center;font-size:15px;color:var(--ink-soft);margin:26px 0 30px}
+        .trust-link a{color:var(--navy);font-weight:600}
+        .trust-link a:hover{text-decoration:underline}
+        .trust-link .arr{display:inline-block;transition:transform .2s}.trust-link a:hover .arr{transform:translateX(4px)}
 
         .eyebrow{font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--navy)}
         .block{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(30px,4vw,46px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 36px 70px -50px rgba(27,26,22,.34);margin-bottom:26px}
@@ -243,6 +247,8 @@
                         <source src="transitus-video.mp4" type="video/mp4">
                     </video>
                 </div>
+
+                <p class="trust-link reveal">Want to know why we do this? <a href="/about">See for yourself <span class="arr">&rarr;</span></a></p>
 
                 <section class="form-block reveal" id="get-options">
                     <h2>See your home's options</h2>
