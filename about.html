@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.className='js';</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18117724697"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','AW-18117724697');</script>
+    <title>Why I built Transitus | Transitus</title>
+    <link rel="canonical" href="https://gettransitus.ai/about">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+    <meta name="description" content="Why I started Transitus: to give Colorado homeowners in their hardest moments the truth and every option, not exploitation. From Darien, the founder.">
+    <meta property="og:title" content="Why I built Transitus">
+    <meta property="og:description" content="Why I started Transitus: to give Colorado homeowners in their hardest moments the truth and every option, not exploitation. From Darien, the founder.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gettransitus.ai/about">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--navy:#2B4C7E;--navy-deep:#1d3556;--cream:#f6f3ec;--paper:#fffdf9;--surface:#ffffff;--ink:#1b1a16;--ink-soft:#52504a;--muted:#8d8b80;--line:#e8e3d7}
+        html{scroll-behavior:smooth}
+        body{font-family:'Hanken Grotesk',-apple-system,sans-serif;color:var(--ink-soft);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+        .wrap{max-width:760px;margin:0 auto;padding:0 24px}
+        h1,h2{font-family:'Newsreader',Georgia,serif;color:var(--ink);font-weight:500;letter-spacing:-0.01em;line-height:1.12}
+        a{color:inherit;text-decoration:none}
+        header{position:sticky;top:0;z-index:50;background:rgba(246,243,236,0.82);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+        .buyer-bar{background:var(--navy);color:#fff;text-align:center;font-family:'Hanken Grotesk',sans-serif;font-size:clamp(11px,1.3vw,13px);font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px}
+        .nav{display:flex;align-items:center;justify-content:space-between;height:68px;max-width:1140px;margin:0 auto;padding:0 24px}
+        .brand{display:flex;align-items:center;gap:11px}
+        .brand svg{width:34px;height:18px}
+        .brand-name{font-family:'Newsreader',serif;font-weight:600;font-size:22px;letter-spacing:0.02em;color:var(--navy)}
+        .nav-right{display:flex;align-items:center;gap:clamp(16px,3vw,26px)}
+        .nav-link{font-size:15px;font-weight:600;color:var(--ink-soft);transition:color .18s}
+        .nav-link:hover{color:var(--navy)}
+        .nav-link.active{color:var(--navy)}
+        .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:14px;border-radius:999px;padding:9px 18px;transition:transform .18s,box-shadow .18s,background .18s;cursor:pointer;white-space:nowrap}
+        .btn-primary{background:var(--navy);color:#fff;box-shadow:0 1px 2px rgba(27,26,22,.12),0 10px 24px -10px rgba(43,76,126,.5)}
+        .btn-primary:hover{background:var(--navy-deep);transform:translateY(-2px)}
+        .btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
+
+        main{padding:56px 0 40px}
+        .ghead{margin-bottom:26px}
+        .eyebrow{font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--navy)}
+        .ghead h1{font-size:clamp(2.1rem,4.6vw,3rem);font-weight:500;margin:12px 0 10px;line-height:1.14}
+        .ghead .dek{font-family:'Newsreader',serif;font-style:italic;font-weight:400;font-size:clamp(1.05rem,2vw,1.28rem);color:var(--navy);line-height:1.3}
+
+        .about{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(28px,4.5vw,52px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 36px 70px -50px rgba(27,26,22,.3)}
+        .byline{display:flex;align-items:center;gap:15px;padding-bottom:26px;margin-bottom:30px;border-bottom:1px solid var(--line)}
+        .b-photo{width:62px;height:62px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:0 6px 16px -8px rgba(27,26,22,.4)}
+        .b-name{font-family:'Newsreader',serif;font-size:18px;font-weight:600;color:var(--ink)}
+        .b-title{font-size:14px;color:var(--muted);margin-top:3px}
+        .about > p{font-size:16.5px;line-height:1.78;margin-bottom:20px;color:var(--ink-soft)}
+        .about > p:last-of-type{margin-bottom:0}
+        .about .close{font-family:'Newsreader',serif;font-size:clamp(1.18rem,2.3vw,1.45rem);font-weight:500;color:var(--ink);line-height:1.5;margin:34px 0 4px;padding-top:30px;border-top:1px solid var(--line)}
+        .cta-card{background:var(--cream);border:1px solid var(--line);border-radius:18px;padding:24px 26px;margin-top:34px}
+        .cta-h{font-family:'Newsreader',serif;font-size:19px;font-weight:600;color:var(--ink);margin-bottom:6px}
+        .cta-sub{font-size:14.5px;color:var(--ink-soft);margin-bottom:17px;line-height:1.6}
+        .back-link{display:inline-block;margin-top:28px;font-weight:600;color:var(--navy)}
+        .back-link:hover{text-decoration:underline}
+
+        footer{margin-top:64px;background:var(--navy-deep);color:rgba(255,255,255,.62)}
+        .foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:30px 0;max-width:1140px;margin:0 auto;padding-left:24px;padding-right:24px}
+        .foot .brand-name{color:#fff;font-size:19px}
+        .foot a{color:#fff;font-weight:500}.foot a:hover{text-decoration:underline}
+        .foot-meta{font-size:13.5px}
+        @media(max-width:600px){.foot{flex-direction:column;text-align:center}}
+        @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav">
+            <a href="/" class="brand" aria-label="Transitus home">
+                <svg viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></svg>
+                <span class="brand-name">Transitus</span>
+            </a>
+            <div class="nav-right">
+                <a href="/about" class="nav-link active">About Us</a>
+                <a href="/your-options" class="btn btn-primary">See my options <span class="arr">&rarr;</span></a>
+            </div>
+        </div>
+    </header>
+    <div class="buyer-bar">A different kind of Colorado home buyer</div>
+    <main>
+        <div class="wrap">
+            <div class="ghead">
+                <span class="eyebrow">The person behind Transitus</span>
+                <h1>Why I built Transitus</h1>
+                <p class="dek">Truth over credentials.</p>
+            </div>
+            <article class="about">
+                <div class="byline">
+                    <img src="darien.jpg" alt="Darien Miller-Gowan, founder of Transitus" class="b-photo" width="62" height="62">
+                    <div>
+                        <p class="b-name">Darien Miller-Gowan</p>
+                        <p class="b-title">Founder, Transitus &middot; Denver, Colorado</p>
+                    </div>
+                </div>
+                <p>You are probably asking, why Darien? Why Transitus? I am happy that you are asking that question and I understand the hesitation to trust me. Simply, I am a 30-year old man who lives in Denver, Colorado who has been in real estate in several capacities for 7+ years. Yes, we buy homes. That's a part of how Transitus makes money, and I'll never hide it from you. But to me, credentials shouldn't be the full story. Instead, truth should.</p>
+                <p>Over the years, I have bought, been a landlord, flipped, rented and had conversations with hundreds of people in real estate. Something that stuck out, specifically with people who operate in distressed real estate, is how they weaponize information asymmetry to take advantage of homeowners when they are in their most vulnerable states. Behind on payments, going through divorce, fighting a tax lien, anything that puts their home and livelihood in jeopardy. And in doing so, they are there precisely to make as much money as they possibly can at the expense of the homeowner.</p>
+                <p>This is why I started Transitus. Because people deserve support in their toughest moments, not exploitation. They deserve all the information, not a subset of it. They deserve the choice for their home, not an ultimatum. Truly, I started Transitus to reshape this industry and remove the predatory nature that exists. The dream is to make how lonely and untrustworthy it feels today to seem foreign tomorrow and we will do everything we can to make that happen.</p>
+                <p class="close">Even your openness to considering us is enough. I don't want to convince you, I'd rather just show you.</p>
+                <div class="cta-card">
+                    <p class="cta-h">See what it means for your home</p>
+                    <p class="cta-sub">Free. Your options delivered by email within 48 hours. No pressure, ever.</p>
+                    <a href="/your-options" class="btn btn-primary">See my options <span class="arr">&rarr;</span></a>
+                </div>
+            </article>
+            <a href="/" class="back-link">&larr; Back to Transitus home</a>
+        </div>
+    </main>
+    <footer>
+        <div class="foot">
+            <span class="brand-name">Transitus</span>
+            <span class="foot-meta">&copy; 2026 Transitus, LLC &middot; <a href="/about">About Us</a> &middot; <a href="/privacy">Privacy</a> &middot; Denver, Colorado</span>
+        </div>
+    </footer>
+</body>
+</html>
