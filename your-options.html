@@ -56,6 +56,18 @@
         .trust-link .arr{display:inline-block;transition:transform .2s}.trust-link a:hover .arr{transform:translateX(4px)}
 
         .eyebrow{font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--navy)}
+        .values{padding:6px 0 26px}
+        .vhead{text-align:center;margin-bottom:18px}
+        .vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(12px,1.8vw,20px)}
+        .vcard{background:var(--surface);border:1px solid var(--line);border-radius:clamp(16px,2vw,22px);padding:clamp(18px,3vw,32px) clamp(16px,3vw,32px) clamp(16px,2.6vw,28px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 30px 60px -50px rgba(27,26,22,.28)}
+        .vicon{width:clamp(34px,4.5vw,44px);height:clamp(34px,4.5vw,44px);border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:clamp(12px,1.8vw,18px)}
+        .vicon svg{width:55%;height:55%}
+        .vc1{background:var(--c1-bg);color:var(--c1-tx)}
+        .vc2{background:var(--c2-bg);color:var(--c2-tx)}
+        .vc3{background:var(--c3-bg);color:var(--c3-tx)}
+        .vc4{background:var(--c4-bg);color:var(--c4-tx)}
+        .vcard h3{font-size:clamp(1.02rem,2.2vw,1.5rem);font-weight:600;line-height:1.28;margin-bottom:clamp(6px,1vw,10px)}
+        .vcard p{font-size:clamp(.88rem,1.7vw,1.04rem);color:var(--ink-soft);line-height:1.62}
         .block{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(30px,4vw,46px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 36px 70px -50px rgba(27,26,22,.34);margin-bottom:26px}
         .block h2{font-size:clamp(1.5rem,3vw,2rem);margin:14px 0 22px}
         .blist{list-style:none}
@@ -186,16 +198,34 @@
                 </section>
 
 
+                <section class="values">
+                    <div class="vhead reveal"><span class="eyebrow">What you get</span></div>
+                    <div class="vgrid">
+                        <div class="vcard reveal">
+                            <div class="vicon vc1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
+                            <h3>See options you didn't know existed</h3>
+                            <p>Every option your home can actually take, based on your situation. So you know you've seen everything available.</p>
+                        </div>
+                        <div class="vcard reveal">
+                            <div class="vicon vc2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+                            <h3>Know which option is actually right for you</h3>
+                            <p>All options side by side, with the math done. Then, the right option becomes clear.</p>
+                        </div>
+                        <div class="vcard reveal">
+                            <div class="vicon vc3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+                            <h3>Know nobody is profiting behind your back</h3>
+                            <p>Every dollar accounted for on every option, including what we make. No wondering if it's fair or not.</p>
+                        </div>
+                        <div class="vcard reveal">
+                            <div class="vicon vc4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                            <h3>You don't do any of it by yourself</h3>
+                            <p>Contractors, cleaners, movers, attorneys. We connect you with whoever you need. So the option you choose is one you can actually pull off.</p>
+                        </div>
+                    </div>
+                </section>
+
                 <section class="block">
-                    <span class="eyebrow">What we do</span>
-                    <h2>Show every option, with full transparency.</h2>
-                    <ul class="blist">
-                        <li><strong>Your situation shapes your options:</strong> We take the time to understand what you're facing, because that's how we build options that fit for you.</li>
-                        <li><strong>Every option, side by side:</strong> All paths for your home on one page to help you compare and choose what's best for you.</li>
-                        <li><strong>You see exactly what we make:</strong> Every dollar is accounted for, including ours. No one profits behind your back.</li>
-                        <li><strong>Full support, sale or not:</strong> Whatever your situation needs, we help coordinate it. Paperwork, agents, movers, contractors, etc.</li>
-                        <li><strong>What it costs you:</strong> Nothing. Just information on where you stand.</li>
-                    </ul>
+                    <p style="font-size:17px;line-height:1.7"><strong style="color:var(--ink)">What it costs you:</strong> Nothing. Just information on where you stand.</p>
                     <div style="margin-top:26px">
                         <button type="button" class="ex-toggle" onclick="toggleExample()">
                             <span class="toggle-label">See an example</span>
