@@ -197,8 +197,11 @@
         .doc-title{font-size:17px;margin:0 0 8px}
         .doc-meta{font-size:12px;margin:0 0 3px}
         .doc-table-wrap{margin:14px 0}
-        .doc-table{font-size:11px}
-        .doc-table th,.doc-table td{padding:5px 8px;white-space:nowrap}
+        .doc-table{font-size:11px;table-layout:fixed;min-width:540px}
+        .doc-table th,.doc-table td{padding:6px 8px;white-space:normal;overflow-wrap:break-word}
+        .doc-table th:first-child{width:17%}
+        .doc-table thead th:not(:first-child),.doc-table tbody td:not(:first-child){width:20.75%}
+        .doc-table tbody th{white-space:normal}
         .doc-table thead th{font-size:11px}
         .doc-disclosure-text{font-size:11px;margin-top:10px}
         .doc-top{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap}
@@ -280,15 +283,15 @@
                                             <tr><th></th><th>Option 1</th><th>Option 2</th><th>Option 3</th><th>Option 4</th></tr>
                                         </thead>
                                         <tbody>
-                                            <tr><th>Deal Type</th><td>Cash to Wholesaler</td><td>List As-Is</td><td>Cash to Investor</td><td>Loss Mitigation</td></tr>
-                                            <tr><th>Sale Price</th><td>$165,000</td><td>~$210,000</td><td>$171,000</td><td>&mdash; (you keep the home)</td></tr>
-                                            <tr><th>Transaction Costs</th><td>$0 to you</td><td>4-6% ($9-13K)</td><td>$0 to you</td><td>$0</td></tr>
-                                            <tr><th>What Transitus Makes</th><td>2% ($3,300) assignment fee</td><td>$0 (referral to agent)</td><td>3% ($5,130)</td><td>$0 &mdash; you never need us</td></tr>
-                                            <tr><th>You Net</th><td>$165,000</td><td>~$197-201K</td><td>$171,000</td><td>Keep your home</td></tr>
-                                            <tr><th>Days to Close</th><td>5-7 days</td><td>90-150 days</td><td>10-14 days</td><td>Varies</td></tr>
-                                            <tr><th>Speed Rank</th><td>1 (fastest)</td><td>3</td><td>2</td><td>&mdash;</td></tr>
-                                            <tr><th>Risk Level</th><td><span class="risk-low">Low</span></td><td><span class="risk-medium">Medium</span></td><td><span class="risk-low">Low</span></td><td>Depends on approval</td></tr>
-                                            <tr><th>What You Need To Do</th><td>Sign and wait</td><td>Showings, inspections, negotiations</td><td>Sign and wait</td><td>Apply through your servicer. We can point you to a HUD counselor.</td></tr>
+                                            <tr><th>Deal Type</th><td>Loss Mitigation</td><td>Cash to Wholesaler</td><td>Cash to Investor</td><td>List As-Is</td></tr>
+                                            <tr><th>Sale Price</th><td>&mdash; (you keep the home)</td><td>$165,000</td><td>$171,000</td><td>~$210,000</td></tr>
+                                            <tr><th>Transaction Costs</th><td>$0</td><td>$0 to you</td><td>$0 to you</td><td>4-6% ($9-13K)</td></tr>
+                                            <tr><th>What Transitus Makes</th><td>$0 &mdash; you never need us</td><td>2% ($3,300) assignment fee</td><td>3% ($5,130)</td><td>$0 (referral to agent)</td></tr>
+                                            <tr><th>You Net</th><td>Keep your home</td><td>$165,000</td><td>$171,000</td><td>~$197-201K</td></tr>
+                                            <tr><th>Days to Close</th><td>Varies</td><td>5-7 days</td><td>10-14 days</td><td>90-150 days</td></tr>
+                                            <tr><th>Speed Rank</th><td>&mdash;</td><td>1 (fastest)</td><td>2</td><td>3</td></tr>
+                                            <tr><th>Risk Level</th><td>Depends on approval</td><td><span class="risk-low">Low</span></td><td><span class="risk-low">Low</span></td><td><span class="risk-medium">Medium</span></td></tr>
+                                            <tr><th>What You Need To Do</th><td>Apply through your servicer.</td><td>Sign and wait</td><td>Sign and wait</td><td>Showings, inspections, negotiations</td></tr>
                                         </tbody>
                                     </table>
                                 </div>
