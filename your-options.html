@@ -80,9 +80,7 @@
         .ex-toggle:hover{border-color:var(--navy)}
         .ex-toggle .arrow{font-size:11px;transition:transform .25s}
         .ex-toggle.open .arrow{transform:rotate(180deg)}
-        .ex-content{max-height:0;overflow:hidden;transition:max-height .5s ease}
-        .ex-content.open{max-height:4000px}
-        .doc{margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3.5vw,40px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 30px 60px -48px rgba(27,26,22,.3)}
+                .doc{margin-top:22px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:clamp(24px,3.5vw,40px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 30px 60px -48px rgba(27,26,22,.3)}
         .doc-header-row{display:flex;align-items:center;gap:12px}
         .doc-logo-arrow{width:34px;height:18px}
         .doc-logo-text{font-family:'Newsreader',serif;font-weight:600;font-size:22px;letter-spacing:.04em;color:var(--navy)}
@@ -141,9 +139,9 @@
         @media(prefers-reduced-motion:reduce){.js .reveal{opacity:1!important;transform:none!important;transition:none!important}html{scroll-behavior:auto}}
         /* example sheet: faithful white + blue Transitus document */
         .doc{margin-top:22px;background:#ffffff;border:1px solid var(--line);border-radius:14px;padding:clamp(26px,3.5vw,45px) clamp(20px,3vw,40px);box-shadow:0 8px 32px rgba(15,23,42,.08);text-align:left}
-        .doc-logo-text{font-family:'Hanken Grotesk',sans-serif;font-size:22px;font-weight:700;color:var(--navy);letter-spacing:.09em}
+        .doc-logo-text{font-family:'Newsreader',serif;font-size:19px;font-weight:600;color:var(--navy);letter-spacing:.02em}
         .doc-tagline{font-family:'Hanken Grotesk',sans-serif;font-size:13px;color:var(--navy);font-style:italic;margin:0 0 24px}
-        .doc-title{font-family:'Hanken Grotesk',sans-serif;font-size:24px;font-weight:700;color:var(--ink);margin:0 0 12px;letter-spacing:0}
+        .doc-title{font-family:'Newsreader',serif;font-size:24px;font-weight:600;color:var(--ink);margin:0 0 12px;letter-spacing:0}
         .doc-meta{font-family:'Hanken Grotesk',sans-serif;font-size:14px;color:var(--ink-soft);margin:0 0 4px}
         .doc-meta strong{color:var(--ink)}
         .doc-table-wrap{overflow-x:auto;margin:24px 0}
@@ -165,7 +163,7 @@
         .field-note{font-size:13px;color:var(--muted);margin:-4px 0 2px;line-height:1.45}
         .contrast{font-size:clamp(1.06rem,1.8vw,1.17rem);color:var(--ink);line-height:1.7;margin:0 0 38px;max-width:600px}
         .form-next{font-size:14px;color:var(--muted);margin-top:-2px;margin-bottom:10px}
-        .testimonial{margin:38px 0 10px;text-align:center}
+        .testimonial{margin:10px 0 30px;text-align:center}
         .tq{font-family:'Newsreader',serif;font-size:clamp(1.15rem,2.2vw,1.35rem);color:var(--ink);font-style:italic;line-height:1.55;max-width:520px;margin:0 auto}
         .ta{font-size:14px;color:var(--muted);margin-top:12px;font-style:normal}
         #get-options{scroll-margin-top:92px}
@@ -175,6 +173,24 @@
         .guides-exit p{font-size:15px;color:var(--muted)}
         .guides-exit a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:rgba(43,76,126,.3);text-underline-offset:3px}
         .guides-exit a:hover{text-decoration-color:var(--navy)}
+        /* compact options-sheet: ~30% smaller so the sample doc reads at a glance */
+        .doc{margin-top:16px;padding:clamp(16px,2.4vw,26px) clamp(14px,2.2vw,24px)}
+        .doc-logo-arrow{width:26px;height:14px}
+        .doc-logo-text{font-size:16px}
+        .doc-title{font-size:17px;margin:0 0 8px}
+        .doc-meta{font-size:12px;margin:0 0 3px}
+        .doc-table-wrap{margin:14px 0}
+        .doc-table{font-size:11px}
+        .doc-table th,.doc-table td{padding:5px 8px;white-space:nowrap}
+        .doc-table thead th{font-size:11px}
+        .doc-disclosure-text{font-size:11px;margin-top:10px}
+        .doc-top{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap}
+        .doc-top .doc-title{margin:8px 0 0}
+        .doc-meta-col{text-align:right}
+        .doc-meta-col .doc-meta{margin:0 0 2px}
+        @media(max-width:640px){.doc-meta-col{text-align:left}}
+        .sheet{padding:0 0 30px}
+        .sheet .doc{margin-top:0}
     </style>
 </head>
 <body>
@@ -224,26 +240,23 @@
                     </div>
                 </section>
 
-            <div class="col">
-                <section class="block">
-                    <span class="eyebrow">The options sheet</span>
-                    <h2>See what lands in your inbox</h2>
-                    <div style="margin-top:0">
-                        <button type="button" class="ex-toggle" onclick="toggleExample()">
-                            <span class="toggle-label">See an example</span>
-                            <span class="arrow">&#9662;</span>
-                        </button>
-                        <div class="ex-content" id="exampleContent">
-                            <div class="doc">
-                                <div class="doc-header-row">
-                                    <svg class="doc-logo-arrow" viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></svg>
-                                    <span class="doc-logo-text">TRANSITUS</span>
+                <section class="sheet">
+                    <div class="vhead reveal"><span class="eyebrow">The options sheet</span></div>
+                    <div class="doc" id="exampleDoc">
+                                <div class="doc-top">
+                                    <div>
+                                        <div class="doc-header-row">
+                                            <svg class="doc-logo-arrow" viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></polyline></svg>
+                                            <span class="doc-logo-text">Transitus</span>
+                                        </div>
+                                        <h3 class="doc-title">Your Home Options</h3>
+                                    </div>
+                                    <div class="doc-meta-col">
+                                        <p class="doc-meta">Prepared for: <strong>Sample Homeowner</strong></p>
+                                        <p class="doc-meta">Property: <strong>1234 Sample St, Denver, CO 80200</strong></p>
+                                        <p class="doc-meta">Date: <strong>Sample Document</strong></p>
+                                    </div>
                                 </div>
-                                <p class="doc-tagline">Transparent Options. Full-Service Coordination.</p>
-                                <h3 class="doc-title">Your Home Options</h3>
-                                <p class="doc-meta">Prepared for: <strong>Sample Homeowner</strong></p>
-                                <p class="doc-meta">Property: <strong>1234 Sample St, Denver, CO 80200</strong></p>
-                                <p class="doc-meta">Date: <strong>Sample Document</strong></p>
                                 <div class="doc-table-wrap">
                                     <table class="doc-table">
                                         <thead>
@@ -263,10 +276,10 @@
                                     </table>
                                 </div>
                                 <p class="doc-disclosure-text" style="margin-top:16px;font-style:italic">Sample document. Numbers shown for illustration only.</p>
-                            </div>
-                        </div>
                     </div>
                 </section>
+
+            <div class="col">
 
                 <div class="testimonial reveal">
                     <p class="tq">"I'm not trusting anybody these days. I don't know why I called you back. But I did, and I trust you."</p>
@@ -283,7 +296,7 @@
 
                 <section class="form-block reveal" id="get-options">
                     <h2>See your home's options</h2>
-                    <p class="form-helper">Free. Darien reviews your situation and sends your options by email within 48 hours. No surprise calls, no spam.</p>
+                    <p class="form-helper">Free. Darien reviews your situation and sends your options by email within 48 hours.</p>
                     <form action="https://formspree.io/f/xqewvyzg" method="POST">
                         <input type="hidden" name="_subject" value="New Transitus Lead">
                         <input type="hidden" name="_next" value="thank-you.html">
@@ -323,11 +336,6 @@
         </div>
     </footer>
     <script>
-        function toggleExample(){
-            var c=document.getElementById('exampleContent'),b=document.querySelector('.ex-toggle'),l=b.querySelector('.toggle-label');
-            c.classList.toggle('open');b.classList.toggle('open');
-            l.textContent=c.classList.contains('open')?'Hide example':'See an example';
-        }
         (function(){
             var els=Array.prototype.slice.call(document.querySelectorAll('.reveal'));
             var vh=window.innerHeight||document.documentElement.clientHeight;
