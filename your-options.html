@@ -172,9 +172,16 @@
         .video-wrap video{display:block;width:100%;border-radius:11px;box-shadow:none}
         .values .video-wrap{margin:0}
         .values.whovid{padding:26px 0 0}
+        .vbar{display:none}
         @media(max-width:600px){
-            /* hide only the big center play button (it covered the face); keep the bottom control bar so it reads as a video */
-            .video-wrap video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none}
+            /* iPhone Safari ignores CSS on native controls, so on mobile we strip them (kills the face-covering
+               center button) and draw our own bar; tapping the video plays it with the real native controls */
+            .video-frame{cursor:pointer}
+            .vbar{display:flex;align-items:center;gap:9px;position:absolute;left:6px;right:6px;bottom:6px;height:34px;padding:0 12px;border-radius:0 0 11px 11px;background:linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,.12) 72%,rgba(0,0,0,0));pointer-events:none}
+            .vbar svg{width:15px;height:15px;fill:#fff;flex-shrink:0}
+            .vbar-track{flex:1;height:3px;background:rgba(255,255,255,.45);border-radius:2px;position:relative}
+            .vbar-track::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;background:#fff}
+            .vbar-time{font-family:'Hanken Grotesk',sans-serif;font-size:11px;font-weight:600;color:#fff;letter-spacing:.02em}
         }
         .guides-exit{margin-top:20px;text-align:center}
         .guides-exit p{font-size:15px;color:var(--muted)}
@@ -293,6 +300,11 @@
                             <video controls playsinline preload="metadata" poster="transitus-video-poster.jpg">
                                 <source src="transitus-video.mp4" type="video/mp4">
                             </video>
+                            <div class="vbar" aria-hidden="true">
+                                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                <span class="vbar-track"></span>
+                                <span class="vbar-time">0:00</span>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -347,5 +359,19 @@
             <span class="foot-meta">&copy; 2026 Transitus, LLC &middot; <a href="/about">About Us</a> &middot; <a href="/privacy">Privacy</a> &middot; Denver, Colorado</span>
         </div>
     </footer>
+    <script>
+        (function(){
+            var f=document.querySelector('.video-frame');if(!f)return;
+            var v=f.querySelector('video'),bar=f.querySelector('.vbar');
+            if(!v)return;
+            if(!window.matchMedia('(max-width:600px)').matches)return; /* desktop: native player, untouched */
+            v.removeAttribute('controls');                            /* mobile: remove native center button */
+            f.addEventListener('click',function(){
+                if(bar)bar.style.display='none';
+                v.setAttribute('controls','');
+                v.play();
+            },{once:true});
+        })();
+    </script>
 </body>
 </html>
