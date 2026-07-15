@@ -168,7 +168,14 @@
         .ta{font-size:14px;color:var(--muted);margin-top:12px;font-style:normal}
         #get-options{scroll-margin-top:92px}
         .video-wrap{margin:19px 0 10px;text-align:center}
-        .video-wrap video{width:100%;max-width:560px;border-radius:14px;box-shadow:0 4px 20px rgba(27,26,22,.1)}
+        .video-frame{position:relative;display:inline-block;width:100%;max-width:560px;line-height:0}
+        .video-wrap video{display:block;width:100%;border-radius:14px;box-shadow:0 4px 20px rgba(27,26,22,.1)}
+        .video-play{display:none}
+        @media(max-width:600px){
+            .video-play{display:flex;align-items:center;justify-content:center;position:absolute;left:50%;bottom:9%;transform:translateX(-50%);width:52px;height:52px;border-radius:50%;background:rgba(43,76,126,.94);color:#fff;border:none;cursor:pointer;box-shadow:0 6px 18px rgba(27,26,22,.4)}
+            .video-play:active{transform:translateX(-50%) scale(.93)}
+            .video-play svg{margin-left:3px}
+        }
         .guides-exit{margin-top:20px;text-align:center}
         .guides-exit p{font-size:15px;color:var(--muted)}
         .guides-exit a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:rgba(43,76,126,.3);text-underline-offset:3px}
@@ -287,9 +294,14 @@
                 </div>
 
                 <div class="video-wrap reveal">
-                    <video controls playsinline preload="metadata" poster="transitus-video-poster.jpg">
-                        <source src="transitus-video.mp4" type="video/mp4">
-                    </video>
+                    <div class="video-frame">
+                        <video controls playsinline preload="metadata" poster="transitus-video-poster.jpg">
+                            <source src="transitus-video.mp4" type="video/mp4">
+                        </video>
+                        <button type="button" class="video-play" aria-label="Play video">
+                            <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+                        </button>
+                    </div>
                 </div>
 
                 <section class="form-block reveal" id="get-options">
@@ -333,5 +345,18 @@
             <span class="foot-meta">&copy; 2026 Transitus, LLC &middot; <a href="/about">About Us</a> &middot; <a href="/privacy">Privacy</a> &middot; Denver, Colorado</span>
         </div>
     </footer>
+    <script>
+        (function(){
+            var f=document.querySelector('.video-frame');if(!f)return;
+            var v=f.querySelector('video'),b=f.querySelector('.video-play');if(!v||!b)return;
+            if(!window.matchMedia('(max-width:600px)').matches)return; /* desktop: native player, untouched */
+            v.removeAttribute('controls');                            /* mobile: drop the native center button */
+            b.addEventListener('click',function(){
+                b.style.display='none';
+                v.setAttribute('controls','');
+                v.play();
+            });
+        })();
+    </script>
 </body>
 </html>
