@@ -168,8 +168,9 @@
         .ta{font-size:14px;color:var(--muted);margin-top:12px;font-style:normal}
         #get-options{scroll-margin-top:92px}
         .video-wrap{margin:19px 0 10px;text-align:center}
-        .video-frame{position:relative;display:inline-block;width:100%;max-width:560px;line-height:0}
-        .video-wrap video{display:block;width:100%;border-radius:14px;box-shadow:0 4px 20px rgba(27,26,22,.1)}
+        .video-frame{position:relative;display:inline-block;width:100%;max-width:572px;padding:6px;background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 4px 20px rgba(27,26,22,.1);line-height:0}
+        .video-wrap video{display:block;width:100%;border-radius:11px;box-shadow:none}
+        .values .video-wrap{margin-top:0}
         .video-play{display:none}
         @media(max-width:600px){
             /* clean poster, no button overlay — tap anywhere to play (native controls then appear, like web) */
@@ -247,7 +248,7 @@
                 </section>
 
                 <section class="sheet">
-                    <div class="vhead reveal"><span class="eyebrow">The options sheet</span></div>
+                    <div class="vhead reveal"><span class="eyebrow">What you receive</span></div>
                     <div class="doc" id="exampleDoc">
                                 <div class="doc-top">
                                     <div>
@@ -285,20 +286,23 @@
                     </div>
                 </section>
 
+                <section class="values">
+                    <div class="vhead reveal"><span class="eyebrow">Who you get</span></div>
+                    <div class="video-wrap reveal">
+                        <div class="video-frame">
+                            <video controls playsinline preload="metadata" poster="transitus-video-poster.jpg">
+                                <source src="transitus-video.mp4" type="video/mp4">
+                            </video>
+                            <button type="button" class="video-play" aria-label="Play video"></button>
+                        </div>
+                    </div>
+                </section>
+
             <div class="col">
 
                 <div class="testimonial reveal">
                     <p class="tq">"I'm not trusting anybody these days. I don't know why I called you back. But I did, and I trust you."</p>
                     <p class="ta">— Ms. J, Colorado homeowner</p>
-                </div>
-
-                <div class="video-wrap reveal">
-                    <div class="video-frame">
-                        <video controls playsinline preload="metadata" poster="transitus-video-poster.jpg">
-                            <source src="transitus-video.mp4" type="video/mp4">
-                        </video>
-                        <button type="button" class="video-play" aria-label="Play video"></button>
-                    </div>
                 </div>
 
                 <section class="form-block reveal" id="get-options">
