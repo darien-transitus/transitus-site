@@ -174,7 +174,7 @@
         .guides-exit a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:rgba(43,76,126,.3);text-underline-offset:3px}
         .guides-exit a:hover{text-decoration-color:var(--navy)}
         /* compact options-sheet: ~30% smaller so the sample doc reads at a glance */
-        .doc{margin-top:16px;padding:clamp(16px,2.4vw,26px) clamp(14px,2.2vw,24px)}
+        .doc{margin-top:16px;padding:clamp(16px,2.4vw,26px) clamp(14px,2.2vw,24px) 4px}
         .doc-logo-arrow{width:26px;height:14px}
         .doc-logo-text{font-size:16px}
         .doc-title{font-size:17px;margin:0 0 8px}
@@ -189,7 +189,7 @@
         .doc-meta-col{text-align:right}
         .doc-meta-col .doc-meta{margin:0 0 2px}
         @media(max-width:640px){.doc-meta-col{text-align:left}}
-        .sheet{padding:0 0 30px}
+        .sheet{padding:0}
         .sheet .doc{margin-top:0}
     </style>
 </head>
@@ -275,7 +275,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                <p class="doc-disclosure-text" style="margin-top:16px;font-style:italic">Sample document. Numbers shown for illustration only.</p>
+                                <p class="doc-disclosure-text" style="margin-top:12px;font-style:italic">Sample document. Numbers shown for illustration only.</p>
                     </div>
                 </section>
 
@@ -294,7 +294,7 @@
 
                 <section class="form-block reveal" id="get-options">
                     <h2>See your home's options</h2>
-                    <p class="form-helper">Free. Darien reviews your situation and sends your options by email within 48 hours.</p>
+                    <p class="form-helper">I review your situation and send your options by email within 48 hours.</p>
                     <form action="https://formspree.io/f/xqewvyzg" method="POST">
                         <input type="hidden" name="_subject" value="New Transitus Lead">
                         <input type="hidden" name="_next" value="thank-you.html">
