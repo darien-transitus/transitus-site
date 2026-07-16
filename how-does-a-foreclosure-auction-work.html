@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.documentElement.className='js';</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18117724697"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','AW-18117724697');</script>
+    <title>Bracing to learn how a foreclosure auction works | Transitus</title>
+    <link rel="canonical" href="https://gettransitus.ai/how-does-a-foreclosure-auction-work">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+    <meta name="description" content="How does a foreclosure auction work? See the whole day: who runs it, who can bid, what happens if nobody does, and the money that can come back to you.">
+    <meta property="og:title" content="Bracing to learn how a foreclosure auction works">
+    <meta property="og:description" content="How does a foreclosure auction work? See the whole day: who runs it, who can bid, what happens if nobody does, and the money that can come back to you.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://gettransitus.ai/how-does-a-foreclosure-auction-work">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--navy:#2B4C7E;--navy-deep:#1d3556;--cream:#f8f7f4;--paper:#ffffff;--surface:#ffffff;--ink:#1b1a16;--ink-soft:#52504a;--muted:#8d8b80;--line:#e8e3d7;--c1-bg:#eaf0f8;--c1-tx:#274a78;--brand:#2B4C7E;--brand-dark:#1d3556;--brand-light:#eaf0f8;--bg:#f8f7f4;--card:#ffffff}
+        html{scroll-behavior:smooth}
+        body{font-family:'Hanken Grotesk',-apple-system,sans-serif;color:var(--ink-soft);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased}
+        .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+        h1,h2,h3{font-family:'Newsreader',Georgia,serif;color:var(--ink);font-weight:500;letter-spacing:-0.01em;line-height:1.12}
+        a{color:inherit;text-decoration:none}
+
+        header{position:sticky;top:0;z-index:50;background:rgba(248,247,244,0.82);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
+        .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+        .brand{display:flex;align-items:center;gap:11px}
+        .brand svg{width:34px;height:18px}
+        .brand-name{font-family:'Newsreader',serif;font-weight:600;font-size:22px;letter-spacing:0.02em;color:var(--navy)}.nav-right{display:flex;align-items:center;gap:clamp(16px,3vw,26px)}.nav-link{font-family:'Hanken Grotesk',sans-serif;font-size:15px;font-weight:600;color:var(--ink-soft);transition:color .18s}.nav-link:hover{color:var(--navy)}.nav-link.active{color:var(--navy)}@media(max-width:600px){.nav-link{display:none}}
+        .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:14px;border-radius:999px;padding:9px 18px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;cursor:pointer;white-space:nowrap}
+        .btn-primary{background:var(--navy);color:#fff;box-shadow:0 1px 2px rgba(27,26,22,.12),0 10px 24px -10px rgba(43,76,126,.5)}
+        .btn-primary:hover{background:var(--navy-deep);transform:translateY(-2px)}
+        .btn .arr{transition:transform .2s ease}.btn:hover .arr{transform:translateX(4px)}
+
+        .alayout{display:flex;gap:0;align-items:flex-start;max-width:1000px;margin:0 auto;padding:52px 0 64px}
+        .toc{width:212px;flex-shrink:0;padding-right:36px;position:sticky;top:92px;align-self:flex-start}
+        .toc-label{font-size:12px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--navy);margin-bottom:14px}
+        .toc-links{display:flex;flex-direction:column;border-left:1.5px solid var(--line)}
+        .toc-links a{font-size:13px;color:var(--muted);line-height:1.35;padding:7px 0 7px 15px;border-left:2px solid transparent;margin-left:-1.5px;transition:color .2s,border-color .2s}
+        .toc-links a:hover{color:var(--navy)}
+        .toc-links a.active{color:var(--navy);font-weight:600;border-left-color:var(--navy)}
+
+        .toc-mobile{display:none;margin-bottom:24px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface)}
+        .toc-mobile-toggle{display:flex;justify-content:space-between;align-items:center;padding:15px 18px;background:transparent;cursor:pointer;border:none;width:100%;font-family:inherit;font-size:14px;color:var(--navy);font-weight:600}
+        .toc-mobile-toggle .caret{font-size:10px;transition:transform .2s}
+        .toc-mobile-toggle.open .caret{transform:rotate(180deg)}
+        .toc-mobile-list{max-height:0;overflow:hidden;transition:max-height .3s ease;background:var(--c1-bg)}
+        .toc-mobile-list.open{max-height:640px}
+        .toc-mobile-list a{display:block;font-size:13.5px;color:var(--navy);padding:9px 18px;border-bottom:1px solid rgba(43,76,126,.1)}
+        .toc-mobile-list a:last-child{border-bottom:none}
+
+        .article{flex:1;min-width:0;max-width:720px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:clamp(32px,5vw,62px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 40px 80px -55px rgba(27,26,22,.4)}
+        .breadcrumb{font-size:13px;color:var(--muted);margin-bottom:22px}
+        .breadcrumb a{color:var(--navy);font-weight:500}
+        .breadcrumb a:hover{text-decoration:underline}
+        .article h1{font-size:clamp(2rem,4.2vw,2.85rem);font-weight:500;color:var(--ink);line-height:1.16;margin-bottom:14px}
+        .dek{font-family:'Newsreader',Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(1.15rem,2.1vw,1.45rem);color:var(--navy);line-height:1.3;margin:0 0 22px}
+        .byline{display:flex;align-items:center;gap:11px;padding:0 0 22px;border-bottom:1px solid var(--line);margin-bottom:34px}
+        .byline svg{width:26px;height:14px;flex-shrink:0}
+        .byline-text{font-size:14px;color:var(--ink-soft);line-height:1.4}
+        .byline-text .author{color:var(--navy);font-weight:600}
+        .byline-text .meta{color:var(--muted)}
+        .article h2{font-size:clamp(1.4rem,2.6vw,1.72rem);font-weight:500;color:var(--ink);line-height:1.25;margin-top:44px;margin-bottom:15px;scroll-margin-top:96px}
+        .article p{font-size:17px;color:var(--ink-soft);line-height:1.78;margin-bottom:20px}
+        .article p strong{color:var(--ink);font-weight:600}
+        .article a:not(.btn){color:var(--navy);font-weight:500;text-decoration:underline;text-decoration-color:rgba(43,76,126,0.32);text-underline-offset:3px;transition:text-decoration-color .2s}
+        .article a:not(.btn):hover{text-decoration-color:var(--navy)}
+        .article ul{list-style:none;padding:0;margin:0 0 24px}
+        .article ul li{font-size:17px;color:var(--ink-soft);margin-bottom:13px;padding-left:36px;position:relative;line-height:1.7}
+        .article ul li::before{content:"";position:absolute;left:0;top:8px;width:25px;height:13px;background-image:url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-2 0 34 16' fill='none' stroke='%232B4C7E' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='3' cy='8' r='2.5' fill='%232B4C7E'/%3E%3Cline x1='6' y1='8' x2='26' y2='8'/%3E%3Cpolyline points='22,3 28,8 22,13'/%3E%3C/svg%3E");background-repeat:no-repeat;background-size:contain;background-position:left center}
+        .article ul li strong{color:var(--ink);font-weight:600}
+
+        .disclaimer{font-size:13px;color:var(--muted);background:var(--cream);border:1px solid var(--line);border-left:3px solid var(--navy);border-radius:12px;padding:18px 20px;margin-top:38px;line-height:1.6}
+
+        .cta-card{margin-top:48px;background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:clamp(30px,4vw,44px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 30px 60px -45px rgba(27,26,22,.35)}
+        .cta-card h3{font-family:'Newsreader',serif;font-size:1.6rem;font-weight:500;color:var(--ink);text-align:center;margin-bottom:6px}
+        .cta-helper{font-size:14px;color:var(--muted);text-align:center;margin-bottom:26px}
+        .fg{margin-bottom:14px}
+        .fg label{display:block;font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:6px}
+        .fg input{width:100%;padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-family:inherit;font-size:15px;background:var(--surface);color:var(--ink);transition:border-color .15s,box-shadow .15s}
+        .fg input:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(43,76,126,.14)}
+        .submit{width:100%;margin-top:8px;background:var(--navy);color:#fff;font-family:inherit;font-weight:600;font-size:15px;border:none;border-radius:10px;padding:14px;cursor:pointer;transition:background .18s,transform .18s}
+        .submit:hover{background:var(--navy-deep);transform:translateY(-1px)}
+        .back-link{display:inline-block;margin-top:20px;font-size:14px;color:var(--navy);font-weight:500}
+        .back-link:hover{text-decoration:underline}
+
+        footer{margin-top:8px;background:var(--navy-deep);color:rgba(255,255,255,.62)}
+        .foot{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;padding:30px 0}
+        .foot .brand-name{color:#fff;font-size:19px}
+        .foot a{color:#fff;font-weight:500}.foot a:hover{text-decoration:underline}
+        .foot-meta{font-size:13.5px}
+
+        @media(max-width:880px){
+            .toc{display:none}
+            .article{max-width:none}
+            .alayout{padding:34px 0 48px}
+            .toc-mobile{display:block}
+        }
+        @media(max-width:600px){.foot{flex-direction:column;text-align:center}}
+        @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+        .guides-exit{margin-top:20px;text-align:center}
+        .guides-exit p{font-size:15px;color:var(--muted)}
+        .guides-exit a{color:var(--navy);font-weight:600;text-decoration:underline;text-decoration-color:rgba(43,76,126,.3);text-underline-offset:3px}
+        .guides-exit a:hover{text-decoration-color:var(--navy)}
+    </style>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Bracing to learn how a foreclosure auction works","description":"How does a foreclosure auction work? See the whole day: who runs it, who can bid, what happens if nobody does, and the money that can come back to you.","author":{"@type":"Organization","name":"Transitus"},"datePublished":"2026-07-16","mainEntityOfPage":"https://gettransitus.ai/how-does-a-foreclosure-auction-work"}</script>
+</head>
+<body>
+    <header>
+        <div class="wrap nav">
+            <a href="/" class="brand" aria-label="Transitus home">
+                <svg viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></svg>
+                <span class="brand-name">Transitus</span>
+            </a>
+            <div class="nav-right"><a href="/about" class="nav-link">About Us</a><a href="/your-options" class="btn btn-primary">See my options <span class="arr">&rarr;</span></a></div>
+        </div>
+    </header>
+    <main>
+        <div class="wrap">
+            <div class="alayout">
+                <nav class="toc" aria-label="Table of contents">
+                    <p class="toc-label">On this page</p>
+                    <div class="toc-links">
+                        <a href="#picturing-the-room-you-have-never-stood-in" class="active">Picturing the room</a>
+                        <a href="#the-relief-of-knowing-the-number-early">Knowing the number</a>
+                        <a href="#the-hope-that-no-one-shows-up">No one shows</a>
+                        <a href="#wondering-if-you-could-buy-it-back-yourself">Buying it back</a>
+                        <a href="#a-quieter-ending-than-you-imagined">A quieter ending</a>
+                        <a href="#the-money-that-can-survive-that-room">Money that survives</a>
+                        <a href="#the-day-can-t-ambush-you-now">Can&#x27;t ambush you</a>
+                    </div>
+                </nav>
+                <article class="article">
+                    <div class="toc-mobile">
+                        <button type="button" class="toc-mobile-toggle" onclick="this.classList.toggle('open');this.nextElementSibling.classList.toggle('open')">
+                            <span>What's in this article</span>
+                            <span class="caret">&#9662;</span>
+                        </button>
+                        <div class="toc-mobile-list">
+                            <a href="#picturing-the-room-you-have-never-stood-in">Picturing the room</a>
+                            <a href="#the-relief-of-knowing-the-number-early">Knowing the number</a>
+                            <a href="#the-hope-that-no-one-shows-up">No one shows</a>
+                            <a href="#wondering-if-you-could-buy-it-back-yourself">Buying it back</a>
+                            <a href="#a-quieter-ending-than-you-imagined">A quieter ending</a>
+                            <a href="#the-money-that-can-survive-that-room">Money that survives</a>
+                            <a href="#the-day-can-t-ambush-you-now">Can&#x27;t ambush you</a>
+                        </div>
+                    </div>
+                    <nav class="breadcrumb"><a href="/">Home</a> &nbsp;/&nbsp; Articles &nbsp;/&nbsp; How does a foreclosure auction work</nav>
+                    <h1>Bracing to learn how a foreclosure auction works</h1>
+                    <p class="dek">Bracing for the day your home goes to auction.</p>
+                    <div class="byline">
+                        <svg viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></svg>
+                        <div class="byline-text">Written by <span class="author">Transitus</span> <span class="meta">&middot; Denver, Colorado &middot; July 16, 2026</span></div>
+                    </div>
+                    <p>There is a date now. Maybe it is printed on the notice you have read ten times, maybe it is still on its way, but you can feel it. And attached to that date is a room you have never stood in. So you are studying the room. Not out of curiosity. You are doing the homework people only do when the day is real, learning the rules before you are forced to live them, so the worst day of this whole process cannot ambush you. This is not giving up. It is you protecting yourself the only way left. So here is how a foreclosure auction actually works, start to finish, with nothing left in the shadows.</p>
+
+                    <h2 id="picturing-the-room-you-have-never-stood-in">Picturing the room you have never stood in</h2>
+                    <p>Let’s start with what this actually is. A foreclosure ends in a public auction: buyers show up, the lender among them, and the home is sold to the highest bidder. In Colorado, the person running that sale is not the bank. It is the <a href="/judicial-vs-nonjudicial-foreclosure#it-was-decided-the-day-you-closed">public trustee of your county, a public official</a>, the same office where the lender filed <a href="/pre-foreclosure-vs-foreclosure#beginning">the paperwork that started all of this</a>.</p>
+                    <p>The room itself is ordinary. By law, the sale happens at a door, entrance, or room of the courthouse, or at the building the county clerk or public trustee's office is, and the exact spot has to be named in the <a href="/foreclosure-guide#time-running">combined notice</a> you receive (CRS 38-38-110(1)(a)). The law also allows the sale to run over the internet instead. And because it is public, you are allowed to be there. You are also allowed not to be. That choice is completely yours, and either answer is okay.</p>
+                    <h2 id="the-relief-of-knowing-the-number-early">The relief of knowing the number early</h2>
+                    <p>Here is something almost no one tells homeowners: the auction does not start as a mystery. The lender is required to submit its opening bid in writing, and it must be in the trustee's hands by noon two business days before the sale (CRS 38-38-106(1)(a)). Once it arrives, the trustee has to make it available to the public, and the amount is read or posted at the sale itself. The opening number on your own home is knowable before the day ever comes. You do not have to walk in blind.</p>
+                    <p>There is also a floor under that number. Colorado requires the lender to bid at least a good-faith estimate of your home's <a href="/fair-home-offer#whats-fair">fair market value</a>, minus things like unpaid property taxes, liens ahead of theirs, and the estimated costs of holding and selling the property. (CRS 38-38-106(6)). They are not however required to bid more than what is owed. I won't pretend that math feels generous. But the floor exists, and it is one of the few parts of this day that was built with you in mind.</p>
+                    <p>One more thing about the lender's bid, so nothing at the sale confuses you: they do not bring money. Up to the amount you owe them, their bid simply cancels that much of your debt instead of being paid in cash. The industry calls this a <a href="/credit-bid#no-say">credit bid</a>. If they ever bid above what they are owed, they only pay the extra.</p>
+                    <h2 id="the-hope-that-no-one-shows-up">The hope that no one shows up</h2>
+                    <p>I think part of you has already pictured it: the sale is called, the room stays quiet, nobody raises a hand, and the whole machine stalls. I understand that hope, but a Colorado foreclosure auction cannot come up empty, because the lender's written bid is already filed. I know that’s not what you want to hear but I would rather you hear from me than discover it on the courthouse steps.</p>
+                    <p>However, what can happen is delay. If the lender's bid does not arrive by its deadline, the trustee must push the sale back a week (CRS 38-38-106(1)(b)). Beyond that, <a href="/when-too-late-foreclosure#hope">the sale can be continued week to week</a>, for good cause or at the lender's written request, though not past twelve months from the original date (CRS 38-38-109). So the date you are bracing for can move, and sometimes does. But a postponement is a pause, not a rescue.</p>
+                    <h2 id="wondering-if-you-could-buy-it-back-yourself">Wondering if you could buy it back yourself</h2>
+                    <p>Now the question underneath your question. The one carrying last hope you could still make: can you bid on your own home? Yes. The sale is public and the bidding is open, and nothing shuts the door on you just because your name is on the deed. If you want to stand in that room and raise your hand, you absolutely can.</p>
+                    <p>Here is what it takes, told straight. Every bidder except the lender has to pay their full bid on the day of the sale itself (CRS 38-38-106(7)(a)). And the money has to be real that day: cash, a wire to the trustee's account, or a bank-issued check like a cashier's check. So, winning your home back at auction means holding the entire price in hand before the sun sets.</p>
+                    <p>I know how that lands. For most people <a href="/how-many-missed-payments-before-foreclosure">carrying missed payments</a>, money on that scale is exactly what does not exist. And if this feels like you, please hear this one sentence: there are <a href="/how-to-save-my-house-from-foreclosure">far less expensive ways to keep your home</a> and they live before the sale. The auction is the most expensive possible door back into your own house and is normally worse for your <a href="/foreclosure-credit-report#how-far">credit</a> and <a href="/foreclosure-guide#two-evils">money</a> if you have to sell in auction. Asking about it was not foolish. It was you looking for a move, and the better moves simply sit earlier. <a href="/your-options">We at Transitus are happy to show you what is available if you need the help</a>.</p>
+                    <h2 id="a-quieter-ending-than-you-imagined">A quieter ending than you imagined</h2>
+                    <p>However the bidding goes, the day ends with paperwork, not a ceremony. The winning bidder does not walk out holding a deed to your home. Within five business days, the trustee records what is called a certificate of purchase, and that certificate only turns into a deed after <a href="/right-of-redemption#a-right-that-exists-for-everyone-but-you">the redemption window</a> passes (CRS 38-38-401).</p>
+                    <p>One honest line before we leave the paperwork. If the winning bid was less than what you owed, the gap has a name, <a href="/credit-bid#why-care">a deficiency</a>, and it gets noted right on that certificate. It does not automatically vanish. And if the lender ever sues you to collect that deficiency, one defense the law allows is pointing out that their bid fell under the good-faith floor from earlier. I won't teach that whole subject here. I just want the word to be familiar if you ever meet it, instead of one more surprise on the worst day.</p>
+                    <h2 id="the-money-that-can-survive-that-room">The money that can survive that room</h2>
+                    <p>Now the part your quieter searches were hoping about, and for once the hope is real. If the bidding climbs past what you owed, the extra money is called an overbid, and after any junior liens entitled to payment are covered, whatever remains must be paid to you (CRS 38-38-111(2)). Not the bank. You. When that happens, losing the house does not mean losing every dollar that was in it.</p>
+                    <p>The trustee is required to try to find you, with real effort to locate your current address and a mailed notice that the money exists. Please don't wait on that letter, though. Unclaimed overbid money sits in escrow for six months from the sale, and after that it moves into the state's unclaimed property system, where getting it back is slower. One protection to carry with you: no one can lawfully charge you a fee to recover overbid money from the public trustee. Colorado made those agreements unenforceable, and even pushing one on you is a crime. <a href="/foreclosure-scams#take-money">If someone offers to collect your money for a cut</a>, the money is already yours, and they know it.</p>
+                    <h2 id="the-day-can-t-ambush-you-now">The day can&#x27;t ambush you now</h2>
+                    <p>You came here to learn the rules of a room you never wanted to enter, and now you hold them. Whatever that day brings, it will not catch you unprepared, and that is your doing, no one else's. If, before it arrives, you want to see what is still possible for your own home and situation, <a href="/your-options">we at Transitus can show you your options</a>. Either way, I am glad you will not face that room in the dark.</p>
+                    <p class="disclaimer" data-nosnippet>This article is general information from Transitus, not legal, financial, or tax advice. Foreclosure rules change and every situation is different. Transitus is not a foreclosure consultant (CRS 6-1-1103) and charges no upfront fees. For free help, call the Colorado Foreclosure Hotline at 1-877-601-HOPE or consult a Colorado real estate attorney.</p>
+                    <div class="cta-card">
+                        <h3>If you'd like to see your specific options</h3>
+                        <p class="cta-helper">Free. Your options delivered by email within 48 hours. No surprise calls, no spam.</p>
+                        <form action="https://formspree.io/f/xqewvyzg" method="POST">
+                            <input type="hidden" name="_subject" value="New Transitus Lead (from How does a foreclosure auction work)">
+                            <input type="hidden" name="_next" value="thank-you.html">
+                            <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" required></div>
+                            <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
+                            <div class="fg"><label for="address">Property Address</label><input type="text" id="address" name="address" required></div>
+                            <div class="fg"><label for="phone">Phone (optional)</label><input type="tel" id="phone" name="phone"></div>
+                            <button type="submit" class="submit">Get My Free Options</button>
+                        </form>
+                        <a href="/" class="back-link">&larr; Back to Transitus home</a>
+                    </div>
+                    <div class="guides-exit">
+                        <p>Not ready yet? No pressure. <a href="/guides">Read our other guides for Colorado homeowners.</a></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrap foot">
+            <span class="brand-name">Transitus</span>
+            <span class="foot-meta">&copy; 2026 Transitus, LLC &middot; <a href="/about">About Us</a> &middot; <a href="/privacy">Privacy</a> &middot; Denver, Colorado</span>
+        </div>
+    </footer>
+    <script>
+    (function(){
+        var links=document.querySelectorAll('.toc-links a');
+        var sections=[];
+        links.forEach(function(a){var id=a.getAttribute('href').replace('#','');var el=document.getElementById(id);if(el)sections.push({id:id,el:el,link:a});});
+        if(!sections.length)return;
+        function update(){
+            var y=window.scrollY||window.pageYOffset,cur=sections[0].id;
+            for(var i=0;i<sections.length;i++){if(sections[i].el.offsetTop-96<=y)cur=sections[i].id;}
+            links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href').replace('#','')===cur);});
+        }
+        window.addEventListener('scroll',update,{passive:true});update();
+    })();
+    </script>
+</body>
+</html>
