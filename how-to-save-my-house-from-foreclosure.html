@@ -218,5 +218,17 @@
         window.addEventListener('scroll',update,{passive:true});update();
     })();
     </script>
+    <script>
+        (function(){
+            var f=document.querySelector('form[action*="formspree.io"]');
+            if(!f)return;
+            f.addEventListener('submit',function(){
+                try{
+                    var n=f.querySelector('#name'), e=f.querySelector('#email');
+                    localStorage.setItem('transitus_lead', JSON.stringify({name:n?n.value:'', email:e?e.value:'', t:Date.now()}));
+                }catch(err){}
+            });
+        })();
+    </script>
 </body>
 </html>
