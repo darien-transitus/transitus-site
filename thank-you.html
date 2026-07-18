@@ -34,7 +34,7 @@
         :root{--navy:#2B4C7E;--navy-deep:#1d3556;--cream:#f6f3ec;--paper:#fffdf9;--surface:#ffffff;--ink:#1b1a16;--ink-soft:#52504a;--muted:#8d8b80;--line:#e8e3d7;--c1-bg:#eaf0f8;--c1-tx:#274a78;--c2-bg:#e9f1e7;--c2-tx:#3c6b2c;--c3-bg:#f6eedd;--c3-tx:#8a591c;--c4-bg:#f6e8e6;--c4-tx:#9a3a31}
         html{scroll-behavior:smooth}
         body{font-family:'Hanken Grotesk',-apple-system,sans-serif;color:var(--ink-soft);background:var(--cream);line-height:1.7;-webkit-font-smoothing:antialiased;min-height:100vh;display:flex;flex-direction:column}
-        .wrap{max-width:1000px;margin:0 auto;padding:0 24px;width:100%}
+        .wrap{max-width:1140px;margin:0 auto;padding:0 24px;width:100%}
         h1,h3{font-family:'Newsreader',Georgia,serif;color:var(--ink);font-weight:500;letter-spacing:-0.01em;line-height:1.12}
         a{color:inherit;text-decoration:none}
         header{background:var(--cream);border-bottom:1px solid var(--line)}
@@ -48,12 +48,12 @@
         .btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
  
         main{flex:1;display:flex;align-items:center;justify-content:center;padding:64px 0}
-        .ty{max-width:540px;width:100%;margin:0 auto;text-align:center}
-        .ty-check{width:60px;height:60px;border-radius:50%;background:var(--c2-bg);display:flex;align-items:center;justify-content:center;margin:0 auto 24px}
+        .ty{max-width:860px;width:100%;margin:0 auto;text-align:center}
+        .ty-check{width:50px;height:50px;border-radius:50%;background:var(--c2-bg);display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
         .ty-check svg{width:30px;height:30px;stroke:var(--c2-tx);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
         .ty h1{font-size:clamp(2rem,4.4vw,2.6rem);font-weight:500;color:var(--ink);margin-bottom:12px}
         .ty .lede{font-size:17px;color:var(--ink-soft)}
-        .ty-divider{height:1px;background:var(--line);margin:40px 0 26px}
+        .ty-divider{height:1px;background:var(--line);margin:24px 0 18px}
         .ty-wait{font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);text-align:left;margin-bottom:6px}
         .alist{text-align:left;border-top:1px solid var(--line)}
         .arow{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:22px;padding:22px 8px;border-bottom:1px solid var(--line);transition:background .18s;cursor:pointer}
@@ -76,6 +76,29 @@
         .foot-meta{font-size:13.5px}
         @media(max-width:720px){.arow{grid-template-columns:auto 1fr;gap:15px;padding:20px 4px}.aarrow{display:none}.aicon{width:42px;height:42px;border-radius:12px}.atext h3{font-size:1.1rem}.atext p{font-size:13.5px}}
         @media(max-width:600px){.foot{flex-direction:column;text-align:center}}
+        /* Stage 2 optional written intake (centered, internal peek-scroll) */
+        .s2{text-align:left;margin:22px 0 4px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:clamp(20px,3.6vw,28px)}
+        .s2-tag{display:inline-block;font-family:'Hanken Grotesk',sans-serif;font-size:11.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:11px}
+        .s2-head{font-family:'Newsreader',serif;font-size:clamp(1.06rem,2.1vw,1.24rem);font-weight:500;color:var(--ink);line-height:1.4;margin-bottom:9px}
+        .s2-aside{font-family:'Newsreader',serif;font-style:italic;font-size:14px;color:var(--muted);line-height:1.5;margin-bottom:16px}
+        .s2-scroll{max-height:250px;overflow-y:auto;padding:14px 14px 2px;margin:0 -6px 12px;border-top:1px solid var(--line);box-shadow:inset 0 -20px 15px -15px rgba(27,26,22,.13)}
+        .s2 .fg{margin-bottom:22px}
+        .s2 .fl{display:block;font-family:'Newsreader',serif;font-size:16px;font-weight:500;color:var(--ink);line-height:1.38;margin-bottom:9px}
+        .s2 .fhelp{display:block;font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:400;color:var(--muted);line-height:1.45;margin:-3px 0 10px}
+        .s2 textarea,.s2 input[type=text]{width:100%;font-family:'Hanken Grotesk',sans-serif;font-size:15px;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:11px;padding:12px 14px;transition:border-color .15s,box-shadow .15s}
+        .s2 textarea{min-height:104px;resize:vertical;line-height:1.6}
+        .s2 textarea:focus,.s2 input[type=text]:focus{outline:none;border-color:var(--navy);box-shadow:0 0 0 3px rgba(43,76,126,.14)}
+        .s2 .opts{display:flex;flex-direction:column;gap:2px}
+        .s2 .opt{display:flex;align-items:flex-start;gap:11px;padding:8px 10px;border-radius:10px;cursor:pointer;font-size:15px;color:var(--ink-soft);line-height:1.4;transition:background .15s}
+        .s2 .opt:hover{background:var(--surface)}
+        .s2 .opt input{margin-top:2px;width:17px;height:17px;accent-color:var(--navy);flex-shrink:0;cursor:pointer}
+        .s2-submit{width:100%;margin-top:2px;background:var(--navy);color:#fff;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:16px;border:none;border-radius:11px;padding:14px;cursor:pointer;transition:background .18s,transform .18s}
+        .s2-submit:hover{background:var(--navy-deep);transform:translateY(-1px)}
+        .s2-submit:disabled{opacity:.7;cursor:default;transform:none}
+        .s2-note{font-size:13.5px;color:var(--c4-tx);margin-top:9px;text-align:center}
+        .s2-done{text-align:center;padding:14px 0}
+        .s2-done-h{font-family:'Newsreader',serif;font-size:1.4rem;font-weight:500;color:var(--ink);margin-bottom:8px}
+        .s2-done p{font-size:15px;color:var(--ink-soft)}
     </style>
 </head>
 <body>
@@ -96,8 +119,70 @@
                     <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
                 </div>
                 <h1>Thank you for trusting us.</h1>
-                <p class="lede">Your options are on the way. We'll be in touch within 48 hours.</p>
+                <p class="lede">Your options are on the way. We'll be in touch.</p>
  
+                <section class="s2" aria-label="Optional written follow-up">
+                    <span class="s2-tag">Optional</span>
+                    <p class="s2-head">If you're willing, this would sharpen what I send you.</p>
+                    <p class="s2-aside">If you'd rather talk it through, I'm happy to. No pressure either way.</p>
+                    <form class="s2-form" action="https://formspree.io/f/xqewvyzg" method="POST" novalidate>
+                        <input type="hidden" name="_subject" value="Transitus - Stage 2 written intake">
+                        <input type="hidden" name="Submission type" value="Stage 2 follow-up (written)">
+                        <input type="hidden" name="Name" id="s2-lead-name">
+                        <input type="hidden" name="email" id="s2-lead-email">
+                        <div class="s2-scroll">
+                        <div class="fg">
+                            <label class="fl" for="s2-words">I want to hear you, in your own words. How you feel and how you see your situation.</label>
+                            <textarea id="s2-words" name="In their words" rows="4"></textarea>
+                        </div>
+                        <div class="fg">
+                            <span class="fl">In a perfect world, how does this go for you?</span>
+                            <div class="opts">
+                                <label class="opt"><input type="radio" name="Ideal outcome" value="I get to keep my home"> I get to keep my home</label>
+                                <label class="opt"><input type="radio" name="Ideal outcome" value="I sell and finally move on"> I sell and finally move on</label>
+                                <label class="opt"><input type="radio" name="Ideal outcome" value="I just want this to be over"> I just want this to be over</label>
+                                <label class="opt"><input type="radio" name="Ideal outcome" value="I'm not sure yet, and that's okay"> I'm not sure yet, and that's okay</label>
+                            </div>
+                        </div>
+                        <div class="fg">
+                            <span class="fl">Are you feeling under pressure? How soon do you need this resolved?</span>
+                            <div class="opts">
+                                <label class="opt"><input type="radio" name="Urgency" value="Soon, this is weeks not months"> Soon, this is weeks not months</label>
+                                <label class="opt"><input type="radio" name="Urgency" value="I've got a month or two"> I've got a month or two</label>
+                                <label class="opt"><input type="radio" name="Urgency" value="There's no clock on me right now"> There's no clock on me right now</label>
+                                <label class="opt"><input type="radio" name="Urgency" value="I honestly don't know"> I honestly don't know</label>
+                            </div>
+                        </div>
+                        <div class="fg">
+                            <label class="fl" for="s2-owe">How much do you owe on your house?</label>
+                            <span class="fhelp">Any answer is okay and you have options either way. This helps me get yours right.</span>
+                            <input type="text" id="s2-owe" name="Amount owed" inputmode="numeric" autocomplete="off">
+                        </div>
+                        <div class="fg">
+                            <span class="fl">What kind of shape is your home in?</span>
+                            <span class="fhelp">There's no right answer here.</span>
+                            <div class="opts">
+                                <label class="opt"><input type="radio" name="Home condition" value="Nothing needs doing"> Nothing needs doing</label>
+                                <label class="opt"><input type="radio" name="Home condition" value="A few small things, nothing broken"> A few small things, nothing broken</label>
+                                <label class="opt"><input type="radio" name="Home condition" value="Some things don't work like they should"> Some things don't work like they should</label>
+                                <label class="opt"><input type="radio" name="Home condition" value="A lot needs fixing, and I know it"> A lot needs fixing, and I know it</label>
+                            </div>
+                        </div>
+                        <div class="fg">
+                            <span class="fl">There may not be an easy answer, but if you had to choose, what matters most to you?</span>
+                            <div class="opts">
+                                <label class="opt"><input type="radio" name="What matters most" value="Getting this behind me quickly"> Getting this behind me quickly</label>
+                                <label class="opt"><input type="radio" name="What matters most" value="Getting as much money as I can"> Getting as much money as I can</label>
+                                <label class="opt"><input type="radio" name="What matters most" value="Not having to manage a whole process"> Not having to manage a whole process</label>
+                                <label class="opt"><input type="radio" name="What matters most" value="Some mix of all three"> Some mix of all three</label>
+                            </div>
+                        </div>
+                        </div>
+                        <button type="submit" class="s2-submit">Send this to Darien</button>
+                        <p class="s2-note" role="status"></p>
+                    </form>
+                </section>
+
                 <div class="ty-divider"></div>
  
                 <p class="ty-wait">While you wait, these might help</p>
@@ -130,5 +215,33 @@
             <span class="foot-meta">&copy; 2026 Transitus, LLC &middot; <a href="/about">About Us</a> &middot; <a href="/privacy">Privacy</a> &middot; Denver, Colorado</span>
         </div>
     </footer>
+    <script>
+        (function(){
+            var form=document.querySelector('.s2-form');
+            if(!form)return;
+            var section=document.querySelector('.s2');
+            var note=form.querySelector('.s2-note');
+            try{var lead=JSON.parse(localStorage.getItem('transitus_lead')||'{}');if(lead.t&&(Date.now()-lead.t)<3600000){var ln=form.querySelector('#s2-lead-name'),le=form.querySelector('#s2-lead-email');if(ln&&lead.name)ln.value=lead.name;if(le&&lead.email)le.value=lead.email;}}catch(e){}
+            var owe=document.getElementById('s2-owe');
+            if(owe){owe.addEventListener('input',function(){var d=owe.value.replace(/[^0-9]/g,'');owe.value=d?'$'+Number(d).toLocaleString('en-US'):'';});}
+            form.addEventListener('submit',function(e){
+                e.preventDefault(); /* AJAX submit: no navigation/reload, so the Ads conversion tag cannot fire a second time */
+                var btn=form.querySelector('.s2-submit');
+                if(btn){btn.disabled=true;btn.textContent='Sending...';}
+                if(note){note.textContent='';}
+                fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}})
+                    .then(function(r){ if(r.ok){done();}else{fail(btn);} })
+                    .catch(function(){ fail(btn); });
+            });
+            function done(){
+                try{localStorage.removeItem('transitus_lead');}catch(e){}
+                section.innerHTML='<div class="s2-done"><p class="s2-done-h">Got it. This helps.</p><p>Thank you for taking the time. It helps me put the right options in front of you.</p></div>';
+            }
+            function fail(btn){
+                if(btn){btn.disabled=false;btn.textContent='Send this to Darien';}
+                if(note){note.textContent='That did not send. Mind trying once more?';}
+            }
+        })();
+    </script>
 </body>
 </html>
