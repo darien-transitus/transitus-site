@@ -332,6 +332,7 @@
                     <form action="https://formspree.io/f/xqewvyzg" method="POST">
                         <input type="hidden" name="_subject" value="New Transitus Lead">
                         <input type="hidden" name="_next" value="thank-you.html">
+                        <input type="hidden" name="Came from" id="ref-article" value="(direct)">
                         <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" required></div>
                         <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
                         <div class="fg"><label for="address">Property Address</label><input type="text" id="address" name="address" required></div>
@@ -391,6 +392,22 @@
                     localStorage.setItem('transitus_lead', JSON.stringify({name:n?n.value:'', email:e?e.value:'', t:Date.now()}));
                 }catch(err){}
             });
+        })();
+    </script>
+    <script>
+        /* Lead attribution: record which article sent this visitor, so the Formspree
+           email says which page earned the lead. Same-origin referrer only. */
+        (function(){
+            var el=document.getElementById('ref-article'); if(!el) return;
+            try{
+                var r=document.referrer; if(!r) return;
+                var u=new URL(r);
+                if(u.hostname!==location.hostname){ el.value='offsite: '+u.hostname; return; }
+                var p=u.pathname.replace(/^\//,'').replace(/\.html$/,'').replace(/\/$/,'');
+                if(!p) { el.value='homepage'; return; }
+                if(/^(your-options|thank-you)/.test(p)) return;   /* keep (direct) */
+                el.value=p;
+            }catch(e){}
         })();
     </script>
 </body>
