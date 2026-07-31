@@ -71,7 +71,7 @@
         .hero-bg .hb-dot{opacity:0;animation:hbFade .6s ease forwards .1s}
         @keyframes hbDraw{to{stroke-dashoffset:0}}
         @keyframes hbFade{to{opacity:1}}
-        @media(max-width:820px){.hero-bg{opacity:.055}}
+        @media(max-width:820px){.hero-bg{opacity:.85}}
         @media(prefers-reduced-motion:reduce){
             .hero-bg .hb-trunk,.hero-bg .hb-path{stroke-dashoffset:0;animation:none}
             .hero-bg .hb-head,.hero-bg .hb-dot{opacity:1;animation:none}
@@ -134,7 +134,7 @@
         .vs-new:hover span{transform:translateX(3px)}
         .vs-old:hover span{transform:translateX(-3px)}
         .vs-old:hover{color:var(--ink-soft)}
-        @media(max-width:600px){.vs{column-gap:20px}.vs-cell{font-size:.88rem}.vs-old,.vs-old-head{padding-right:20px}.vs-new,.vs-new-head{padding-left:20px}.vs-head{font-size:11px}}
+        @media(max-width:600px){.vs{column-gap:13px}.vs-cell{font-size:.88rem;padding-bottom:22px}.vs-old,.vs-old-head{padding-right:15px}.vs-new,.vs-new-head{padding-left:15px}.vs-head{font-size:11px}}
         .mf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.8vw,20px);align-items:stretch}
         .mf-card{display:flex;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:clamp(16px,2vw,22px);padding:clamp(24px,3.2vw,34px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 30px 60px -50px rgba(27,26,22,.28)}
         .mf-card p{font-size:clamp(.98rem,1.6vw,1.08rem);color:var(--ink-soft);line-height:1.7}
