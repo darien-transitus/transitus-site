@@ -61,8 +61,7 @@
         .hero h1,.hero p,.hero-notes{width:fit-content;margin-left:auto;margin-right:auto;background:var(--cream);box-shadow:0 0 30px 20px var(--cream)}
         .hero-cta{position:relative}
         .hero-bg svg{width:100%;height:100%;display:block}
-        .hero-bg .hb-mobile{display:none}
-        @media(max-width:820px){.hero-bg .hb-wide{display:none}.hero-bg .hb-mobile{display:block}}
+        @media(max-width:820px){.hero-bg g{stroke-width:6}.hero-bg .hb-main .hb-dot{r:20}.hero-bg .hb-sub .hb-dot{r:16}}
         .hero-bg .hb-trunk,.hero-bg .hb-path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:hbDraw 1.9s cubic-bezier(.22,.7,.25,1) forwards}
         .hero-bg .hb-path:nth-of-type(2){animation-delay:.30s}
         .hero-bg .hb-path:nth-of-type(3){animation-delay:.40s}
@@ -290,90 +289,55 @@
     <main>
         <section class="hero">
             <div class="hero-bg" aria-hidden="true">
-                <svg class="hb-wide" viewBox="0 0 1440 790" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <svg class="hb-wide" viewBox="0 0 1440 1660" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" stroke="#2B4C7E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                         <g class="hb-main">
-                            <circle class="hb-dot" cx="74" cy="600" r="5.5" fill="#2B4C7E" stroke="none"/>
-                            <path class="hb-trunk" d="M86 600 H660"/>
-                            <path class="hb-path" d="M660 600 C 820 600, 900 500, 1354 462"/>
-                            <path class="hb-path" d="M660 600 C 860 600, 960 552, 1354 532"/>
-                            <path class="hb-path" d="M660 600 H1354"/>
-                            <path class="hb-path" d="M660 600 C 860 600, 960 648, 1354 668"/>
-                            <path class="hb-path" d="M660 600 C 820 600, 900 700, 1354 738"/>
-                            <polyline class="hb-head" points="1344,454 1358,462 1344,470"/>
-                            <polyline class="hb-head" points="1344,524 1358,532 1344,540"/>
-                            <polyline class="hb-head" points="1344,592 1358,600 1344,608"/>
-                            <polyline class="hb-head" points="1344,660 1358,668 1344,676"/>
-                            <polyline class="hb-head" points="1344,730 1358,738 1344,746"/>
+                            <circle class="hb-dot" cx="74" cy="1035" r="5.5" fill="#2B4C7E" stroke="none"/>
+                            <path class="hb-trunk" d="M86 1035 H660"/>
+                            <path class="hb-path" d="M660 1035 C 820 1035, 900 935, 1354 897"/>
+                            <path class="hb-path" d="M660 1035 C 860 1035, 960 987, 1354 967"/>
+                            <path class="hb-path" d="M660 1035 H1354"/>
+                            <path class="hb-path" d="M660 1035 C 860 1035, 960 1083, 1354 1103"/>
+                            <path class="hb-path" d="M660 1035 C 820 1035, 900 1135, 1354 1173"/>
+                            <polyline class="hb-head" points="1344,889 1358,897 1344,905"/>
+                            <polyline class="hb-head" points="1344,959 1358,967 1344,975"/>
+                            <polyline class="hb-head" points="1344,1027 1358,1035 1344,1043"/>
+                            <polyline class="hb-head" points="1344,1095 1358,1103 1344,1111"/>
+                            <polyline class="hb-head" points="1344,1165 1358,1173 1344,1181"/>
                         </g>
                         <g class="hb-sub">
-                            <circle class="hb-dot" cx="86" cy="150" r="4" fill="#2B4C7E" stroke="none"/>
-                            <path class="hb-trunk" d="M96 150 H250"/>
-                            <path class="hb-path" d="M250 150 C 330 150, 360 104, 470 92"/>
-                            <path class="hb-path" d="M250 150 H470"/>
-                            <path class="hb-path" d="M250 150 C 330 150, 360 196, 470 208"/>
-                            <polyline class="hb-head" points="462,85 474,92 462,99"/>
-                            <polyline class="hb-head" points="462,143 474,150 462,157"/>
-                            <polyline class="hb-head" points="462,201 474,208 462,215"/>
+                            <circle class="hb-dot" cx="86" cy="585" r="4" fill="#2B4C7E" stroke="none"/>
+                            <path class="hb-trunk" d="M96 585 H250"/>
+                            <path class="hb-path" d="M250 585 C 330 585, 360 539, 470 527"/>
+                            <path class="hb-path" d="M250 585 H470"/>
+                            <path class="hb-path" d="M250 585 C 330 585, 360 631, 470 643"/>
+                            <polyline class="hb-head" points="462,520 474,527 462,534"/>
+                            <polyline class="hb-head" points="462,578 474,585 462,592"/>
+                            <polyline class="hb-head" points="462,636 474,643 462,650"/>
                         </g>
                         <g class="hb-sub">
-                            <circle class="hb-dot" cx="1012" cy="126" r="4" fill="#2B4C7E" stroke="none"/>
-                            <path class="hb-trunk" d="M1022 126 H1150"/>
-                            <path class="hb-path" d="M1150 126 C 1230 126, 1264 82, 1356 68"/>
-                            <path class="hb-path" d="M1150 126 H1356"/>
-                            <path class="hb-path" d="M1150 126 C 1230 126, 1264 170, 1356 184"/>
-                            <polyline class="hb-head" points="1348,61 1360,68 1348,75"/>
-                            <polyline class="hb-head" points="1348,119 1360,126 1348,133"/>
-                            <polyline class="hb-head" points="1348,177 1360,184 1348,191"/>
+                            <circle class="hb-dot" cx="1012" cy="561" r="4" fill="#2B4C7E" stroke="none"/>
+                            <path class="hb-trunk" d="M1022 561 H1150"/>
+                            <path class="hb-path" d="M1150 561 C 1230 561, 1264 517, 1356 503"/>
+                            <path class="hb-path" d="M1150 561 H1356"/>
+                            <path class="hb-path" d="M1150 561 C 1230 561, 1264 605, 1356 619"/>
+                            <polyline class="hb-head" points="1348,496 1360,503 1348,510"/>
+                            <polyline class="hb-head" points="1348,554 1360,561 1348,568"/>
+                            <polyline class="hb-head" points="1348,612 1360,619 1348,626"/>
                         </g>
                         <g class="hb-sub hb-mid">
-                            <circle class="hb-dot" cx="196" cy="368" r="4.5" fill="#2B4C7E" stroke="none"/>
-                            <path class="hb-trunk" d="M206 368 H470"/>
-                            <path class="hb-path" d="M470 368 C 646 368, 828 318, 1152 300"/>
-                            <path class="hb-path" d="M470 368 C 720 368, 920 356, 1240 352"/>
-                            <path class="hb-path" d="M470 368 C 646 368, 820 396, 1100 416"/>
-                            <polyline class="hb-head" points="1144,292 1158,300 1144,308"/>
-                            <polyline class="hb-head" points="1232,344 1246,352 1232,360"/>
-                            <polyline class="hb-head" points="1092,408 1106,416 1092,424"/>
+                            <circle class="hb-dot" cx="196" cy="803" r="4.5" fill="#2B4C7E" stroke="none"/>
+                            <path class="hb-trunk" d="M206 803 H470"/>
+                            <path class="hb-path" d="M470 803 C 646 803, 828 753, 1152 735"/>
+                            <path class="hb-path" d="M470 803 C 720 803, 920 791, 1240 787"/>
+                            <path class="hb-path" d="M470 803 C 646 803, 820 831, 1100 851"/>
+                            <polyline class="hb-head" points="1144,727 1158,735 1144,743"/>
+                            <polyline class="hb-head" points="1232,779 1246,787 1232,795"/>
+                            <polyline class="hb-head" points="1092,843 1106,851 1092,859"/>
                         </g>
                     </g>
                 </svg>
-
-                <svg class="hb-mobile" viewBox="0 0 390 450" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
-                    <g fill="none" stroke="#2B4C7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                        <g class="hb-main">
-                            <circle class="hb-dot" cx="16" cy="60" r="4" fill="#2B4C7E" stroke="none"/>
-                            <path class="hb-trunk" d="M24 60 H74"/>
-                            <path class="hb-path" d="M74 60 C 116 60, 132 34, 170 26"/>
-                            <path class="hb-path" d="M74 60 H170"/>
-                            <path class="hb-path" d="M74 60 C 116 60, 132 86, 170 94"/>
-                            <polyline class="hb-head" points="163,20 173,26 164,33"/>
-                            <polyline class="hb-head" points="163,54 173,60 163,66"/>
-                            <polyline class="hb-head" points="163,88 173,94 164,101"/>
-                        </g>
-                        <g class="hb-sub">
-                            <circle class="hb-dot" cx="212" cy="240" r="4" fill="#2B4C7E" stroke="none"/>
-                            <path class="hb-trunk" d="M220 240 H262"/>
-                            <path class="hb-path" d="M262 240 C 306 240, 326 214, 372 204"/>
-                            <path class="hb-path" d="M262 240 H372"/>
-                            <path class="hb-path" d="M262 240 C 306 240, 326 266, 372 278"/>
-                            <polyline class="hb-head" points="365,198 375,204 366,211"/>
-                            <polyline class="hb-head" points="365,234 375,240 365,246"/>
-                            <polyline class="hb-head" points="365,272 375,278 366,285"/>
-                        </g>
-                        <g class="hb-sub">
-                            <circle class="hb-dot" cx="16" cy="392" r="4" fill="#2B4C7E" stroke="none"/>
-                            <path class="hb-trunk" d="M24 392 H88"/>
-                            <path class="hb-path" d="M88 392 C 138 392, 158 362, 208 350"/>
-                            <path class="hb-path" d="M88 392 H208"/>
-                            <path class="hb-path" d="M88 392 C 138 392, 158 422, 208 436"/>
-                            <polyline class="hb-head" points="201,344 211,350 202,357"/>
-                            <polyline class="hb-head" points="201,386 211,392 201,398"/>
-                            <polyline class="hb-head" points="201,430 211,436 202,443"/>
-                        </g>
-                    </g>
-                </svg>
-                        </div>
+                                    </div>
             <div class="wrap">
                 <div class="hero-inner">
                     <h1>Democratizing<br>real estate solutions</h1>
