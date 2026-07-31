@@ -53,13 +53,46 @@
         /* Hero */
         .hero{position:relative;text-align:center;padding:76px 0 40px;overflow:hidden}
         .hero::before{content:"";position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:130%;height:120%;background:radial-gradient(60% 50% at 50% 0%,rgba(43,76,126,.13),rgba(43,76,126,0) 70%);pointer-events:none}
-        .hero-inner{position:relative;max-width:760px;margin:0 auto}
+        .hero-inner{position:relative;z-index:1;max-width:1040px;margin:0 auto}
+        .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+        .hero-bg .hb-trunk,.hero-bg .hb-path,.hero-bg .hb-head{stroke-opacity:.16}
+        .hero-bg .hb-dot{fill-opacity:.42}
+        .hero-bg .hb-sub{opacity:.72}
+        .hero h1,.hero p,.hero-notes{width:fit-content;margin-left:auto;margin-right:auto;background:var(--cream);box-shadow:0 0 30px 20px var(--cream)}
+        .hero-cta{position:relative}
+        .hero-bg svg{width:100%;height:100%;display:block}
+        .hero-bg .hb-trunk,.hero-bg .hb-path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:hbDraw 1.9s cubic-bezier(.22,.7,.25,1) forwards}
+        .hero-bg .hb-path:nth-of-type(2){animation-delay:.30s}
+        .hero-bg .hb-path:nth-of-type(3){animation-delay:.40s}
+        .hero-bg .hb-path:nth-of-type(4){animation-delay:.50s}
+        .hero-bg .hb-path:nth-of-type(5){animation-delay:.60s}
+        .hero-bg .hb-path:nth-of-type(6){animation-delay:.70s}
+        .hero-bg .hb-head{opacity:0;animation:hbFade .8s ease forwards 1.5s}
+        .hero-bg .hb-dot{opacity:0;animation:hbFade .6s ease forwards .1s}
+        @keyframes hbDraw{to{stroke-dashoffset:0}}
+        @keyframes hbFade{to{opacity:1}}
+        @media(max-width:820px){.hero-bg{opacity:.055}}
+        @media(prefers-reduced-motion:reduce){
+            .hero-bg .hb-trunk,.hero-bg .hb-path{stroke-dashoffset:0;animation:none}
+            .hero-bg .hb-head,.hero-bg .hb-dot{opacity:1;animation:none}
+        }
         .buyer-bar{background:var(--navy);color:#fff;text-align:center;font-family:'Hanken Grotesk',sans-serif;font-size:clamp(11px,1.3vw,13px);font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px}
-        .hero h1{font-size:clamp(2.6rem,6.2vw,4.3rem);margin:0 0 24px;font-weight:500}
+        .hero h1{font-size:clamp(2.4rem,6.2vw,4rem);margin:0 auto 24px;font-weight:500;text-wrap:balance}
         .hero p{font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--ink-soft);max-width:660px;margin:0 auto;line-height:1.72;text-wrap:pretty}
         .pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:30px 0 32px}
         .pill{font-size:13.5px;font-weight:500;color:var(--ink-soft);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:8px 16px}
         .pill b{color:var(--navy);font-weight:600}
+        .hero-cta{margin:28px 0 6px}
+        .hero-notes{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 22px;margin-top:34px}
+        .hero-notes span{position:relative;font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.01em}
+        .hero-notes span + span::before{content:"";position:absolute;left:-12px;top:50%;transform:translateY(-50%);width:3px;height:3px;border-radius:50%;background:var(--muted);opacity:.45}
+        @media(max-width:600px){.hero-notes{gap:8px 16px;margin-top:26px}.hero-notes span{font-size:12px}.hero-notes span + span::before{left:-9px}}
+        .how{padding:44px 0 26px}
+        .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.8vw,20px)}
+        .step{background:var(--surface);border:1px solid var(--line);border-radius:clamp(16px,2vw,22px);padding:clamp(22px,3vw,34px);text-align:center;box-shadow:0 1px 2px rgba(27,26,22,.04),0 30px 60px -50px rgba(27,26,22,.28)}
+        .step-num{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--c1-bg);color:var(--navy);font-family:'Newsreader',serif;font-size:20px;font-weight:600;margin-bottom:14px}
+        .step p{font-size:clamp(.95rem,1.6vw,1.08rem);color:var(--ink);font-weight:500;line-height:1.5}
+        @media(max-width:600px){.steps{grid-template-columns:1fr}}
 
         /* Reveal */
         .js .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
@@ -77,10 +110,45 @@
         .eyebrow{font-family:'Hanken Grotesk',sans-serif;font-size:13px;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--navy)}
 
         /* Promise (sec 2) */
-        .promise{padding:10px 0}
+        .promise{padding:34px 0 10px}
+        .vs{display:grid;grid-template-columns:1fr 1fr;column-gap:clamp(34px,5vw,68px);row-gap:0;max-width:900px;margin:0 auto}
+        .vs-head{font-family:'Hanken Grotesk',sans-serif;font-size:12.5px;font-weight:700;letter-spacing:.13em;text-transform:uppercase;padding:0 0 18px 0}
+        .vs-old-head{text-align:right;padding-right:34px}
+        .vs-new-head{padding-left:34px}
+        .vs-old-head{color:var(--muted)}
+        .vs-new-head{color:var(--navy)}
+        .vs-cell{position:relative;padding:0 0 26px 0;font-size:clamp(.95rem,1.6vw,1.06rem);line-height:1.55;transition:color .2s}
+        .vs-cell span{display:inline-block;transition:transform .2s}
+        .vs-cell::before{content:"";position:absolute;top:5px;width:13px;height:13px;border-radius:50%;box-sizing:border-box;transition:transform .2s,background .2s}
+        .vs-cell::after{content:"";position:absolute;top:20px;bottom:0;width:1.5px;transition:background .2s}
+        .vs-last::after{display:none}
+        .vs-old{color:var(--muted);text-align:right;padding-right:34px}
+        .vs-new{padding-left:34px}
+        .vs-old::before{right:0;border:2px solid var(--muted);background:var(--paper)}
+        .vs-old::after{right:6px;background:var(--line)}
+        .vs-new{color:var(--ink)}
+        .vs-new::before{left:0;background:var(--navy);border:2px solid var(--navy)}
+        .vs-new::after{left:6px;background:rgba(43,76,126,.3)}
+        .vs-cell:hover::before{transform:scale(1.35)}
+        .vs-new:hover{color:var(--navy)}
+        .vs-new:hover span{transform:translateX(3px)}
+        .vs-old:hover span{transform:translateX(-3px)}
+        .vs-old:hover{color:var(--ink-soft)}
+        @media(max-width:600px){.vs{column-gap:20px}.vs-cell{font-size:.88rem}.vs-old,.vs-old-head{padding-right:20px}.vs-new,.vs-new-head{padding-left:20px}.vs-head{font-size:11px}}
+        .mf-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.8vw,20px);align-items:stretch}
+        .mf-card{display:flex;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:clamp(16px,2vw,22px);padding:clamp(24px,3.2vw,34px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 30px 60px -50px rgba(27,26,22,.28)}
+        .mf-card p{font-size:clamp(.98rem,1.6vw,1.08rem);color:var(--ink-soft);line-height:1.7}
+        .mf-turn-card{background:var(--navy);border-color:var(--navy);box-shadow:0 1px 2px rgba(27,26,22,.12),0 30px 60px -40px rgba(43,76,126,.7)}
+        .mf-turn-card p{color:rgba(255,255,255,.72);font-family:'Newsreader',Georgia,serif;font-size:clamp(1.05rem,1.9vw,1.22rem);line-height:1.55}
+        .mf-turn-card strong{color:#fff;font-weight:600}
+        @media(max-width:820px){.mf-grid{grid-template-columns:1fr}}
         .promise-card{background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:clamp(36px,5vw,64px);box-shadow:0 1px 2px rgba(27,26,22,.04),0 40px 80px -50px rgba(27,26,22,.35);max-width:920px;margin:0 auto;text-align:center}
         .promise-card h2{font-size:clamp(1.7rem,3.4vw,2.5rem);margin:16px auto 18px;max-width:720px}
         .promise-card p{font-size:1.08rem;color:var(--ink-soft);max-width:660px;margin:0 auto;line-height:1.78}
+        .promise-card .mf-problem{font-size:clamp(1rem,1.7vw,1.1rem);color:var(--ink-soft);max-width:620px;margin:0 auto 10px;line-height:1.72}
+        .mf-rule{width:54px;height:2px;background:var(--navy);opacity:.3;border-radius:2px;margin:26px auto 24px}
+        .promise-card .mf-turn{font-family:'Newsreader',Georgia,serif;font-size:clamp(1.3rem,2.6vw,1.72rem);color:var(--ink);max-width:660px;margin:0 auto;line-height:1.45}
+        .promise-card .mf-turn strong{color:var(--navy);font-weight:600}
         .proofs{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:30px}
         .proof{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:600;color:var(--navy);background:var(--c1-bg);border-radius:12px;padding:9px 15px}
         .proof svg{width:16px;height:16px}
@@ -116,12 +184,32 @@
         .cta{margin:60px 0 0;padding:0 24px}
         .cta-inner{max-width:1140px;margin:0 auto;background:var(--navy);border-radius:32px;padding:clamp(48px,6vw,82px) clamp(28px,5vw,72px);text-align:center;position:relative;overflow:hidden}
         .cta-inner::before{content:none}
-        .cta-inner h2{color:#fff;font-size:clamp(1.8rem,3.8vw,2.7rem);max-width:760px;margin:0 auto 18px;position:relative}
+        .cta-inner h2{color:#fff;font-size:clamp(1.8rem,3.8vw,2.7rem);max-width:1000px;margin:0 auto 18px;position:relative}
         .cta-inner p{color:rgba(255,255,255,.82);font-size:1.08rem;max-width:640px;margin:0 auto 30px;line-height:1.75;position:relative}
         .cta-inner .btn{position:relative}
 
         /* Founder (sec 5) */
         .founder{padding:74px 0 20px}
+        /* ---- SECTION SEGMENTATION: alternating full-bleed bands + real air ---- */
+        .band-paper{background:linear-gradient(to bottom,rgba(43,76,126,.055),rgba(43,76,126,0) 320px),radial-gradient(circle at 1px 1px,rgba(43,76,126,.08) 1px,transparent 0),var(--paper);background-size:auto,30px 30px,auto;background-repeat:no-repeat,repeat,no-repeat;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+        .promise{padding:clamp(18px,2vw,26px) 0 clamp(56px,6.5vw,84px)}
+        .how{position:relative;overflow:hidden;padding:clamp(60px,7vw,92px) 0 clamp(56px,6.5vw,84px)}
+        .how-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+        .how-bg svg{width:100%;height:100%;display:block}
+        .how-bg .hb-trunk,.how-bg .hb-path,.how-bg .hb-head{stroke-opacity:.14}
+        .how-bg .hb-dot{fill-opacity:.4}
+        .how .wrap{position:relative;z-index:1}
+        .vs-empty::before,.vs-empty::after{display:none}
+        .vs-final{color:var(--navy);font-weight:500;padding-top:6px}
+        .articles{padding:clamp(64px,7.5vw,100px) 0 clamp(44px,5vw,64px)}
+        .founder{padding:clamp(56px,6.5vw,84px) 0 clamp(28px,3vw,40px)}
+        .cta{margin:clamp(56px,6.5vw,84px) 0 0}
+        .hero{padding:clamp(58px,6vw,78px) 0 clamp(110px,12vw,168px)}
+        /* section label: number + name, so each block announces itself */
+        .sec-label{display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:clamp(26px,3.4vw,42px)}
+        .sec-label .num{font-family:'Newsreader',Georgia,serif;font-size:15px;font-weight:600;color:var(--navy);opacity:.5}
+        .sec-label .bar{width:26px;height:1.5px;background:var(--navy);opacity:.28;border-radius:2px}
+        .sec-label .eyebrow{margin:0}
         .founder-card{display:flex;align-items:center;gap:26px;max-width:680px;margin:0 auto;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:30px 34px;box-shadow:0 1px 2px rgba(27,26,22,.04),0 30px 60px -45px rgba(27,26,22,.3)}
         .founder-card img{width:96px;height:96px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:0 6px 18px -8px rgba(27,26,22,.4)}
         .f-name{font-family:'Newsreader',serif;font-size:21px;font-weight:600;color:var(--ink)}
@@ -166,8 +254,10 @@
         .filter:hover{border-color:var(--navy);color:var(--navy)}
         .filter.active{background:var(--navy);color:#fff;border-color:var(--navy)}
         .alist{margin-top:14px;border-top:1px solid var(--line)}
-        .arow{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:22px;padding:26px 10px;border-bottom:1px solid var(--line);transition:background .18s;cursor:pointer}
-        .arow:hover{background:var(--paper)}
+        .arow{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:22px;padding:26px 10px;border-bottom:1px solid var(--line);transition:background .2s,box-shadow .2s;cursor:pointer;border-radius:0 10px 10px 0}
+        .arow:hover{background:linear-gradient(to right,rgba(43,76,126,.055),rgba(43,76,126,0) 62%);box-shadow:inset 3px 0 0 var(--navy)}
+        .arow h3{transition:color .2s}
+        .arow:hover h3{color:var(--navy)}
         .aicon{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
         .aicon svg{width:23px;height:23px}
         .ai1{background:var(--c1-bg);color:var(--c1-tx)}.ai2{background:var(--c2-bg);color:var(--c2-tx)}.ai3{background:var(--c3-bg);color:var(--c3-tx)}.ai4{background:var(--c4-bg);color:var(--c4-tx)}
@@ -197,52 +287,125 @@
 
     <main>
         <section class="hero">
+            <div class="hero-bg" aria-hidden="true">
+                <svg viewBox="0 0 1440 790" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" stroke="#2B4C7E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <g class="hb-main">
+                            <circle class="hb-dot" cx="74" cy="600" r="5.5" fill="#2B4C7E" stroke="none"/>
+                            <path class="hb-trunk" d="M86 600 H660"/>
+                            <path class="hb-path" d="M660 600 C 820 600, 900 500, 1354 462"/>
+                            <path class="hb-path" d="M660 600 C 860 600, 960 552, 1354 532"/>
+                            <path class="hb-path" d="M660 600 H1354"/>
+                            <path class="hb-path" d="M660 600 C 860 600, 960 648, 1354 668"/>
+                            <path class="hb-path" d="M660 600 C 820 600, 900 700, 1354 738"/>
+                            <polyline class="hb-head" points="1344,454 1358,462 1344,470"/>
+                            <polyline class="hb-head" points="1344,524 1358,532 1344,540"/>
+                            <polyline class="hb-head" points="1344,592 1358,600 1344,608"/>
+                            <polyline class="hb-head" points="1344,660 1358,668 1344,676"/>
+                            <polyline class="hb-head" points="1344,730 1358,738 1344,746"/>
+                        </g>
+                        <g class="hb-sub">
+                            <circle class="hb-dot" cx="86" cy="150" r="4" fill="#2B4C7E" stroke="none"/>
+                            <path class="hb-trunk" d="M96 150 H250"/>
+                            <path class="hb-path" d="M250 150 C 330 150, 360 104, 470 92"/>
+                            <path class="hb-path" d="M250 150 H470"/>
+                            <path class="hb-path" d="M250 150 C 330 150, 360 196, 470 208"/>
+                            <polyline class="hb-head" points="462,85 474,92 462,99"/>
+                            <polyline class="hb-head" points="462,143 474,150 462,157"/>
+                            <polyline class="hb-head" points="462,201 474,208 462,215"/>
+                        </g>
+                        <g class="hb-sub">
+                            <circle class="hb-dot" cx="1012" cy="126" r="4" fill="#2B4C7E" stroke="none"/>
+                            <path class="hb-trunk" d="M1022 126 H1150"/>
+                            <path class="hb-path" d="M1150 126 C 1230 126, 1264 82, 1356 68"/>
+                            <path class="hb-path" d="M1150 126 H1356"/>
+                            <path class="hb-path" d="M1150 126 C 1230 126, 1264 170, 1356 184"/>
+                            <polyline class="hb-head" points="1348,61 1360,68 1348,75"/>
+                            <polyline class="hb-head" points="1348,119 1360,126 1348,133"/>
+                            <polyline class="hb-head" points="1348,177 1360,184 1348,191"/>
+                        </g>
+                        <g class="hb-sub hb-mid">
+                            <circle class="hb-dot" cx="196" cy="368" r="4.5" fill="#2B4C7E" stroke="none"/>
+                            <path class="hb-trunk" d="M206 368 H470"/>
+                            <path class="hb-path" d="M470 368 C 646 368, 828 318, 1152 300"/>
+                            <path class="hb-path" d="M470 368 C 720 368, 920 356, 1240 352"/>
+                            <path class="hb-path" d="M470 368 C 646 368, 820 396, 1100 416"/>
+                            <polyline class="hb-head" points="1144,292 1158,300 1144,308"/>
+                            <polyline class="hb-head" points="1232,344 1246,352 1232,360"/>
+                            <polyline class="hb-head" points="1092,408 1106,416 1092,424"/>
+                        </g>
+                    </g>
+                </svg>
+            </div>
             <div class="wrap">
                 <div class="hero-inner">
-                    <h1>However you got here, you decide what's next</h1>
-                    <p>Since things got hard, the calls haven't stopped. Everyone wants to buy your home. Few ask what's best for you. We work with you, not against you.</p>
-                    <div class="pills">
-                        <span class="pill"><b>No cost</b></span>
-                        <span class="pill"><b>No pressure</b></span>
-                        <span class="pill"><b>No obligation to sell</b></span>
-                    </div>
-                </div>
+                    <h1>Democratizing<br>real estate solutions</h1>
+                    <p>For distressed homeowners: Real estate is full of options that stay hidden.<br>We make them clear, and help you act.</p>
+                    <div class="hero-cta"><a href="/your-options" class="btn btn-primary">See your options <span class="arr">&rarr;</span></a></div>
+                    <div class="hero-notes"><span>No cost</span><span>No obligation</span><span>5 minutes</span></div>
+                                    </div>
             </div>
         </section>
 
-        <section class="values">
+        <section class="promise band-paper">
             <div class="wrap">
-                <div class="vhead reveal"><span class="eyebrow">What different means</span></div>
-                <div class="vgrid">
-                    <div class="vcard reveal">
-                        <div class="vicon vc1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></div>
-                        <h3>Better options you didn't know existed</h3>
-                        <p>Most companies give one offer. Another path could get you more, and we show them all. Even the ones that aren't us.</p>
+                <div class="sec-label reveal"><span class="num">01</span><span class="bar"></span><span class="eyebrow">Why we built this</span></div>
+                <div class="vs">
+                    <div class="vs-head vs-old-head">The old way</div>
+                    <div class="vs-head vs-new-head">What we built</div>
+                    <div class="vs-cell vs-old reveal"><span>Built for investors, not the people selling</span></div>
+                    <div class="vs-cell vs-new reveal"><span>Built for the seller, and only the seller</span></div>
+                    <div class="vs-cell vs-old reveal"><span>The less you know, the cheaper they buy</span></div>
+                    <div class="vs-cell vs-new reveal"><span>Everything shown, nothing hidden</span></div>
+                    <div class="vs-cell vs-old reveal"><span>You're the supply chain</span></div>
+                    <div class="vs-cell vs-new reveal"><span>You're the priority, not the inventory.</span></div>
+                    <div class="vs-cell vs-old vs-last reveal"><span>One path, the one that pays them</span></div>
+                    <div class="vs-cell vs-new reveal"><span>Every path, even the ones that don't pay us</span></div>
+                    <div class="vs-cell vs-old vs-empty vs-last" aria-hidden="true"></div>
+                    <div class="vs-cell vs-new vs-final vs-last reveal"><span>The information was always there. We just make sure you see it too.</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="how">
+            <div class="how-bg" aria-hidden="true">
+                <svg viewBox="0 0 1440 360" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" stroke="#2B4C7E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                        <circle class="hb-dot" cx="72" cy="180" r="4.5" fill="#2B4C7E" stroke="none"/>
+                        <path class="hb-trunk" d="M84 180 H360"/>
+                        <path class="hb-path" d="M360 180 C 640 180, 880 108, 1356 86"/>
+                        <path class="hb-path" d="M360 180 H1356"/>
+                        <path class="hb-path" d="M360 180 C 640 180, 880 252, 1356 274"/>
+                        <polyline class="hb-head" points="1346,78 1360,86 1346,94"/>
+                        <polyline class="hb-head" points="1346,172 1360,180 1346,188"/>
+                        <polyline class="hb-head" points="1346,266 1360,274 1346,282"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="wrap">
+                <div class="sec-label reveal"><span class="num">02</span><span class="bar"></span><span class="eyebrow">How it works</span></div>
+                <div class="steps">
+                    <div class="step reveal">
+                        <span class="step-num">1</span>
+                        <p>Tell us your situation.</p>
                     </div>
-                    <div class="vcard reveal">
-                        <div class="vicon vc2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
-                        <h3>Full transparency</h3>
-                        <p>You see every number, including what we make, even when it's nothing at all.</p>
+                    <div class="step reveal">
+                        <span class="step-num">2</span>
+                        <p>See every option, side by side.</p>
                     </div>
-                    <div class="vcard reveal">
-                        <div class="vicon vc3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-                        <h3>Move at your pace, fast or slow</h3>
-                        <p>Need to close in days? We can. Need more time? That works too. Your timeline, not ours.</p>
-                    </div>
-                    <div class="vcard reveal">
-                        <div class="vicon vc4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-                        <h3>Full support, sale or not</h3>
-                        <p>Paperwork, agents, movers, contractors. If you need it, we coordinate it.</p>
+                    <div class="step reveal">
+                        <span class="step-num">3</span>
+                        <p>You choose. We help you get it done.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="articles">
+        <section class="articles band-paper">
             <div class="wrap">
                 <div class="sec-head reveal">
                     <span class="eyebrow">Written by Transitus</span>
-                    <h2>Wherever you are in this exhausting process, we wrote it for you. The homeowner.</h2>
+                    <h2>Wherever you are in this process, we wrote it for you. The homeowner.</h2>
                 </div>
                 <div class="filters reveal">
                     <button class="filter active" data-filter="all">All</button>
@@ -396,7 +559,7 @@
             <div class="cta-inner reveal">
                 <h2>When you're ready, see what it means for your home</h2>
                 <p>We'll build a clear breakdown for your home and send it within 48 hours.<br>No pressure, ever.</p>
-                <a href="/your-options" class="btn btn-light">See my options <span class="arr">&rarr;</span></a>
+                                <a href="/your-options" class="btn btn-light">See my options <span class="arr">&rarr;</span></a>
             </div>
         </section>
 
