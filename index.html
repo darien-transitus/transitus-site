@@ -61,6 +61,8 @@
         .hero h1,.hero p,.hero-notes{width:fit-content;margin-left:auto;margin-right:auto;background:var(--cream);box-shadow:0 0 30px 20px var(--cream)}
         .hero-cta{position:relative}
         .hero-bg svg{width:100%;height:100%;display:block}
+        .hero-bg .hb-mobile{display:none}
+        @media(max-width:820px){.hero-bg .hb-wide{display:none}.hero-bg .hb-mobile{display:block}}
         .hero-bg .hb-trunk,.hero-bg .hb-path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:hbDraw 1.9s cubic-bezier(.22,.7,.25,1) forwards}
         .hero-bg .hb-path:nth-of-type(2){animation-delay:.30s}
         .hero-bg .hb-path:nth-of-type(3){animation-delay:.40s}
@@ -288,7 +290,7 @@
     <main>
         <section class="hero">
             <div class="hero-bg" aria-hidden="true">
-                <svg viewBox="0 0 1440 790" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                <svg class="hb-wide" viewBox="0 0 1440 790" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
                     <g fill="none" stroke="#2B4C7E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
                         <g class="hb-main">
                             <circle class="hb-dot" cx="74" cy="600" r="5.5" fill="#2B4C7E" stroke="none"/>
@@ -336,7 +338,42 @@
                         </g>
                     </g>
                 </svg>
-            </div>
+
+                <svg class="hb-mobile" viewBox="0 0 390 450" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" stroke="#2B4C7E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <g class="hb-main">
+                            <circle class="hb-dot" cx="16" cy="60" r="4" fill="#2B4C7E" stroke="none"/>
+                            <path class="hb-trunk" d="M24 60 H74"/>
+                            <path class="hb-path" d="M74 60 C 116 60, 132 34, 170 26"/>
+                            <path class="hb-path" d="M74 60 H170"/>
+                            <path class="hb-path" d="M74 60 C 116 60, 132 86, 170 94"/>
+                            <polyline class="hb-head" points="163,20 173,26 164,33"/>
+                            <polyline class="hb-head" points="163,54 173,60 163,66"/>
+                            <polyline class="hb-head" points="163,88 173,94 164,101"/>
+                        </g>
+                        <g class="hb-sub">
+                            <circle class="hb-dot" cx="212" cy="240" r="4" fill="#2B4C7E" stroke="none"/>
+                            <path class="hb-trunk" d="M220 240 H262"/>
+                            <path class="hb-path" d="M262 240 C 306 240, 326 214, 372 204"/>
+                            <path class="hb-path" d="M262 240 H372"/>
+                            <path class="hb-path" d="M262 240 C 306 240, 326 266, 372 278"/>
+                            <polyline class="hb-head" points="365,198 375,204 366,211"/>
+                            <polyline class="hb-head" points="365,234 375,240 365,246"/>
+                            <polyline class="hb-head" points="365,272 375,278 366,285"/>
+                        </g>
+                        <g class="hb-sub">
+                            <circle class="hb-dot" cx="16" cy="392" r="4" fill="#2B4C7E" stroke="none"/>
+                            <path class="hb-trunk" d="M24 392 H88"/>
+                            <path class="hb-path" d="M88 392 C 138 392, 158 362, 208 350"/>
+                            <path class="hb-path" d="M88 392 H208"/>
+                            <path class="hb-path" d="M88 392 C 138 392, 158 422, 208 436"/>
+                            <polyline class="hb-head" points="201,344 211,350 202,357"/>
+                            <polyline class="hb-head" points="201,386 211,392 201,398"/>
+                            <polyline class="hb-head" points="201,430 211,436 202,443"/>
+                        </g>
+                    </g>
+                </svg>
+                        </div>
             <div class="wrap">
                 <div class="hero-inner">
                     <h1>Democratizing<br>real estate solutions</h1>
@@ -607,18 +644,6 @@
                 entries.forEach(function(en){if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}});
             },{rootMargin:'0px 0px -8% 0px',threshold:.08});
             els.forEach(function(e){io.observe(e)});
-        })();
-    </script>
-    <script>
-        /* The hero motif uses a wide viewBox with slice cropping. Centre-cropping on a phone
-           lands on the middle of the paths, hiding every origin dot and nearly every arrowhead.
-           Anchor left on narrow screens so the dots and fans stay in frame. */
-        (function(){
-            var svg=document.querySelector('.hero-bg svg'); if(!svg) return;
-            var mq=window.matchMedia('(max-width:820px)');
-            function fit(){ svg.setAttribute('preserveAspectRatio', mq.matches ? 'xMinYMid slice' : 'xMidYMid slice'); }
-            fit();
-            (mq.addEventListener ? mq.addEventListener('change',fit) : mq.addListener(fit));
         })();
     </script>
 </body>
