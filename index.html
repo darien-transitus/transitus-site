@@ -609,5 +609,17 @@
             els.forEach(function(e){io.observe(e)});
         })();
     </script>
+    <script>
+        /* The hero motif uses a wide viewBox with slice cropping. Centre-cropping on a phone
+           lands on the middle of the paths, hiding every origin dot and nearly every arrowhead.
+           Anchor left on narrow screens so the dots and fans stay in frame. */
+        (function(){
+            var svg=document.querySelector('.hero-bg svg'); if(!svg) return;
+            var mq=window.matchMedia('(max-width:820px)');
+            function fit(){ svg.setAttribute('preserveAspectRatio', mq.matches ? 'xMinYMid slice' : 'xMidYMid slice'); }
+            fit();
+            (mq.addEventListener ? mq.addEventListener('change',fit) : mq.addListener(fit));
+        })();
+    </script>
 </body>
 </html>
