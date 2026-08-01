@@ -42,10 +42,12 @@
 
         /* Header */
         header{position:sticky;top:0;z-index:50;background:rgba(246,243,236,0.82);backdrop-filter:saturate(180%) blur(14px);-webkit-backdrop-filter:saturate(180%) blur(14px);border-bottom:1px solid var(--line)}
-        .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+        .nav{display:flex;align-items:center;justify-content:space-between;height:58px;padding-top:4px;position:relative}
+        .nav-left{display:flex;align-items:center;gap:clamp(26px,4vw,54px)}
+        .nav-links{display:flex;align-items:center;gap:clamp(18px,2.6vw,32px);white-space:nowrap}
         .brand{display:flex;align-items:center;gap:11px}
         .brand svg{width:34px;height:18px}
-        .brand-name{font-family:'Newsreader',serif;font-weight:600;font-size:22px;letter-spacing:0.02em;color:var(--navy)}.nav-right{display:flex;align-items:center;gap:clamp(16px,3vw,26px)}.nav-link{font-family:'Hanken Grotesk',sans-serif;font-size:15px;font-weight:600;color:var(--ink-soft);transition:color .18s}.nav-link:hover{color:var(--navy)}.nav-link.active{color:var(--navy)}@media(max-width:600px){.nav-link{display:none}}
+        .brand-name{font-family:'Newsreader',serif;font-weight:600;font-size:22px;letter-spacing:0.02em;color:var(--navy)}.nav .brand-name{position:relative;top:2.7px}.nav-right{display:flex;align-items:center;gap:clamp(16px,3vw,26px)}.nav-link{font-family:'Hanken Grotesk',sans-serif;font-size:15px;font-weight:600;color:var(--ink);transition:color .18s}.nav-link:hover{color:var(--navy)}.nav-link.active{color:var(--navy)}.nav-right .btn{padding:9px 18px;font-size:14px;line-height:1.15;box-shadow:0 1px 2px rgba(27,26,22,.10),0 6px 14px -8px rgba(43,76,126,.45)}@media(max-width:600px){.nav-link{display:none}}
         .btn{display:inline-flex;align-items:center;gap:8px;font-family:'Hanken Grotesk',sans-serif;font-weight:600;font-size:15px;border-radius:999px;padding:11px 22px;transition:transform .18s ease,box-shadow .18s ease,background .18s ease;cursor:pointer;white-space:nowrap}
         .btn-primary{background:var(--navy);color:#fff;box-shadow:0 1px 2px rgba(27,26,22,.12),0 10px 24px -10px rgba(43,76,126,.5)}
         .btn-primary:hover{background:var(--navy-deep);transform:translateY(-2px);box-shadow:0 1px 2px rgba(27,26,22,.12),0 16px 30px -10px rgba(43,76,126,.55)}
@@ -60,8 +62,8 @@
         .hero::before{content:"";position:absolute;top:-30%;left:50%;transform:translateX(-50%);width:130%;height:120%;background:radial-gradient(60% 50% at 50% 0%,rgba(43,76,126,.13),rgba(43,76,126,0) 70%);pointer-events:none}
         .hero-inner{position:relative;z-index:1;max-width:1040px;margin:0 auto}
         .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
-        .hero-bg .hb-trunk,.hero-bg .hb-path,.hero-bg .hb-head{stroke-opacity:.16}
-        .hero-bg .hb-dot{fill-opacity:.42}
+        .hero-bg .hb-trunk,.hero-bg .hb-path,.hero-bg .hb-head{stroke-opacity:.21}
+        .hero-bg .hb-dot{fill-opacity:.5}
         .hero-bg .hb-sub{opacity:.72}
         .hero h1,.hero p,.hero-notes{width:fit-content;margin-left:auto;margin-right:auto;background:var(--cream);box-shadow:0 0 30px 20px var(--cream)}
         .hero-cta{position:relative}
@@ -82,7 +84,7 @@
             .hero-bg .hb-trunk,.hero-bg .hb-path{stroke-dashoffset:0;animation:none}
             .hero-bg .hb-head,.hero-bg .hb-dot{opacity:1;animation:none}
         }
-        .buyer-bar{background:var(--navy);color:#fff;text-align:center;font-family:'Hanken Grotesk',sans-serif;font-size:clamp(11px,1.3vw,13px);font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px}
+        .buyer-bar{background:var(--navy);height:3px}
         .hero h1{font-size:clamp(2.4rem,6.2vw,4rem);margin:0 auto 24px;font-weight:500;text-wrap:balance}
         .hero p{font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--ink-soft);max-width:660px;margin:0 auto;line-height:1.72;text-wrap:pretty}
         .pills{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:30px 0 32px}
@@ -90,7 +92,7 @@
         .pill b{color:var(--navy);font-weight:600}
         .hero-cta{margin:28px 0 6px}
         .hero-notes{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:10px 22px;margin-top:34px}
-        .hero-notes span{position:relative;font-size:13px;font-weight:500;color:var(--muted);letter-spacing:.01em}
+        .hero-notes span{position:relative;font-size:12.5px;font-weight:500;color:var(--muted);opacity:.82;letter-spacing:.02em}
         .hero-notes span + span::before{content:"";position:absolute;left:-12px;top:50%;transform:translateY(-50%);width:3px;height:3px;border-radius:50%;background:var(--muted);opacity:.45}
         @media(max-width:600px){.hero-notes{gap:8px 16px;margin-top:26px}.hero-notes span{font-size:12px}.hero-notes span + span::before{left:-9px}}
         .how{padding:44px 0 26px}
@@ -98,6 +100,7 @@
         .step{background:var(--surface);border:1px solid var(--line);border-radius:clamp(16px,2vw,22px);padding:clamp(22px,3vw,34px);text-align:center;box-shadow:0 1px 2px rgba(27,26,22,.04),0 30px 60px -50px rgba(27,26,22,.28)}
         .step-num{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--c1-bg);color:var(--navy);font-family:'Newsreader',serif;font-size:20px;font-weight:600;margin-bottom:14px}
         .step p{font-size:clamp(.95rem,1.6vw,1.08rem);color:var(--ink);font-weight:500;line-height:1.5}
+        .step{display:block;transition:transform .2s,box-shadow .2s,border-color .2s}.step-num{transition:transform .2s}.step p{transition:color .2s}.step:hover{transform:translateY(-2px);border-color:#ded8ca;box-shadow:0 1px 2px rgba(27,26,22,.05),0 26px 48px -38px rgba(27,26,22,.34)}.step:hover .step-num{transform:scale(1.14)}.step:hover p{color:var(--navy)}.step-link{cursor:pointer}.step-go{display:inline-flex;align-items:center;gap:6px;margin-top:13px;font-family:'Hanken Grotesk',sans-serif;font-size:13.5px;font-weight:600;color:var(--navy);opacity:.8;transition:opacity .2s}.step-go .arr{display:inline-block;transition:transform .2s}.step-link:hover .step-go{opacity:1}.step-link:hover .step-go .arr{transform:translateX(5px)}
         @media(max-width:600px){.steps{grid-template-columns:1fr}}
 
         /* Reveal */
@@ -202,8 +205,8 @@
         .how{position:relative;overflow:hidden;padding:clamp(60px,7vw,92px) 0 clamp(56px,6.5vw,84px)}
         .how-bg{position:absolute;inset:0;z-index:0;pointer-events:none;overflow:hidden}
         .how-bg svg{width:100%;height:100%;display:block}
-        .how-bg .hb-trunk,.how-bg .hb-path,.how-bg .hb-head{stroke-opacity:.14}
-        .how-bg .hb-dot{fill-opacity:.4}
+        .how-bg .hb-trunk,.how-bg .hb-path,.how-bg .hb-head{stroke-opacity:.18}
+        .how-bg .hb-dot{fill-opacity:.48}
         .how .wrap{position:relative;z-index:1}
         .vs-empty::before,.vs-empty::after{display:none}
         .vs-final{color:var(--navy);font-weight:500;padding-top:6px}
@@ -281,15 +284,14 @@
 <body>
     <header>
         <div class="wrap nav">
-            <a href="/" class="brand" aria-label="Transitus home">
+            <div class="nav-left"><a href="/" class="brand" aria-label="Transitus home">
                 <svg viewBox="-2 0 34 16" fill="none" stroke="#2B4C7E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><circle cx="3" cy="8" r="2.5" fill="#2B4C7E"/><line x1="6" y1="8" x2="26" y2="8"/><polyline points="22,3 28,8 22,13"/></svg>
                 <span class="brand-name">Transitus</span>
-            </a>
-            <div class="nav-right"><a href="/about" class="nav-link">About Us</a><a href="/your-options" class="btn btn-primary">See my options <span class="arr">&rarr;</span></a></div>
+            </a><nav class="nav-links"><a href="/solutions" class="nav-link">Solutions</a><a href="/see-an-example" class="nav-link">See Example</a><a href="/guides" class="nav-link">Guides</a><a href="/about" class="nav-link">About Us</a></nav></div><div class="nav-right"><a href="/your-options" class="btn btn-primary">See my options <span class="arr">&rarr;</span></a></div>
         </div>
     </header>
 
-    <div class="buyer-bar">A different kind of Colorado home buyer</div>
+    <div class="buyer-bar" aria-hidden="true"></div>
 
     <main>
         <section class="hero">
@@ -347,9 +349,9 @@
                 <div class="hero-inner">
                     <h1>Democratizing<br>real estate solutions</h1>
                     <p>For distressed homeowners: Real estate is full of options that stay hidden.<br>We make them clear, and help you act.</p>
-                    <div class="hero-cta"><a href="/your-options" class="btn btn-primary">See your options <span class="arr">&rarr;</span></a></div>
-                    <div class="hero-notes"><span>No cost</span><span>No obligation</span><span>5 minutes</span></div>
-                                    </div>
+                    <div class="hero-cta"><a href="/your-options" class="btn btn-primary">See my options <span class="arr">&rarr;</span></a></div>
+                    <div class="hero-notes"><span>Colorado</span><span>No cost</span><span>No obligation</span><span>5 minutes</span></div>
+                                                        </div>
             </div>
         </section>
 
@@ -391,10 +393,11 @@
             <div class="wrap">
                 <div class="sec-label reveal"><span class="num">02</span><span class="bar"></span><span class="eyebrow">How it works</span></div>
                 <div class="steps">
-                    <div class="step reveal">
+                    <a class="step step-link reveal" href="/your-options">
                         <span class="step-num">1</span>
                         <p>Tell us your situation.</p>
-                    </div>
+                        <span class="step-go">Start here <span class="arr">&rarr;</span></span>
+                    </a>
                     <div class="step reveal">
                         <span class="step-num">2</span>
                         <p>See every option, side by side.</p>
@@ -421,6 +424,11 @@
                     <button class="filter" data-filter="protect">Protecting yourself</button>
                 </div>
                 <div class="alist reveal">
+                    <a class="arow" data-cat="sell" data-all="1" href="/what-happens-to-equity-in-foreclosure">
+                        <span class="aicon ai3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5 11 5h6.5A1.5 1.5 0 0 1 19 6.5V13l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
+                        <span class="atext"><span class="acat">Selling as a way out</span><h3>Afraid of what happens to equity in foreclosure</h3><p>Where the auction money goes and how to keep what&#x27;s yours.</p></span>
+                        <span class="aarrow">&rarr;</span>
+                    </a>
                     <a class="arow" data-cat="understand" data-all="1" href="/reverse-mortgage-foreclosure">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Blindsided by a reverse mortgage foreclosure</h3><p>The loan that promised no payments can still end in foreclosure.</p></span>
@@ -436,7 +444,7 @@
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Hoping mortgage reinstatement can stop the sale</h3><p>Catch up the missed payments, not the whole loan, and it ends.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="sell" data-all="1" href="/deed-in-lieu-vs-short-sale">
+                    <a class="arow" data-cat="sell" href="/deed-in-lieu-vs-short-sale">
                         <span class="aicon ai3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5 11 5h6.5A1.5 1.5 0 0 1 19 6.5V13l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
                         <span class="atext"><span class="acat">Selling as a way out</span><h3>Torn between a deed in lieu vs short sale</h3><p>Two hard doors, one honest look at which ends cleaner for you.</p></span>
                         <span class="aarrow">&rarr;</span>
