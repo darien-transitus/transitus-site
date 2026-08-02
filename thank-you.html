@@ -14,6 +14,26 @@
       gtag('config', 'AW-18117724697');
     </script>
 
+    <!-- Enhanced conversions: user-provided data from the lead just submitted.
+         gtag normalises + SHA-256 hashes these in the browser; raw values never leave the page. -->
+    <script>
+      (function(){
+        try{
+          var lead=JSON.parse(localStorage.getItem("transitus_lead")||"{}");
+          if(!lead||!lead.t||(Date.now()-lead.t)>3600000) return;
+          var ud={};
+          if(lead.email){var e=String(lead.email).trim().toLowerCase(); if(e.indexOf("@")>0) ud.email=e;}
+          if(lead.phone){var d=String(lead.phone).replace(/\D/g,"");
+            if(d.length===10) ud.phone_number="+1"+d;
+            else if(d.length===11&&d.charAt(0)==="1") ud.phone_number="+"+d;}
+          if(lead.name){var p=String(lead.name).trim().split(/\s+/).filter(Boolean);
+            if(p.length){ud.address={first_name:p[0].toLowerCase()};
+              if(p.length>1) ud.address.last_name=p[p.length-1].toLowerCase();}}
+          if(ud.email||ud.phone_number) gtag("set","user_data",ud);
+        }catch(err){}
+      })();
+    </script>
+
     <!-- Event snippet for Options Form Lead conversion page -->
     <script>
       gtag('event', 'conversion', {'send_to': 'AW-18117724697/z68MCN2TrNEcEJmUmr9D'});
