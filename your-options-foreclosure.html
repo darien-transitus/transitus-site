@@ -171,7 +171,7 @@
         .ta{font-size:14px;color:var(--muted);margin-top:12px;font-style:normal}
         #get-options{scroll-margin-top:92px}
         .video-wrap{margin:19px 0 10px;text-align:center}
-        .video-frame{position:relative;display:block;width:100%;line-height:0}
+        .video-frame{position:relative;display:block;width:100%;line-height:0}.vcue{position:absolute;left:12px;bottom:12px;z-index:2;display:inline-flex;align-items:center;gap:7px;border:0;cursor:pointer;padding:7px 13px 7px 10px;border-radius:999px;background:rgba(27,26,22,.66);-webkit-backdrop-filter:saturate(160%) blur(6px);backdrop-filter:saturate(160%) blur(6px);box-shadow:0 4px 16px rgba(27,26,22,.28);transition:background .18s ease,transform .18s ease}.vcue svg{width:15px;height:15px;fill:#fff;display:block}.vcue-t{font-family:'Hanken Grotesk',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:.03em;color:#fff;line-height:1}.vcue:hover{background:rgba(43,76,126,.92);transform:translateY(-1px)}.video-frame.playing .vcue{display:none}
         .video-wrap video{display:block;width:100%;border-radius:12px;box-shadow:0 6px 18px -8px rgba(27,26,22,.22)}
         .values .video-wrap{margin:0}
         .values.whovid{padding:12px 0 16px}
@@ -310,7 +310,7 @@
                                 <video controls playsinline preload="metadata" poster="transitus-video-poster.jpg">
                                     <source src="transitus-video.mp4" type="video/mp4">
                                 </video>
-                                <div class="vbar" aria-hidden="true">
+                                <button class="vcue" type="button" aria-label="Play video"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg><span class="vcue-t">0:58</span></button><div class="vbar" aria-hidden="true">
                                     <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
                                     <span class="vbar-track"></span>
                                     <span class="vbar-time">0:00</span>
@@ -374,15 +374,25 @@
     <script>
         (function(){
             var f=document.querySelector('.video-frame');if(!f)return;
-            var v=f.querySelector('video'),bar=f.querySelector('.vbar');
+            var v=f.querySelector('video'),bar=f.querySelector('.vbar'),badge=f.querySelector('.vcue'),dur=f.querySelector('.vcue-t');
             if(!v)return;
-            if(!window.matchMedia('(max-width:600px)').matches)return; /* desktop: native player, untouched */
-            v.removeAttribute('controls');                            /* mobile: remove native center button */
-            f.addEventListener('click',function(){
+                        v.removeAttribute('controls');   /* poster state: our chip is the only affordance, at every size.
+                                                the native bar comes back the moment playback starts */
+            function start(){
                 if(bar)bar.style.display='none';
+                f.classList.add('playing');
                 v.setAttribute('controls','');
                 v.play();
-            },{once:true});
+            }
+            if(badge)badge.addEventListener('click',function(e){e.stopPropagation();start();});
+            f.addEventListener('click',start,{once:true});   /* tap/click anywhere on the frame, any size */
+            v.addEventListener('play',function(){f.classList.add('playing');});
+            v.addEventListener('loadedmetadata',function(){
+                if(!dur||!isFinite(v.duration))return;
+                var m=Math.floor(v.duration/60),sec=Math.floor(v.duration%60);
+                if(sec===60){m++;sec=0;}
+                dur.textContent=m+':'+(sec<10?'0':'')+sec;
+            });
         })();
     </script>
     <script>
