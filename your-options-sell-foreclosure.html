@@ -183,7 +183,7 @@
             /* iPhone Safari ignores CSS on native controls, so on mobile we strip them (kills the face-covering
                center button) and draw our own bar; tapping the video plays it with the real native controls */
             .video-frame{cursor:pointer}
-            .vbar{display:flex;align-items:center;gap:9px;position:absolute;left:0;right:0;bottom:0;height:34px;padding:0 12px;border-radius:0 0 12px 12px;background:linear-gradient(to top,rgba(0,0,0,.6),rgba(0,0,0,.12) 72%,rgba(0,0,0,0));pointer-events:none}
+            .vbar{display:none}
             .vbar svg{width:15px;height:15px;fill:#fff;flex-shrink:0}
             .vbar-track{flex:1;height:3px;background:rgba(255,255,255,.45);border-radius:2px;position:relative}
             .vbar-track::before{content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);width:9px;height:9px;border-radius:50%;background:#fff}
