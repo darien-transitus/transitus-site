@@ -112,6 +112,34 @@
         .guides-exit a:hover{text-decoration-color:var(--navy)}
     </style>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Bracing to learn how a foreclosure auction works","description":"How does a foreclosure auction work? See the whole day: who runs it, who can bid, what happens if nobody does, and the money that can come back to you.","author":{"@type":"Organization","name":"Transitus"},"datePublished":"2026-07-16","mainEntityOfPage":"https://gettransitus.ai/how-does-a-foreclosure-auction-work"}</script>
+    <script>
+        /* Source attribution: record HOW this visit reached the site, on the FIRST page only.
+           sessionStorage, so a later organic visit is never credited to an old ad click. */
+        (function(){
+            try{
+                var K="transitus_src";
+                if(sessionStorage.getItem(K)) return;
+                var q=new URLSearchParams(location.search), g=function(n){return q.get(n)||"";};
+                var click=g("gclid")||g("gbraid")||g("wbraid")||g("msclkid");
+                var us=g("utm_source"), um=g("utm_medium"), uc=g("utm_campaign");
+                var host="";
+                try{ if(document.referrer){ var u=new URL(document.referrer);
+                     if(u.hostname!==location.hostname) host=u.hostname.replace(/^www\./,""); } }catch(e){}
+                var engine=/(^|\.)(google|bing|duckduckgo|yahoo|ecosia|brave)\./.test(host+".")?host.split(".")[0]:"";
+                var label;
+                var net=g("msclkid")?"microsoft ads":"google ads";
+                if(click) label="paid: "+(us||net)+(uc?" / "+uc:"");
+                else if(us) label=us+(um?" / "+um:"");
+                else if(engine) label="organic: "+engine;
+                else if(host) label="referral: "+host;
+                else label="direct";
+                sessionStorage.setItem(K, JSON.stringify({
+                    s:label, g:click, c:uc,
+                    land:location.pathname.replace(/\.html$/,"")||"/", t:Date.now()
+                }));
+            }catch(e){}
+        })();
+    </script>
 </head>
 <body>
     <header>

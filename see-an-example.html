@@ -238,6 +238,34 @@
         .ex-hero p{max-width:560px;text-wrap:balance}.bridge{text-align:center;margin:clamp(40px,4.6vw,58px) auto 0;max-width:660px}.bridge a{font-family:'Hanken Grotesk',sans-serif;font-size:clamp(.98rem,1.6vw,1.05rem);color:var(--ink-soft);line-height:1.7;transition:color .2s}.bridge .bridge-go{color:var(--navy);font-weight:600}.bridge .arr{display:inline-block;transition:transform .2s}.bridge a:hover .arr{transform:translateX(5px)}.bridge a:hover .bridge-go{color:var(--navy-deep)}.close-band{position:relative;overflow:hidden}.close-bg{position:absolute;left:0;right:0;bottom:0;height:clamp(112px,12vw,152px);z-index:0;pointer-events:none;overflow:hidden}.close-bg svg{width:100%;height:100%;display:block}.close-bg .hb-trunk,.close-bg .hb-path,.close-bg .hb-head{stroke-opacity:.15}.close-bg .hb-dot{fill-opacity:.4}.close-band .wrap{position:relative;z-index:1}
         @media(max-width:600px){.note{padding-left:26px}.note::after{left:5px}}
     </style>
+    <script>
+        /* Source attribution: record HOW this visit reached the site, on the FIRST page only.
+           sessionStorage, so a later organic visit is never credited to an old ad click. */
+        (function(){
+            try{
+                var K="transitus_src";
+                if(sessionStorage.getItem(K)) return;
+                var q=new URLSearchParams(location.search), g=function(n){return q.get(n)||"";};
+                var click=g("gclid")||g("gbraid")||g("wbraid")||g("msclkid");
+                var us=g("utm_source"), um=g("utm_medium"), uc=g("utm_campaign");
+                var host="";
+                try{ if(document.referrer){ var u=new URL(document.referrer);
+                     if(u.hostname!==location.hostname) host=u.hostname.replace(/^www\./,""); } }catch(e){}
+                var engine=/(^|\.)(google|bing|duckduckgo|yahoo|ecosia|brave)\./.test(host+".")?host.split(".")[0]:"";
+                var label;
+                var net=g("msclkid")?"microsoft ads":"google ads";
+                if(click) label="paid: "+(us||net)+(uc?" / "+uc:"");
+                else if(us) label=us+(um?" / "+um:"");
+                else if(engine) label="organic: "+engine;
+                else if(host) label="referral: "+host;
+                else label="direct";
+                sessionStorage.setItem(K, JSON.stringify({
+                    s:label, g:click, c:uc,
+                    land:location.pathname.replace(/\.html$/,"")||"/", t:Date.now()
+                }));
+            }catch(e){}
+        })();
+    </script>
 </head>
 <body>
     <header>

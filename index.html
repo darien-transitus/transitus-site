@@ -280,6 +280,34 @@
         .see-all{display:inline-flex;align-items:center;gap:7px;margin-top:24px;font-size:15px;font-weight:600;color:var(--navy)}
         .see-all .arr{transition:transform .2s}.see-all:hover .arr{transform:translateX(5px)}
     </style>
+    <script>
+        /* Source attribution: record HOW this visit reached the site, on the FIRST page only.
+           sessionStorage, so a later organic visit is never credited to an old ad click. */
+        (function(){
+            try{
+                var K="transitus_src";
+                if(sessionStorage.getItem(K)) return;
+                var q=new URLSearchParams(location.search), g=function(n){return q.get(n)||"";};
+                var click=g("gclid")||g("gbraid")||g("wbraid")||g("msclkid");
+                var us=g("utm_source"), um=g("utm_medium"), uc=g("utm_campaign");
+                var host="";
+                try{ if(document.referrer){ var u=new URL(document.referrer);
+                     if(u.hostname!==location.hostname) host=u.hostname.replace(/^www\./,""); } }catch(e){}
+                var engine=/(^|\.)(google|bing|duckduckgo|yahoo|ecosia|brave)\./.test(host+".")?host.split(".")[0]:"";
+                var label;
+                var net=g("msclkid")?"microsoft ads":"google ads";
+                if(click) label="paid: "+(us||net)+(uc?" / "+uc:"");
+                else if(us) label=us+(um?" / "+um:"");
+                else if(engine) label="organic: "+engine;
+                else if(host) label="referral: "+host;
+                else label="direct";
+                sessionStorage.setItem(K, JSON.stringify({
+                    s:label, g:click, c:uc,
+                    land:location.pathname.replace(/\.html$/,"")||"/", t:Date.now()
+                }));
+            }catch(e){}
+        })();
+    </script>
 </head>
 <body>
     <header>
