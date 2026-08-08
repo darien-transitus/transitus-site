@@ -217,6 +217,7 @@
                         <form action="https://formspree.io/f/xqewvyzg" method="POST">
                             <input type="hidden" name="_subject" value="New Transitus Lead (from Right of redemption)">
                             <input type="hidden" name="_next" value="thank-you.html">
+                            <input type="hidden" name="Source" id="src-source" value="(unknown)"><input type="hidden" name="Landing page" id="src-landing" value=""><input type="hidden" name="Click ID" id="src-click" value="">
                             <div class="fg"><label for="name">Your Name</label><input type="text" id="name" name="name" required></div>
                             <div class="fg"><label for="email">Email</label><input type="email" id="email" name="email" required></div>
                             <div class="fg"><label for="address">Property Address</label><input type="text" id="address" name="address" required></div>
@@ -256,6 +257,12 @@
         (function(){
             var f=document.querySelector('form[action*="formspree.io"]');
             if(!f)return;
+            /* Stamp the source recorded on the first pageview onto the form before it posts. */
+            try{
+                var d=JSON.parse(sessionStorage.getItem("transitus_src")||"{}");
+                var set=function(id,v){var el=document.getElementById(id); if(el&&v) el.value=v;};
+                set("src-source", d.s); set("src-landing", d.land); set("src-click", d.g);
+            }catch(err){}
             f.addEventListener('submit',function(){
                 try{
                     var n=f.querySelector('#name'), e=f.querySelector('#email'), p=f.querySelector('#phone');
