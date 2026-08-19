@@ -260,14 +260,19 @@
         .ag-sub a:hover{color:var(--navy)}
     </style>
     <style>
-        .ag-lead{max-width:720px;margin:0 auto clamp(22px,2.6vw,30px);text-align:left;font-size:clamp(1rem,1.6vw,1.12rem);line-height:1.7;color:var(--ink-soft)}
-        .ag-lead strong{color:var(--ink);font-weight:600}
-        .ag-ex{max-width:720px;margin:0 auto;padding:0;list-style:none;display:grid;gap:0}
-        .ag-ex li{position:relative;padding:13px 0 13px 26px;border-bottom:1px solid var(--line);color:var(--ink);line-height:1.6}
-        .ag-ex li:last-child{border-bottom:0}
-        .ag-ex li::before{content:"";position:absolute;left:4px;top:21px;width:7px;height:7px;border-radius:50%;background:var(--navy)}
-        @media(min-width:680px){.ag-ex{grid-template-columns:1fr 1fr;column-gap:34px}
-          .ag-ex li:nth-last-child(2){border-bottom:0}}
+        .ag-when .wrap{max-width:820px}
+        .ag-panel{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:clamp(24px,3vw,34px) clamp(22px,3vw,36px);position:relative;overflow:hidden}
+        .ag-panel::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--navy)}
+        .ag-lead{margin:0 0 clamp(20px,2.4vw,26px);text-align:left;font-size:clamp(1rem,1.6vw,1.1rem);line-height:1.7;color:var(--ink-soft)}
+        .ag-lead strong{display:block;font-family:'Newsreader',serif;font-size:clamp(1.18rem,2.1vw,1.4rem);font-weight:600;color:var(--ink);margin-bottom:7px;letter-spacing:-.005em}
+        .ag-ex{margin:0;padding:0;list-style:none;display:grid;gap:0;border-top:1px solid var(--line)}
+        .ag-ex li{position:relative;padding:12px 0 12px 24px;border-bottom:1px solid var(--line);color:var(--ink);line-height:1.55;font-size:15px}
+        .ag-ex li::before{content:"";position:absolute;left:3px;top:20px;width:6px;height:6px;border-radius:50%;background:var(--navy);opacity:.55}
+        @media(min-width:700px){
+          .ag-ex{grid-template-columns:1fr 1fr;column-gap:38px}
+          .ag-ex li:nth-last-child(-n+2){border-bottom:0}
+        }
+        @media(max-width:699px){.ag-ex li:last-child{border-bottom:0}}
     </style>
     </head>
 <body>
@@ -317,7 +322,8 @@
 
                 <section class="values ag-when">
                     <div class="vhead reveal"><span class="eyebrow">When to bring us in</span></div>
-                    <p class="ag-lead reveal"><strong>Any deal that isn&#x27;t moving:</strong> Days on market keep climbing, price cuts aren&#x27;t working, and the seller wants something the market won&#x27;t give.</p>
+                    <div class="ag-panel reveal">
+                        <p class="ag-lead reveal"><strong>Any deal that isn&#x27;t moving:</strong> Days on market keep climbing, price cuts aren&#x27;t working, and the seller wants something the market won&#x27;t give.</p>
                     <ul class="ag-ex reveal">
                         <li>A rental the landlord wants out of, at a number</li>
                         <li>A house that needs work before it will sell</li>
@@ -326,6 +332,7 @@
                         <li>A seller who needs more than the market will pay</li>
                         <li>A seller who has to be out now</li>
                     </ul>
+                    </div>
                 </section>
 
                 <div class="col">
