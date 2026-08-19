@@ -9,6 +9,7 @@
     <title>For agents | Transitus</title>
     <meta name="robots" content="noindex, nofollow">
     <link rel="canonical" href="https://gettransitus.ai/for-agents">
+    
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
@@ -332,7 +333,7 @@
             <div class="col">
                 <section class="phero">
                     <h1>A buyer for the listings that don't work the normal way</h1>
-                    <p class="phero-sub">Some listings need what the market can&#x27;t give.<br>They need a different&nbsp;structure.</p>
+                    <p class="phero-sub">Some listings need what the market can&#x27;t give.<br>We close the gap with creative&nbsp;structure.</p>
                 </section>
             </div>
 
@@ -356,34 +357,50 @@
                         </div>
                         <div class="vcard reveal">
                             <div class="vicon vc4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></div>
-                            <h3>These deals close on trust</h3>
+                            <h3>Our deals close with trust and partnership</h3>
                             <p>How it works, why we&#x27;re doing it, and what the risks are. Everyone understands before anyone signs.</p>
                         </div>
                     </div>
                 </section>
 
-                <section class="values ag-when">
-                    <div class="vhead reveal"><span class="eyebrow">When to bring us in</span></div>
-                    <div class="ag-panel reveal">
-                        <p class="ag-lead reveal"><strong>Any deal that isn&#x27;t moving</strong> Days on market keep climbing, price cuts aren&#x27;t working, <br class="dbr">and the seller wants something the market won&#x27;t give.</p>
-                    <p class="ag-more"><span>Sell fast</span><span>Sell for the most</span><span>Creative ways to sell</span></p>
-                    </div>
-                </section>
+                
+<style>
 
-                <section class="values ag-both">
-                    <div class="vhead reveal"><span class="eyebrow">It goes both ways</span></div>
-                    <div class="ag-both-box reveal">
-                        <p class="ag-both-line"><strong>Some of our deals need a listing</strong> When one does, it goes to an agent we already work&nbsp;with.</p>
+/* same 2-col grid and gap as the 4 cards above, so the pair lines up with them */
+.pvside-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(12px,1.8vw,20px);align-items:stretch}
+.pvcol{display:flex;flex-direction:column;min-width:0}
+.pvcol .vhead{margin-bottom:18px}
+.pvcol .ag-panel,.pvcol .ag-both-box{max-width:none;margin:0;flex:1;display:flex;flex-direction:column}
+.pvcol .ag-more,.pvcol .ag-both-cta{margin-top:auto}
+@media(max-width:760px){
+  .pvside-grid{grid-template-columns:1fr;gap:clamp(20px,3vw,26px)}
+  .pvcol .ag-more,.pvcol .ag-both-cta{margin-top:0}
+}
+</style>
+<section class="values">
+<div class="pvside-grid">
+  <div class="pvcol">
+    <div class="vhead reveal"><span class="eyebrow">When to bring us in</span></div>
+<div class="ag-panel reveal">
+                        <p class="ag-lead reveal"><strong>Any deal that isn&#x27;t moving</strong> Days on market keep climbing, price cuts aren&#x27;t working, <br class="dbr">and the seller wants something the market won&#x27;t give.</p>
+                    <p class="ag-more"><span>Creative ways to sell</span><span>Sell for the most</span><span>Sell fast</span></p>
+                    </div>
+  </div>
+  <div class="pvcol">
+    <div class="vhead reveal"><span class="eyebrow">We send deals your way too</span></div>
+<div class="ag-both-box reveal">
+                        <p class="ag-both-line"><strong>We find our own deals</strong> When one needs a listing, it goes to an agent we already work&nbsp;with.</p>
                         <p class="ag-both-cta"><a href="/see-an-example">See how this works <span class="arr">&rarr;</span></a></p>
                     </div>
-                </section>
-
-                <div class="col">
+  </div>
+</div>
+</section>
+<div class="col">
 
                 
 
                 <div class="vhead reveal" id="get-options"><span class="eyebrow">Let&#x27;s work together</span></div>
-                <section class="form-block reveal">
+                <section class="form-block agN reveal">
                     <div class="ag-callwrap"><a class="ag-call" href="tel:+17203586256"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>720.358.6256</a>
                     <p class="ag-sub"><a href="mailto:darien@gettransitus.ai">darien@gettransitus.ai</a></p>
                     <p class="ag-promise">Nothing happens without you.</p></div>
@@ -479,5 +496,14 @@
             tick();
         })();
     </script>
+<style>
+/* Transitus blue on the closing card */
+.agN{background:var(--navy-deep);border:0;box-shadow:0 34px 66px -46px rgba(29,53,86,.8)}
+.agN .ag-call{color:#fff}
+.agN .ag-call:hover{color:#cfdff5}
+.agN .ag-sub a{color:rgba(255,255,255,.82)}
+.agN .ag-sub a:hover{color:#fff}
+.agN .ag-promise{border-top:1px solid rgba(255,255,255,.24);color:#fff}
+</style>
 </body>
 </html>
