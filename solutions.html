@@ -272,6 +272,26 @@
             }catch(e){}
         })();
     </script>
+<style>
+/* Navy header, site-wide. Logo mark + wordmark invert to white, nav CTA inverts to
+   cream-on-navy, burger bars go white, and the mobile panel matches the bar so the
+   menu doesn't open a cream sheet under a navy header. */
+header{background:var(--navy-deep);-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom:0}
+header .nav-link{color:rgba(255,255,255,.84)}
+header .nav-link:hover,header .nav-link.active{color:#fff}
+header .brand-name{color:#fff}
+header .brand svg{stroke:#fff}
+header .brand svg circle{fill:#fff}
+header .nav-right .btn{background:var(--cream);color:var(--navy-deep);border-color:transparent}
+header .nav-right .btn:hover{background:#fff}
+header .navburger span{background:#fff}
+.buyer-bar{background:var(--navy)}
+@media(max-width:860px){
+  .nav-links{background:var(--navy-deep)}
+  .nav-link{color:#fff}
+  .nav-link:hover,.nav-link.active{color:#fff}
+}
+</style>
 </head>
 <body>
     <header>

@@ -7,12 +7,13 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18117724697"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','AW-18117724697');</script>
     <title>Democratizing real estate solutions | Transitus</title>
-    <link rel="canonical" href="https://gettransitus.ai/">
+    
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
     <link rel="apple-touch-icon" sizes="192x192" href="favicon-192.png">
+    <link rel="canonical" href="https://gettransitus.ai/">
     <meta name="description" content="Most buyers give you one number. We show every option for your Colorado home, what each nets you, and what we make. Free, and no obligation to sell.">
     <meta property="og:title" content="Democratizing real estate solutions">
     <meta property="og:description" content="Most buyers give you one number. We show every option for your Colorado home, what each nets you, and what we make. Free, and no obligation to sell.">
@@ -308,6 +309,59 @@
             }catch(e){}
         })();
     </script>
+
+<style>
+.hero-eyebrow{position:relative;z-index:1;width:fit-content;margin:0 auto 30px;
+  font-family:'Hanken Grotesk',sans-serif;font-weight:600;text-transform:uppercase;line-height:1;
+  font-size:13px;letter-spacing:.2em;color:var(--navy)}
+.he-rule{display:flex;align-items:center;justify-content:center;gap:16px}
+.he-rule .ln{display:block;width:30px;height:1px;background:currentColor;opacity:.34}
+/* soft halo: little solid spread, long blur -- motif lines fade out instead of being cut */
+.he-rule .tx,.hero-eyebrow{box-shadow:0 0 30px 20px var(--cream)}
+.hero h1{font-size:clamp(2.6rem,8vw,5.5rem);line-height:1.08;margin:0 auto 26px}
+.hero-routes{position:relative;z-index:1;margin:20px auto 0;width:fit-content;max-width:820px;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
+.hero-routes a{display:inline-flex;align-items:center;font-family:'Hanken Grotesk',sans-serif;
+  font-size:14.5px;font-weight:600;color:var(--navy);background:var(--cream);
+  border:1px solid var(--line);border-radius:999px;padding:11px 20px;text-decoration:none;
+  transition:border-color .18s,background .18s,transform .18s;white-space:nowrap;box-shadow:none}
+.hero-routes a:hover{border-color:var(--navy);background:#fffdf9;transform:translateY(-1px)}
+@media(max-width:560px){.hero-routes a{font-size:13.5px;padding:10px 16px}}
+header{background:var(--navy-deep);-webkit-backdrop-filter:none;backdrop-filter:none;border-bottom:0}
+header .nav-link{color:rgba(255,255,255,.84)}
+header .nav-link:hover,header .nav-link.active{color:#fff}
+header .brand-name{color:#fff}
+header .brand svg{stroke:#fff}
+header .brand svg circle{fill:#fff}
+header .nav-right .btn{background:var(--cream);color:var(--navy-deep);border-color:transparent}
+header .navburger span{background:#fff}
+.buyer-bar{background:var(--navy)}
+@media(max-width:860px){.nav-links{background:var(--navy-deep)}.nav-link{color:#fff}}
+</style>
+<style>
+.hero-bg{overflow:hidden}
+.hero-bg svg{position:absolute;top:0;left:0;width:100%;height:auto;transform:translateY(-22.6%)}
+</style>
+<style>
+/* cream mask behind hero text: motif lines fade out behind the words and pick
+   back up on the far side, finishing at their arrowheads. same as the live homepage. */
+.hero h1,.hero p,.hero-eyebrow,.he-rule .tx{background:var(--cream);box-shadow:0 0 26px 4px var(--cream)}
+</style>
+<style>
+/* tighten the hero stack */
+.hero{padding:clamp(46px,4.6vw,60px) 0 clamp(76px,8vw,110px)}
+.hero-eyebrow{margin-bottom:20px}
+.hero h1{margin:0 auto 16px}
+.hero-routes{margin-top:34px}          /* pills pushed down a little */
+.hero-bg svg{transform:translateY(-28.3%)}   /* motif follows the content up */
+</style>
+<style>
+/* step 3's line needs 281px and the card offered 282 -- it wrapped on a hair.
+   trim the side padding on desktop so all three sit on one line at full type size. */
+@media(min-width:861px){
+  .steps .step{padding-left:24px;padding-right:24px}
+  .steps .step p{white-space:nowrap}
+}
+</style>
 </head>
 <body>
     <header>
@@ -340,7 +394,7 @@
                             <polyline class="hb-head" points="1344,1095 1358,1103 1344,1111"/>
                             <polyline class="hb-head" points="1344,1165 1358,1173 1344,1181"/>
                         </g>
-                        <g class="hb-sub">
+                        <g transform="translate(0,-98)" class="hb-sub">
                             <circle class="hb-dot" cx="86" cy="585" r="4" fill="#2B4C7E" stroke="none"/>
                             <path class="hb-trunk" d="M96 585 H250"/>
                             <path class="hb-path" d="M250 585 C 330 585, 360 539, 470 527"/>
@@ -350,7 +404,7 @@
                             <polyline class="hb-head" points="462,578 474,585 462,592"/>
                             <polyline class="hb-head" points="462,636 474,643 462,650"/>
                         </g>
-                        <g class="hb-sub">
+                        <g transform="translate(0,-44)" class="hb-sub">
                             <circle class="hb-dot" cx="1012" cy="561" r="4" fill="#2B4C7E" stroke="none"/>
                             <path class="hb-trunk" d="M1022 561 H1150"/>
                             <path class="hb-path" d="M1150 561 C 1230 561, 1264 517, 1356 503"/>
@@ -360,7 +414,7 @@
                             <polyline class="hb-head" points="1348,554 1360,561 1348,568"/>
                             <polyline class="hb-head" points="1348,612 1360,619 1348,626"/>
                         </g>
-                        <g class="hb-sub hb-mid">
+                        <g transform="translate(0,13)" class="hb-sub hb-mid">
                             <circle class="hb-dot" cx="196" cy="803" r="4.5" fill="#2B4C7E" stroke="none"/>
                             <path class="hb-trunk" d="M206 803 H470"/>
                             <path class="hb-path" d="M470 803 C 646 803, 828 753, 1152 735"/>
@@ -375,10 +429,16 @@
                                     </div>
             <div class="wrap">
                 <div class="hero-inner">
-                    <h1>Democratizing<br>real estate solutions</h1>
-                    <p><span class="hs1">If your path doesn&#x27;t work, there are usually options that do.</span><br>We show them all, and make it happen.</p>
+                    <div class="hero-eyebrow he-rule"><span class="tx">For Colorado Homeowners</span></div>
+                    <h1>A buyer who shows you everything</h1>
+                    <p><span class="hs1">Most homes would benefit from another option.</span><br>We show them all, even the ones we don&#x27;t buy.</p>
                     <div class="hero-cta"><a href="/your-options" class="btn btn-primary">See my options <span class="arr">&rarr;</span></a></div>
-                    <div class="hero-notes"><span>Colorado</span><span>No cost</span><span>No obligation</span><span>5 minutes</span></div>
+                    <div class="hero-routes">
+                        <a href="/your-options">Selling a home</a>
+                        <a href="/your-options-foreclosure">In foreclosure</a>
+                        <a href="/your-options-probate">Inherited a home</a>
+                        <a href="/for-agents">I&#x27;m an agent</a>
+                    </div>
                                                         </div>
             </div>
         </section>
@@ -390,13 +450,15 @@
                     <div class="vs-head vs-old-head">The old way</div>
                     <div class="vs-head vs-new-head">What we built</div>
                     <div class="vs-cell vs-old reveal"><span>Built for investors, not the people selling</span></div>
-                    <div class="vs-cell vs-new reveal"><span>Built for the seller, and only the seller</span></div>
+                    <div class="vs-cell vs-new reveal"><span>Built by a buyer, for the seller</span></div>
                     <div class="vs-cell vs-old reveal"><span>The less you know, the cheaper they buy</span></div>
                     <div class="vs-cell vs-new reveal"><span>Everything shown, nothing hidden</span></div>
                     <div class="vs-cell vs-old reveal"><span>You're the supply chain</span></div>
                     <div class="vs-cell vs-new reveal"><span>You're the priority, not the inventory</span></div>
-                    <div class="vs-cell vs-old vs-last reveal"><span>One path, the one that pays them</span></div>
-                    <div class="vs-cell vs-new reveal"><span>Every path, even the ones that don't pay us</span></div>
+                    <div class="vs-cell vs-old reveal"><span>One path, the one that pays them</span></div>
+                    <div class="vs-cell vs-new reveal"><span>Every path, even the ones that don&#x27;t pay us</span></div>
+                    <div class="vs-cell vs-old vs-last reveal"><span>You never see what they make</span></div>
+                    <div class="vs-cell vs-new reveal"><span>Our number is on every option</span></div>
                     <div class="vs-cell vs-old vs-empty vs-last" aria-hidden="true"></div>
                     <div class="vs-cell vs-new vs-final vs-last reveal"><span>The information was always there. We just make sure you see it too.</span></div>
                 </div>
@@ -426,14 +488,16 @@
                         <p>Tell us your situation.</p>
                         <span class="step-go">Start here <span class="arr">&rarr;</span></span>
                     </a>
-                    <div class="step reveal">
+                    <a class="step step-link reveal" href="/see-an-example">
                         <span class="step-num">2</span>
                         <p>See every option, side by side.</p>
-                    </div>
-                    <div class="step reveal">
+                        <span class="step-go">See an example <span class="arr">&rarr;</span></span>
+                    </a>
+                    <a class="step step-link reveal" href="/coordination">
                         <span class="step-num">3</span>
                         <p>You choose. We help you get it done.</p>
-                    </div>
+                        <span class="step-go">Who we bring in <span class="arr">&rarr;</span></span>
+                    </a>
                 </div>
             </div>
         </section>
