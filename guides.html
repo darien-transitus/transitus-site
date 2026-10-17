@@ -6,7 +6,7 @@
     <script>document.documentElement.className='js';</script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18117724697"></script>
     <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','AW-18117724697');</script>
-    <title>Every foreclosure guide, for Colorado homeowners | Transitus</title>
+    <title>Every guide we've written, for Colorado homeowners | Transitus</title>
     <link rel="canonical" href="https://gettransitus.ai/guides">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -55,6 +55,13 @@
         .filter{font-family:'Hanken Grotesk',sans-serif;font-size:14px;font-weight:600;color:var(--ink-soft);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 18px;cursor:pointer;transition:background .18s,color .18s,border-color .18s}
         .filter:hover{border-color:var(--navy);color:var(--navy)}
         .filter.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+        /* Cluster bubbles (Foreclosure / Probate) above the category chips */
+        .filters[hidden],.filter[hidden]{display:none}
+        .clusters{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 10px}
+        .cluster{font-family:'Hanken Grotesk',sans-serif;font-size:14px;font-weight:600;color:var(--ink-soft);background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:9px 18px;cursor:pointer;transition:background .18s,color .18s,border-color .18s}
+        .cluster:hover{border-color:var(--navy);color:var(--navy)}
+        .cluster.active{background:var(--navy);color:#fff;border-color:var(--navy)}
+
         .alist{margin-top:14px;border-top:1px solid var(--line)}
         .arow{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:22px;padding:26px 10px;border-bottom:1px solid var(--line);transition:background .2s,box-shadow .2s;cursor:pointer;border-radius:0 10px 10px 0}.arow h3{transition:color .2s}
         .arow:hover{background:linear-gradient(to right,rgba(43,76,126,.055),rgba(43,76,126,0) 62%);box-shadow:inset 3px 0 0 var(--navy)}.arow:hover h3{color:var(--navy)}
@@ -147,12 +154,16 @@ header .navburger span{background:#fff}
         <div class="wrap">
             <section class="page-hero">
                 <h1>Every guide we've written. For the homeowner.</h1>
-                <p>Wherever you are in this, there's something here for you.</p>
+                <p>Wherever you are, there's something here for you.</p>
             </section>
         </div>
         <section class="list-band">
         <div class="wrap">
-                        <div class="filters">
+                        <div class="clusters reveal">
+                    <button class="cluster" data-cluster="foreclosure">Foreclosure</button>
+                    <button class="cluster" data-cluster="probate">Probate</button>
+                </div>
+                <div class="filters" id="catFilters" hidden>
                 <button class="filter active" data-filter="all">All</button>
                 <button class="filter" data-filter="understand">Understanding it</button>
                 <button class="filter" data-filter="keep">Keeping your home</button>
@@ -161,294 +172,299 @@ header .navburger span{background:#fff}
             </div>
 
             <div class="alist">
-                    <a class="arow" data-cat="understand" href="/foreclosure-guide">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" href="/foreclosure-guide">
                     <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                     <span class="atext"><span class="acat">Understanding it</span><h3>You don't have to navigate foreclosure alone</h3><p>A calm walkthrough of the whole process, start to finish.</p></span>
                     <span class="aarrow">&rarr;</span>
                 </a>
-                    <a class="arow" data-cat="keep" data-all="1" href="/falling-behind-on-mortgage-payments">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" data-all="1" href="/falling-behind-on-mortgage-payments">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Falling behind on mortgage payments and scared</h3><p>The map of what to do the moment payments start slipping</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" data-all="1" href="/how-many-missed-payments-before-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" data-all="1" href="/how-many-missed-payments-before-foreclosure">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Dreading missed payments: How many to foreclosure?</h3><p>The law counts days, not payments. The edge is farther than you fear.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" data-all="1" href="/what-is-a-notice-of-default">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" data-all="1" href="/what-is-a-notice-of-default">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Jolted by a notice of default and what to do</h3><p>A warning, not the endgame. What the letter means and what comes next.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" href="/pre-foreclosure-vs-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" href="/pre-foreclosure-vs-foreclosure">
                     <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                     <span class="atext"><span class="acat">Understanding it</span><h3>Hesitant to know: pre-foreclosure vs foreclosure</h3><p>The difference between the two, and why it changes your timeline.</p></span>
                     <span class="aarrow">&rarr;</span>
                 </a>
-                    <a class="arow" data-cat="understand" data-all="1" href="/judicial-vs-nonjudicial-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" data-all="1" href="/judicial-vs-nonjudicial-foreclosure">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Confused by judicial vs nonjudicial foreclosure</h3><p>Two systems. Which one is aimed at your house, and why?</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" data-all="1" href="/what-is-a-public-trustee">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" data-all="1" href="/what-is-a-public-trustee">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Curious what a public trustee is in Colorado</h3><p>A referee, not a rescuer or predator. The neutral office built into every Colorado home loan.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" href="/rule-120-hearing">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" href="/rule-120-hearing">
                     <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                     <span class="atext"><span class="acat">Understanding it</span><h3>Uneasy about a Rule 120 hearing: what it means</h3><p>What that court notice actually is, and the narrow things it decides.</p></span>
                     <span class="aarrow">&rarr;</span>
                 </a>
-                    <a class="arow" data-cat="understand" data-all="1" href="/how-does-a-foreclosure-auction-work">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" data-all="1" href="/how-does-a-foreclosure-auction-work">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Bracing to learn how a foreclosure auction works</h3><p>Who runs it, who can bid, and what can survive the auction.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" data-all="1" href="/how-to-save-my-house-from-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" data-all="1" href="/how-to-save-my-house-from-foreclosure">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Wondering how to save your home from foreclosure</h3><p>The real levers that stop a foreclosure are closer than you think</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" data-all="1" href="/mortgage-reinstatement">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" data-all="1" href="/mortgage-reinstatement">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Hoping mortgage reinstatement can stop the sale</h3><p>Catch up the missed payments, not the whole loan, and it ends.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" href="/when-too-late-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" href="/when-too-late-foreclosure">
                     <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                     <span class="atext"><span class="acat">Keeping your home</span><h3>The worry it's too late to stop your foreclosure</h3><p>Every deadline, walked backward from the sale date.</p></span>
                     <span class="aarrow">&rarr;</span>
                 </a>
-                    <a class="arow" data-cat="sell" data-all="1" href="/can-i-sell-my-home-before-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="sell" data-all="1" href="/can-i-sell-my-home-before-foreclosure">
                         <span class="aicon ai3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5 11 5h6.5A1.5 1.5 0 0 1 19 6.5V13l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
                         <span class="atext"><span class="acat">Selling as a way out</span><h3>Anxious you can’t sell before foreclosure</h3><p>A clear declaration of when you can and when you cannot sell</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="sell" data-all="1" href="/how-to-sell-a-house-in-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="sell" data-all="1" href="/how-to-sell-a-house-in-foreclosure">
                         <span class="aicon ai3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5 11 5h6.5A1.5 1.5 0 0 1 19 6.5V13l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
                         <span class="atext"><span class="acat">Selling as a way out</span><h3>In foreclosure: unsure how to sell the right way</h3><p>A walkthrough of the major items you need to get this done</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="sell" data-all="1" href="/selling-a-house-for-less-than-you-owe">
+                    <a class="arow" data-cluster="foreclosure" data-cat="sell" data-all="1" href="/selling-a-house-for-less-than-you-owe">
                         <span class="aicon ai3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5 11 5h6.5A1.5 1.5 0 0 1 19 6.5V13l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
                         <span class="atext"><span class="acat">Selling as a way out</span><h3>Afraid you can&#x27;t sell for less than you owe</h3><p>A guide of everything you need to know when selling underwater</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" data-all="1" href="/how-does-a-short-sale-work">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" data-all="1" href="/how-does-a-short-sale-work">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Unsure about how a short sale works?</h3><p>Every step explained, from the hardship letter to the leftover debt.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="sell" data-all="1" href="/deed-in-lieu-vs-short-sale">
+                    <a class="arow" data-cluster="foreclosure" data-cat="sell" data-all="1" href="/deed-in-lieu-vs-short-sale">
                         <span class="aicon ai3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5 11 5h6.5A1.5 1.5 0 0 1 19 6.5V13l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
                         <span class="atext"><span class="acat">Selling as a way out</span><h3>Torn between a deed in lieu vs short sale</h3><p>Two hard doors, one honest look at which ends cleaner for you.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="sell" data-all="1" href="/can-i-give-my-house-back-to-the-bank">
+                    <a class="arow" data-cluster="foreclosure" data-cat="sell" data-all="1" href="/can-i-give-my-house-back-to-the-bank">
                         <span class="aicon ai3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5 11 5h6.5A1.5 1.5 0 0 1 19 6.5V13l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
                         <span class="atext"><span class="acat">Selling as a way out</span><h3>Tired: can I give my house back to the bank</h3><p>Handing it back is real. Let&#x27;s make sure it’s best for you.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" data-all="1" href="/voluntary-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" data-all="1" href="/voluntary-foreclosure">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Weighing if voluntary foreclosure is right</h3><p>Handing it back has a real name, and a real price.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="sell" data-all="1" href="/sell-and-rent-back-my-home">
+                    <a class="arow" data-cluster="foreclosure" data-cat="sell" data-all="1" href="/sell-and-rent-back-my-home">
                         <span class="aicon ai3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5 11 5h6.5A1.5 1.5 0 0 1 19 6.5V13l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
                         <span class="atext"><span class="acat">Selling as a way out</span><h3>Considering selling, hoping to rent back my home</h3><p>The options and legal support to help you rent back your home.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/fair-home-offer">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/fair-home-offer">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>You deserve to know if a home offer is fair</h3><p>How to tell a real offer from a lowball before you sign.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/foreclosure-scams">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/foreclosure-scams">
                     <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                     <span class="atext"><span class="acat">Protecting yourself</span><h3>Wronged by foreclosure scams: how to spot them</h3><p>The common traps, and how to catch someone taking advantage.</p></span>
                     <span class="aarrow">&rarr;</span>
                 </a>
-                    <a class="arow" data-cat="sell" data-all="1" href="/what-happens-to-equity-in-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="sell" data-all="1" href="/what-happens-to-equity-in-foreclosure">
                         <span class="aicon ai3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5 11 5h6.5A1.5 1.5 0 0 1 19 6.5V13l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
                         <span class="atext"><span class="acat">Selling as a way out</span><h3>Afraid of what happens to equity in foreclosure</h3><p>Where the auction money goes and how to keep what&#x27;s yours.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" data-all="1" href="/will-a-short-sale-hurt-my-credit">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" data-all="1" href="/will-a-short-sale-hurt-my-credit">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Bracing for how a short sale hurts your credit</h3><p>It hurts about as much as foreclosure does, but it does not last forever.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/foreclosure-credit-report">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/foreclosure-credit-report">
                     <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                     <span class="atext"><span class="acat">Protecting yourself</span><h3>Worried foreclosure will ruin your credit</h3><p>Seven years, but the clock started earlier and recovery starts sooner.</p></span>
                     <span class="aarrow">&rarr;</span>
                 </a>
-                    <a class="arow" data-cat="protect" data-all="1" href="/what-is-a-deficiency-judgment">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" data-all="1" href="/what-is-a-deficiency-judgment">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Unsure what a deficiency judgment is</h3><p>The debt can follow you out, but there is a real finish line.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" href="/credit-bid">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" href="/credit-bid">
                     <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                     <span class="atext"><span class="acat">Understanding it</span><h3>Credit bid: the term nobody explained to you</h3><p>Why you might still owe money after the auction, in plain words.</p></span>
                     <span class="aarrow">&rarr;</span>
                 </a>
-                    <a class="arow" data-cat="understand" data-all="1" href="/right-of-redemption">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" data-all="1" href="/right-of-redemption">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Hoping the right of redemption undoes the sale</h3><p>The legal name for a second chance, and where Colorado actually keeps yours.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" data-all="1" href="/how-to-claim-surplus-funds-after-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" data-all="1" href="/how-to-claim-surplus-funds-after-foreclosure">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Hoping to claim surplus funds after foreclosure</h3><p>Yes, that money is really yours, and you can claim it yourself.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/how-long-can-i-stay-in-my-house-after-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/how-long-can-i-stay-in-my-house-after-foreclosure">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Dreading how long you can stay after foreclosure</h3><p>The sale is not moving day. The law spells out your time.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" data-all="1" href="/reverse-mortgage-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" data-all="1" href="/reverse-mortgage-foreclosure">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Blindsided by a reverse mortgage foreclosure</h3><p>The loan that promised no payments can still end in foreclosure.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                                <a class="arow" data-cat="keep" href="/loss-mitigation">
+                                <a class="arow" data-cluster="foreclosure" data-cat="keep" href="/loss-mitigation">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Wary of what loss mitigation actually offers</h3><p>A real menu hides behind the jargon, and so does the catch.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" href="/hud-approved-housing-counselor">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" href="/hud-approved-housing-counselor">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Hoping a HUD approved housing counselor is real</h3><p>Real people, really free, and how to tell them from the fakes.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/foreclosure-vs-bankruptcy">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/foreclosure-vs-bankruptcy">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Weighing foreclosure vs bankruptcy and afraid</h3><p>One of these can keep your home. The other only pauses the loss.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" href="/repayment-plan-mortgage">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" href="/repayment-plan-mortgage">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Hopeful a mortgage repayment plan saves you</h3><p>Yes, and it has a name. A few steady months can close this.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" href="/partial-claim-mortgage">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" href="/partial-claim-mortgage">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Wondering how a partial claim mortgage works</h3><p>The fix is real: the missed months can wait at the back.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" href="/second-mortgage-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" href="/second-mortgage-foreclosure">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Dreading your second mortgage after foreclosure</h3><p>The lien dies with the house. The debt needs its own ending.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" href="/force-placed-insurance">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" href="/force-placed-insurance">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Blindsided by force placed insurance costs</h3><p>The jump has a name, and you may be owed a refund.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/1099-c-cancellation-of-debt">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/1099-c-cancellation-of-debt">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Blindsided by a 1099-C cancellation of debt</h3><p>Forgiven debt can count as income, but the exits are real.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" href="/loan-modification">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" href="/loan-modification">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Hoping a loan modification lets you stay</h3><p>The stay-put fix: the loan changes so you and the house don&#x27;t.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" href="/mortgage-forbearance">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" href="/mortgage-forbearance">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Wishing a mortgage forbearance pause works</h3><p>A real pause, and the skipped months rarely land all at once.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" href="/loss-mitigation-application">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" href="/loss-mitigation-application">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Afraid your loss mitigation application is wrong</h3><p>The application has an answer key, and they must hand it to you.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" href="/va-loan-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" href="/va-loan-foreclosure">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Hoping your VA loan foreclosure is different</h3><p>Yes, it is different, and mostly in the direction you were hoping.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="sell" href="/should-i-let-my-house-go-into-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="sell" href="/should-i-let-my-house-go-into-foreclosure">
                         <span class="aicon ai3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5 11 5h6.5A1.5 1.5 0 0 1 19 6.5V13l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
                         <span class="atext"><span class="acat">Selling as a way out</span><h3>Tired enough to let my house go to foreclosure</h3><p>Being done is allowed. The do-nothing door just costs the most.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/deed-theft">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/deed-theft">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Stunned by deed theft on the house you own</h3><p>A stranger&#x27;s paper cannot outrank the truth of who owns your home.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/cash-for-keys">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/cash-for-keys">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Worn down and hoping cash for keys is real</h3><p>Sometimes leaving pays, and asking for it costs you nothing.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="sell" href="/short-sale-vs-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="sell" href="/short-sale-vs-foreclosure">
                         <span class="aicon ai3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5 11 5h6.5A1.5 1.5 0 0 1 19 6.5V13l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
                         <span class="atext"><span class="acat">Selling as a way out</span><h3>Doubting what&#x27;s better: short sale or foreclosure</h3><p>On your score, a tie. On the debt and the road back, not even close.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" href="/usda-loan-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" href="/usda-loan-foreclosure">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Unsure if USDA loan foreclosure is different</h3><p>Same Colorado machine. Who stands behind it decides how patient they have to be.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" href="/colorado-emergency-mortgage-assistance-program">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" href="/colorado-emergency-mortgage-assistance-program">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Hoping Colorado emergency mortgage help is real</h3><p>The state money was real, and it ran out. What still catches you up.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/zombie-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/zombie-foreclosure">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Blindsided by a zombie foreclosure in your name</h3><p>Leaving was never the legal ending, and the deed may still say so.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" href="/foreclosure-mediation-program">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" href="/foreclosure-mediation-program">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Hoping a foreclosure mediation program buys time</h3><p>No mediator in Colorado, but the date can still move for you.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" href="/hoa-foreclosure-colorado">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" href="/hoa-foreclosure-colorado">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Stunned an HOA foreclosure is real</h3><p>Yes, they can. But the fuse is longer than the letter sounds.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/removal-of-improvements-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/removal-of-improvements-foreclosure">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Afraid to take home improvements in foreclosure</h3><p>The line between what is yours and what stays with the house.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="understand" href="/tax-lien-sale-colorado">
+                    <a class="arow" data-cluster="foreclosure" data-cat="understand" href="/tax-lien-sale-colorado">
                         <span class="aicon ai1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 5.5A1.5 1.5 0 0 1 4.5 4H10a2 2 0 0 1 2 2 2 2 0 0 1 2-2h5.5A1.5 1.5 0 0 1 21 5.5v12a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 0 0-2 2 2 2 0 0 0-2-2H4.5A1.5 1.5 0 0 1 3 17.5z"/><path d="M12 6v14"/></svg></span>
                         <span class="atext"><span class="acat">Understanding it</span><h3>Shaken by a tax lien sale in Colorado</h3><p>It outranks the mortgage, but the fuse is years long and paying ends it.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/what-liens-survive-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/what-liens-survive-foreclosure">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Bracing for what liens survive foreclosure</h3><p>Recording order decides what the house carries out and what follows you.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/renting-after-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/renting-after-foreclosure">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Ashamed to ask about renting after foreclosure</h3><p>Yes, someone will. Here is what the screening actually sees.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="protect" href="/how-soon-can-i-buy-after-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="protect" href="/how-soon-can-i-buy-after-foreclosure">
                         <span class="aicon ai4"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9.1 12l2 2 3.7-4.2"/></svg></span>
                         <span class="atext"><span class="acat">Protecting yourself</span><h3>Hoping to buy again soon after foreclosure</h3><p>Yes, you can own again. The wait runs two to seven years.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
-                    <a class="arow" data-cat="keep" href="/refinance-to-stop-foreclosure">
+                    <a class="arow" data-cluster="foreclosure" data-cat="keep" href="/refinance-to-stop-foreclosure">
                         <span class="aicon ai2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M9.5 20v-5h5v5"/></svg></span>
                         <span class="atext"><span class="acat">Keeping your home</span><h3>Hoping a refinance can stop your foreclosure</h3><p>The swap is real, the takeover is narrower, and both race one clock.</p></span>
+                        <span class="aarrow">&rarr;</span>
+                    </a>
+                    <a class="arow" data-cluster="probate" data-cat="sell" href="/selling-a-house-in-probate">
+                        <span class="aicon ai3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3.5 12.5 11 5h6.5A1.5 1.5 0 0 1 19 6.5V13l-7.5 7.5a1.5 1.5 0 0 1-2.1 0l-5.9-5.9a1.5 1.5 0 0 1 0-2.1z"/><circle cx="15" cy="9" r="1.3"/></svg></span>
+                        <span class="atext"><span class="acat">Selling the house</span><h3>Unsure if selling a house in probate is allowed</h3><p>Yes, during. The sale runs inside probate, once the authority is yours.</p></span>
                         <span class="aarrow">&rarr;</span>
                     </a>
 </div>
@@ -470,7 +486,7 @@ header .navburger span{background:#fff}
         var rows=Array.prototype.slice.call(document.querySelectorAll('.arow'));
         var pager=document.getElementById('pager');
         function render(){
-            var matched=rows.filter(function(r){return cat==='all'||r.getAttribute('data-cat')===cat;});
+            var matched=rows.filter(function(r){return (!cluster||r.getAttribute('data-cluster')===cluster)&&(cat==='all'||r.getAttribute('data-cat')===cat);});
             var pages=Math.max(1,Math.ceil(matched.length/PAGE));
             if(page>pages)page=pages;
             rows.forEach(function(r){r.hidden=true;});
@@ -479,6 +495,17 @@ header .navburger span{background:#fff}
             if(pages>1){for(var i=1;i<=pages;i++){(function(i){var b=document.createElement('button');b.textContent=i;if(i===page)b.className='active';b.addEventListener('click',function(){page=i;render();window.scrollTo({top:0,behavior:'smooth'});});pager.appendChild(b);})(i);}}
         }
         fb.forEach(function(b){b.addEventListener('click',function(){fb.forEach(function(x){x.classList.remove('active')});b.classList.add('active');cat=b.getAttribute('data-filter');page=1;render();});});
+        var cb=document.querySelectorAll('.cluster'),cluster=null;
+        function syncChips(){document.getElementById('catFilters').hidden=!cluster;
+            fb.forEach(function(b){var f=b.getAttribute('data-filter');
+                var has=f==='all'||rows.some(function(r){return (!cluster||r.getAttribute('data-cluster')===cluster)&&r.getAttribute('data-cat')===f;});
+                b.hidden=!has;});}
+        cb.forEach(function(b){b.addEventListener('click',function(){
+            var c=b.getAttribute('data-cluster');cluster=(cluster===c)?null:c;cat='all';page=1;
+            cb.forEach(function(x){x.classList.toggle('active',x.getAttribute('data-cluster')===cluster)});
+            fb.forEach(function(x){x.classList.remove('active')});fb[0].classList.add('active');
+            syncChips();render();});});
+        syncChips();
         render();
     })();
     </script>
