@@ -874,7 +874,9 @@ header .navburger span{background:#fff}
                         var c=r.getAttribute('data-cat');
                         if(!(c in byCat))byCat[c]=r;
                         if(r.getAttribute('data-all')==='1')byCat[c]=r;});
-                    show=Object.keys(byCat).map(function(c){return byCat[c];});}
+                    show=Object.keys(byCat).map(function(c){return byCat[c];});
+                    // top up to 4 with the cluster's other articles until every category has one
+                    rows.forEach(function(r){if(show.length<4&&r.getAttribute('data-cluster')===cluster&&show.indexOf(r)===-1)show.push(r);});}
                 else{show=rows.filter(function(r){return r.getAttribute('data-cluster')===cluster&&r.getAttribute('data-cat')===cat;}).slice(0,4);}
                 show=show.slice(0,4);
                 rows.forEach(function(r){r.hidden=show.indexOf(r)===-1;});}
